@@ -293,10 +293,10 @@ body, html {
     margin-bottom: 20px; }
 
 .socials {
-  padding-top: 20px; }
+  padding-top: 10px; }
   @media (min-width: 600px) {
     .socials {
-      padding-bottom: 20px; } }
+      padding-bottom: 10px; } }
   .socials__list {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -333,6 +333,14 @@ body, html {
   margin-left: -20px;
   margin-right: -20px;
   text-align: center; }
+  @media (min-width: 600px) {
+    .test-result {
+      margin-left: 0;
+      margin-right: 0; } }
   @media (max-width: 599px) {
     .test-result__title {
       margin-top: 8px; } }
+
+@media (max-width: 599px) {
+  .block-on-mobile {
+    display: block; } }

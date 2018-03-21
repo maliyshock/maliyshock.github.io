@@ -227,6 +227,8 @@ body, html {
   cursor: pointer; }
   .button:hover {
     background-color: #343434; }
+  .button:active:focus {
+    outline: none; }
   @media (min-width: 600px) {
     .button {
       padding-left: 15px;
@@ -457,7 +459,6 @@ body, html {
   .section--bg-img {
     position: relative;
     min-height: 200px;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff; }
@@ -474,8 +475,13 @@ body, html {
     @media (min-width: 900px) {
       .section--bg-img {
         min-height: 580px; } }
-  .section--bg-application {
-    background-image: url("images/application.jpg"); }
+  @media (min-width: 300px) {
+    .section--bg-application {
+      background-image: url("images/application_mob.jpg"); } }
+  @media (min-width: 600px) {
+    .section--bg-application {
+      background-image: url("images/application.jpg");
+      background-size: cover; } }
   .section__inner {
     position: relative;
     z-index: 2;
@@ -531,6 +537,10 @@ body, html {
   margin-left: -20px;
   margin-right: -20px;
   text-align: center; }
+  @media (min-width: 600px) {
+    .test-result {
+      margin-left: 0;
+      margin-right: 0; } }
   @media (max-width: 599px) {
     .test-result__title {
       margin-top: 8px; } }
