@@ -227,7 +227,7 @@ body, html {
   cursor: pointer; }
   .button:hover {
     background-color: #343434; }
-  .button:active:focus {
+  .button:focus {
     outline: none; }
   @media (min-width: 600px) {
     .button {
@@ -236,7 +236,7 @@ body, html {
       min-width: 200px; } }
   .button--bg-blue {
     background-color: #3075f3; }
-    .button--bg-blue:hover {
+    .button--bg-blue:hover, .button--bg-blue:focus {
       background-color: #5990f4; }
   .button--width-full {
     width: 100%; }
