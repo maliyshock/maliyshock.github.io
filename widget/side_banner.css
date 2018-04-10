@@ -59,6 +59,29 @@ textarea {
 	padding: 0px;
 	box-sizing: border-box;
 	min-width: 290px;
+	position: relative;
+}
+
+.popup {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+
+	width: 100%;
+	height: 100%;
+
+	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgba(0,0,0,.85);
+}
+
+.popup__inner {
+	color: #fff;
+	font-size: 16px;
 }
 
 .banner form input {
@@ -154,7 +177,7 @@ form .banner__form__item {
 	flex-basis: 50%;
     flex: 1 1;
 }
-.sideBanner .wpcf7-form input[type="submit"] {
+.sideBanner .wpcf7-form button {
 	margin-top: 10px;
 }
 
@@ -164,8 +187,8 @@ input[type=email].banner__form__email{
 	box-sizing: border-box;
 	line-height: 30px;
 }
-.banner input[type=submit],
-.entry .banner input[type=submit],
+.banner button,
+.entry .banner button,
 .banner__form__submit {
 	box-sizing: border-box;
 	line-height: 46px;
@@ -180,7 +203,7 @@ input[type=email].banner__form__email{
 
 }
 
-.banner input[type=submit]:hover,
+.banner button:hover,
 .banner__form__submit:hover {
 	background-color: #fc5e87;
 }

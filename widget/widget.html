@@ -14,6 +14,14 @@
         <div class="textwidget custom-html-widget">
             <div class="sideBanner banner" id="sticky-bar" href="undefined&amp;utm_medium=/chem-otlichaetsya-britanskij-anglijskij-yazyk-ot-amerikanskogo" style="/* height: 524px; *//* padding: 0px; *//* border: 0px; */">
                 <div class="banner__inner" style="">
+
+                    <div class="popup js-popup">
+                        <div class="popup__inner">
+                            <p class="popup__text js-popup-text"></p>
+                            <button type="button" class="wpcf7-form-control wpcf7-submit js-popup-close">Ok</button>
+                        </div>
+                    </div>
+
                     <div class="sideBanner__body">
                         <div class="sideBanner__logo"></div>
                         <div class="sideBanner__swapBlock">
@@ -38,28 +46,28 @@
                         </div>
                         <div role="form" class="wpcf7" id="wpcf7-f7026-o2" lang="ru-RU" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="" method="post" class="wpcf7-form" id="demo-form">
+                            <form action="" method="post" class="wpcf7-form" id="order-form">
                                 <div class="banner__form__container">
                                     <div class="banner__form__item banner__form__item__name">
                                         <span class="wpcf7-form-control-wrap your-name">
-                                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text banner__form__name" aria-invalid="false" placeholder="Имя">
+                                            <input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text banner__form__name" aria-invalid="false" placeholder="Имя">
                                         </span>
                                     </div>
 
                                     <div class="banner__form__item banner__form__item__phone">
                                         <span class="wpcf7-form-control-wrap your-phone">
-                                            <input type="tel" name="your-phone" value="" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel banner__form__phone js-phone" data-parsley-errors-messages-disabled required="" placeholder="+7 (___) ___-__-__  ">
+                                            <input type="tel" name="phone" value="" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel banner__form__phone js-phone" data-parsley-errors-messages-disabled required="" placeholder="+7 (___) ___-__-__  ">
                                         </span>
                                     </div>
 
                                     <div class="banner__form__item banner__form__item__email">
                                         <span class="wpcf7-form-control-wrap your-email">
-                                            <input type="email" name="your-email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email banner__form__email" data-parsley-errors-messages-disabled required="" placeholder="Email">
+                                            <input type="email" name="email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email banner__form__email" data-parsley-errors-messages-disabled required="" placeholder="Email">
                                         </span>
                                     </div>
 
                                     <div class="banner__form__item banner__form__item__submit">
-                                        <button type="button" value="Отправить" class="wpcf7-form-control wpcf7-submit"></button>
+                                        <button type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit">Отправить</button>
                                     </div>
                                 </div>
                             </form>
@@ -71,19 +79,74 @@
     </div>
 
     <script src="jquery.js"></script>
+    <script src="http://skyeng.ru/files/scripts/lp-order-creator.js"></script>
     <script src="jquery.inputmask.bundle.js"></script>
     <script src="parsley.min.js"></script>
 
     <script>
-        $(document).ready(function(){
+        function getJsonFromUrl() {
+            var query = location.search.substr(1);
+            var result = {};
+            query.split("&").forEach(function(part) {
+                var item = part.split("=");
+                result[item[0]] = decodeURIComponent(item[1]);
+            });
+            return result;
+        }
+
+        $(document).ready(function() {
+            var jsonFromUrl = getJsonFromUrl();
+            var dataType = jsonFromUrl['type'];
+            var utmMedium = jsonFromUrl['utm-medium'];
+            var utmSource = jsonFromUrl['utm-source'];
+            var popup = $('.js-popup')
+            var popupText = $('.js-popup-text')
+
             $(".js-phone").inputmask("+7 (999) 999-99-99");
 
-            $('#demo-form').parsley().on('field:validated', function() {
-                var ok = $('.parsley-error').length === 0;
+            $('#order-form').parsley().on('field:validated', function() {
+                // var ok = $('.parsley-error').length === 0;
+            });
+
+            $('.js-popup-close').on('click', function () {
+                $(this).closest('.js-popup').fadeOut();
             })
-                .on('form:submit', function() {
-                    return false; // Don't submit form for this demo
+
+            $('#order-form').on('submit', function(event) {
+                event.preventDefault();  // отменяем стандартную отправку формы
+                var $form = $(this);
+                skyengCreateOrder({
+                    name: $form.find('input[name=name]').val(),
+                    email: $form.find('input[name=email]').val(),
+                    phone: $form.find('input[name=phone]').val(),
+                    extraData: {
+                        source_type: dataType,
+                        utm_source: utmMedium,
+                        utm_medium: utmSource,
+                    }
+                }).then(function (result) {
+                    /** обработка успешного результата */
+                    popupText.text('Спасибо за Ваше сообщение. Оно успешно отправлено.');
+
+                    popup.css("display", "flex")
+                        .hide()
+                        .fadeIn();
+                }, function (errors) {
+                    /** обработка ошибок, объект errors содержит сообщения об ошибках в полях name, email, phone */
+
+                    var errorMsgName = errors.name ? '<p>' + errors.name+'</p> ' : '';
+                    var errorMsgEmail = errors.email ? '<p>' + errors.email+'</p> ' : '';
+                    var errorMsgPhone = errors.phone ? '<p>' + errors.phone +'</p> ': '';
+
+                    var errorMsg =  '<p>Ошибка сервера. Попробуйте снова</p> ' + errorMsgName + errorMsgEmail + errorMsgPhone;
+
+                    popupText.html(errorMsg);
+
+                    popup.css("display", "flex")
+                        .hide()
+                        .fadeIn();
                 });
+            });
         });
     </script>
 </body>
