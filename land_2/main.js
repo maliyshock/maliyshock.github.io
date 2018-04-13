@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/mac/works/projects/Sky_eng/yandex-taxi-landing-2/dev";
+/******/ 	__webpack_require__.p = "/Users/mac/works/projects/Sky_eng/tasks/yandex-taxi-landing-2/dev";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 140);

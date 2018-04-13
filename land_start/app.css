@@ -575,6 +575,9 @@ body, html {
       height: 0;
       overflow: hidden; }
 
+.link {
+  color: #3075f3; }
+
 .list {
   padding-left: 25px; }
   .list__item {
@@ -703,6 +706,12 @@ body, html {
     width: 100%; }
     .popup__row--align-inline > * {
       width: 100%; }
+    .popup__row--align-inline > * + * {
+      margin-top: 20px; }
+      @media (min-width: 600px) {
+        .popup__row--align-inline > * + * {
+          margin-left: 20px;
+          margin-top: 0; } }
     @media (min-width: 600px) {
       .popup__row--align-inline {
         display: -webkit-box;
