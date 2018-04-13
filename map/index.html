@@ -280,6 +280,8 @@
 
         .popup {
             display: none;
+            align-items: center;
+            
             position: absolute;
             top: 118px;
             bottom: 118px;
@@ -754,7 +756,7 @@
             $('.js-map-area.active').removeClass('active');
 
             $(this).addClass('active');
-            $('.js-popup').hide().fadeIn();
+            $('.js-popup').css({'display':'flex'}).hide().fadeIn();
         });
 
         $(window).click(function() {
