@@ -281,7 +281,7 @@
         .popup {
             display: none;
             align-items: center;
-            
+
             position: absolute;
             top: 118px;
             bottom: 118px;
@@ -760,6 +760,7 @@
         });
 
         $(window).click(function() {
+            $('.js-map-area.active').removeClass('active');
             $('.js-popup').fadeOut();
         });
 
