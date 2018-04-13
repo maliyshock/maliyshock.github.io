@@ -132,11 +132,13 @@
             opacity: .3;
             stroke:  white;
             cursor: pointer;
+
+            transition: fill .5s, stroke .5s, opacity .5s;
         }
 
-        .map__area:hover {
+        .map__area:hover, .map__area.active {
             fill: #4F9EFF;
-            stroke:  #4F9EFF;
+            stroke:  #fff;
             opacity: 1;
         }
 
@@ -748,6 +750,10 @@
     $('document').ready(function(){
         $('.js-map-area').on('click',function (e) {
             e.stopPropagation();
+
+            $('.js-map-area.active').removeClass('active');
+
+            $(this).addClass('active');
             $('.js-popup').hide().fadeIn();
         });
 
