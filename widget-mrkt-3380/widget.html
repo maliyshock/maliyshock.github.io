@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="side_banner.css">
 </head>
 <body>
-    <!--<iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=buyer&targets=&targets-hint=&default-sum=&button-text=11&hint=&successURL=&quickpay=shop&account=41001627892195" width="450" height="170" frameborder="0" allowtransparency="true" scrolling="no"></iframe>-->
-
     <div class="widget_text sidebar-box widget_custom_html clr">
         <div class="textwidget custom-html-widget">
             <div class="sideBanner banner" id="sticky-bar" href="undefined&amp;utm_medium=/chem-otlichaetsya-britanskij-anglijskij-yazyk-ot-amerikanskogo" style="/* height: 524px; *//* padding: 0px; *//* border: 0px; */">
@@ -32,7 +30,7 @@
                             </div>
                             <div class="sideBanner__swapItem sideBanner__swapItem_2 js-sidebanner-item" data-banner-num="2" style="display: none;">
                                 <div class="sideBanner__swapItem__text">
-                                    <span>Составим цели</span>
+                                    <span>Поставим цели</span>
                                 </div>
                             </div>
                             <div class="sideBanner__swapItem sideBanner__swapItem_3 js-sidebanner-item" data-banner-num="3" style="display: none;">
@@ -56,7 +54,7 @@
 
                                     <div class="banner__form__item banner__form__item__phone">
                                         <span class="wpcf7-form-control-wrap your-phone">
-                                            <input type="tel" name="phone" value="" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel banner__form__phone js-phone" data-parsley-errors-messages-disabled required="" placeholder="+7 (___) ___-__-__  ">
+                                            <input type="tel" name="phone" value="" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel banner__form__phone js-phone" data-parsley-errors-messages-disabled required="" placeholder="Телефон">
                                         </span>
                                     </div>
 
@@ -116,8 +114,6 @@
                 $('.js-sidebanner-item.active').removeClass('active').css({'display':'none'});
                 $('.js-sidebanner-item[data-banner-num='+ currentItem+']').addClass('active').fadeIn();
             }
-
-            $(".js-phone").inputmask("+7 (999) 999-99-99");
 
             $('#order-form').parsley().on('field:validated', function() {
                 // var ok = $('.parsley-error').length === 0;
