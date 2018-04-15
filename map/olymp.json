@@ -1,0 +1,572 @@
+{
+  "moskva":{
+      "name": "Москва",
+      "color": "#87C0FD",
+      "count": "8521",
+      "points": "67",
+      "listen": "71",
+      "vocabulary": "63",
+      "grammar": "59",
+      "read": "73"
+  },
+  "moskovskaya_oblast":{
+      "name": "Московская область",
+      "color": "#87C0FD",
+      "count": "4057",
+      "points": "63",
+      "listen": "67",
+      "vocabulary": "60",
+      "grammar": "55",
+      "read": "69"
+  },
+  "sankt-peterburg":{
+      "name": "Санкт-Петербург",
+      "color": "#87C0FD",
+      "count": "1900",
+      "points": "64",
+      "listen": "69",
+      "vocabulary": "61",
+      "grammar": "56",
+      "read": "70"
+  },
+  "respublika_tatarstan":{
+      "name": "Татарстан",
+      "color": "#8AC2FD",
+      "count": "773",
+      "points": "60",
+      "listen": "63",
+      "vocabulary": "57",
+      "grammar": "51",
+      "read": "67"
+  },
+  "chelyabinskaya_oblast":{
+      "name": "Челябинская область",
+      "color": "#8AC2FD",
+      "count": "726",
+      "points": "59",
+      "listen": "65",
+      "vocabulary": "55",
+      "grammar": "50",
+      "read": "66"
+  },
+  "astrakhanskaya_oblast":{
+      "name": "Астраханская область",
+      "color": "#87C0FD",
+      "count": "664",
+      "points": "63",
+      "listen": "67",
+      "vocabulary": "60",
+      "grammar": "55",
+      "read": "70"
+  },
+  "nizhegorodskaya_oblast":{
+      "name": "Нижегородская область",
+      "color": "#87C0FD",
+      "count": "658",
+      "points": "63",
+      "listen": "68",
+      "vocabulary": "59",
+      "grammar": "53",
+      "read": "71"
+  },
+  "respublika_kareliya":{
+      "name": "Карелия",
+      "color": "#87C0FD",
+      "count": "548",
+      "points": "63",
+      "listen": "70",
+      "vocabulary": "60",
+      "grammar": "54",
+      "read": "69"
+  },
+  "samarskaya_oblast":{
+      "name": "Самарская область",
+      "color": "#87C0FD",
+      "count": "535",
+      "points": "65",
+      "listen": "69",
+      "vocabulary": "61",
+      "grammar": "58",
+      "read": "71"
+  },
+  "sverdlovskaya_oblast":{
+      "name": "Свердловская область",
+      "color": "#8AC2FD",
+      "count": "510",
+      "points": "59",
+      "listen": "64",
+      "vocabulary": "54",
+      "grammar": "49",
+      "read": "67"
+  },
+  "vologogradskaya_oblast":{
+      "name": "Волгоградская область",
+      "color": "#87C0FD",
+      "count": "382",
+      "points": "62",
+      "listen": "65",
+      "vocabulary": "60",
+      "grammar": "55",
+      "read": "70"
+  },
+  "krasnoyarsky_kray":{
+      "name": "Красноярский край",
+      "color": "#8AC2FD",
+      "count": "365",
+      "points": "57",
+      "listen": "63",
+      "vocabulary": "53",
+      "grammar": "48",
+      "read": "64"
+  },
+  "novosibirskaya_oblast":{
+      "name": "Новосибирская область",
+      "color": "#8AC2FD",
+      "count": "349",
+      "points": "59",
+      "listen": "64",
+      "vocabulary": "55",
+      "grammar": "49",
+      "read": "66"
+  },
+  "rostovskaya_oblast":{
+      "name": "Ростовская область",
+      "color": "#8AC2FD",
+      "count": "331",
+      "points": "58",
+      "listen": "62",
+      "vocabulary": "53",
+      "grammar": "51",
+      "read": "64"
+  },
+  "permsky_kray":{
+      "name": "Пермский край",
+      "color": "#8AC2FD",
+      "count": "322",
+      "points": "57",
+      "listen": "61",
+      "vocabulary": "53",
+      "grammar": "47",
+      "read": "65"
+  },
+  "chuvashskaya_respublika":{
+      "name": "Чувашская",
+      "color": "#87C0FD",
+      "count": "279",
+      "points": "62",
+      "listen": "66",
+      "vocabulary": "60",
+      "grammar": "51",
+      "read": "69"
+  },
+  "vladimirskaya_oblast":{
+      "name": "Владимирская область",
+      "color": "#8AC2FD",
+      "count": "248",
+      "points": "57",
+      "listen": "61",
+      "vocabulary": "52",
+      "grammar": "47",
+      "read": "67"
+  },
+  "hanty_mansysky_avtonomny_okrug":{
+      "name": "Ханты-Мансийский Автономный округ - Югра АО",
+      "color": "#8AC2FD",
+      "count": "228",
+      "points": "57",
+      "listen": "64",
+      "vocabulary": "52",
+      "grammar": "46",
+      "read": "66"
+  },
+  "respublika_bashkortostan":{
+      "name": "Башкортостан",
+      "color": "#8AC2FD",
+      "count": "208",
+      "points": "57",
+      "listen": "58",
+      "vocabulary": "55",
+      "grammar": "47",
+      "read": "65"
+  },
+  "krasnoyarsky_kray":{
+      "name": "Краснодарский край",
+      "color": "#87C0FD",
+      "count": "204",
+      "points": "63",
+      "listen": "67",
+      "vocabulary": "59",
+      "grammar": "57",
+      "read": "68"
+  },
+  "ulyanovskaya_oblast":{
+      "name": "Ульяновская область",
+      "color": "#8AC2FD",
+      "count": "200",
+      "points": "53",
+      "listen": "58",
+      "vocabulary": "49",
+      "grammar": "45",
+      "read": "59"
+  },
+  "respublika_komi":{
+      "name": "Коми",
+      "color": "#87C0FD",
+      "count": "184",
+      "points": "63",
+      "listen": "67",
+      "vocabulary": "60",
+      "grammar": "52",
+      "read": "71"
+  },
+  "stavropolsky_kray":{
+      "name": "Ставропольский край",
+      "color": "#87C0FD",
+      "count": "147",
+      "points": "66",
+      "listen": "67",
+      "vocabulary": "64",
+      "grammar": "62",
+      "read": "71"
+  },
+  "tambovskaya_oblast":{
+      "name": "Тамбовская область",
+      "color": "#87C0FD",
+      "count": "138",
+      "points": "63",
+      "listen": "63",
+      "vocabulary": "62",
+      "grammar": "55",
+      "read": "73"
+  },
+  "ryazanskaya_oblast":{
+      "name": "Рязанская область",
+      "color": "#87C0FD",
+      "count": "127",
+      "points": "62",
+      "listen": "64",
+      "vocabulary": "59",
+      "grammar": "54",
+      "read": "71"
+  },
+  "tulskaya_oblast":{
+      "name": "Тульская область",
+      "color": "#87C0FD",
+      "count": "126",
+      "points": "63",
+      "listen": "64",
+      "vocabulary": "62",
+      "grammar": "57",
+      "read": "70"
+  },
+  "saratovskaya_oblast":{
+      "name": "Саратовская область",
+      "color": "#87C0FD",
+      "count": "121",
+      "points": "68",
+      "listen": "74",
+      "vocabulary": "64",
+      "grammar": "59",
+      "read": "74"
+  },
+  "novgorodskaya_oblast":{
+      "name": "Новгородская область",
+      "color": "#87C0FD",
+      "count": "116",
+      "points": "62",
+      "listen": "62",
+      "vocabulary": "59",
+      "grammar": "54",
+      "read": "72"
+  },
+  "orenburgskaya_oblast":{
+      "name": "Оренбургская область",
+      "color": "#87C0FD",
+      "count": "114",
+      "points": "68",
+      "listen": "73",
+      "vocabulary": "67",
+      "grammar": "56",
+      "read": "75"
+  },
+  "kirovskaya_oblast":{
+      "name": "Кировская область",
+      "color": "#8AC2FD",
+      "count": "101",
+      "points": "53",
+      "listen": "62",
+      "vocabulary": "48",
+      "grammar": "41",
+      "read": "61"
+  },
+  "yaroslavskaya_oblast":{
+      "name": "Ярославская область",
+      "color": "#87C0FD",
+      "count": "99",
+      "points": "63",
+      "listen": "68",
+      "vocabulary": "58",
+      "grammar": "52",
+      "read": "72"
+  },
+  "murmanskaya_oblast":{
+      "name": "Мурманская область",
+      "color": "#87C0FD",
+      "count": "98",
+      "points": "66",
+      "listen": "70",
+      "vocabulary": "60",
+      "grammar": "60",
+      "read": "72"
+  },
+  "leningradskaya_oblast":{
+      "name": "Ленинградская область",
+      "color": "#8AC2FD",
+      "count": "96",
+      "points": "59",
+      "listen": "64",
+      "vocabulary": "53",
+      "grammar": "52",
+      "read": "68"
+  },
+  "respublika_mordovia":{
+      "name": "Мордовия",
+      "color": "#87C0FD",
+      "count": "93",
+      "points": "69",
+      "listen": "70",
+      "vocabulary": "68",
+      "grammar": "57",
+      "read": "81"
+  },
+  "primorsky_kray":{
+      "name": "Приморский край",
+      "color": "#87C0FD",
+      "count": "87",
+      "points": "66",
+      "listen": "71",
+      "vocabulary": "60",
+      "grammar": "62",
+      "read": "70"
+  },
+  "voronezhskaya_oblast":{
+      "name": "Воронежская область",
+      "color": "#87C0FD",
+      "count": "87",
+      "points": "61",
+      "listen": "65",
+      "vocabulary": "59",
+      "grammar": "52",
+      "read": "68"
+  },
+  "omskaya_oblast":{
+      "name": "Омская область",
+      "color": "#87C0FD",
+      "count": "81",
+      "points": "64",
+      "listen": "71",
+      "vocabulary": "60",
+      "grammar": "54",
+      "read": "72"
+  },
+  "respublika_krym":{
+      "name": "Крым",
+      "color": "#8AC2FD",
+      "count": "80",
+      "points": "55",
+      "listen": "59",
+      "vocabulary": "49",
+      "grammar": "48",
+      "read": "62"
+  },
+  "kemerovskaya_oblast":{
+      "name": "Кемеровская область",
+      "color": "#87C0FD",
+      "count": "79",
+      "points": "69",
+      "listen": "69",
+      "vocabulary": "66",
+      "grammar": "65",
+      "read": "77"
+  },
+  "tomskata_oblast":{
+      "name": "Томская область",
+      "color": "#8AC2FD",
+      "count": "66",
+      "points": "55",
+      "listen": "61",
+      "vocabulary": "54",
+      "grammar": "43",
+      "read": "61"
+  },
+  "tymenskaya_oblast":{
+      "name": "Тюменская область",
+      "color": "#87C0FD",
+      "count": "63",
+      "points": "70",
+      "listen": "71",
+      "vocabulary": "69",
+      "grammar": "66",
+      "read": "73"
+  },
+  "respublika_adygeya":{
+      "name": "Адыгея",
+      "color": "#8AC2FD",
+      "count": "63",
+      "points": "58",
+      "listen": "57",
+      "vocabulary": "57",
+      "grammar": "50",
+      "read": "66"
+  },
+  "smolenskaya_oblast":{
+      "name": "Смоленская область",
+      "color": "#87C0FD",
+      "count": "61",
+      "points": "62",
+      "listen": "65",
+      "vocabulary": "64",
+      "grammar": "58",
+      "read": "62"
+  },
+  "orlovskaya_oblast":{
+      "name": "Орловская область",
+      "color": "#87C0FD",
+      "count": "57",
+      "points": "70",
+      "listen": "70",
+      "vocabulary": "69",
+      "grammar": "67",
+      "read": "75"
+  },
+  "respublika_mari_el":{
+      "name": "Марий Эл",
+      "color": "#87C0FD",
+      "count": "56",
+      "points": "67",
+      "listen": "67",
+      "vocabulary": "67",
+      "grammar": "59",
+      "read": "74"
+  },
+  "khabarovsky_kray":{
+      "name": "Хабаровский край",
+      "color": "#87C0FD",
+      "count": "55",
+      "points": "69",
+      "listen": "74",
+      "vocabulary": "66",
+      "grammar": "62",
+      "read": "73"
+  },
+  "belgorodskaya_oblast":{
+      "name": "Белгородская область",
+      "color": "#6EB1FC",
+      "count": "54",
+      "points": "72",
+      "listen": "76",
+      "vocabulary": "68",
+      "grammar": "64",
+      "read": "78"
+  },
+  "kurskaya_oblast":{
+      "name": "Курская область",
+      "color": "#87C0FD",
+      "count": "53",
+      "points": "62",
+      "listen": "64",
+      "vocabulary": "63",
+      "grammar": "53",
+      "read": "69"
+  },
+  "sakhalinskaya_oblast":{
+      "name": "Сахалинская область",
+      "color": "#8AC2FD",
+      "count": "44",
+      "points": "60",
+      "listen": "68",
+      "vocabulary": "56",
+      "grammar": "50",
+      "read": "64"
+  },
+  "lipetskaya_oblast":{
+      "name": "Липецкая область",
+      "color": "#87C0FD",
+      "count": "44",
+      "points": "68",
+      "listen": "68",
+      "vocabulary": "67",
+      "grammar": "60",
+      "read": "75"
+  },
+  "kaliningradskaya_oblast":{
+      "name": "Калининградская область",
+      "color": "#87C0FD",
+      "count": "42",
+      "points": "62",
+      "listen": "66",
+      "vocabulary": "60",
+      "grammar": "53",
+      "read": "69"
+  },
+  "respublika_tyva":{
+      "name": "Тыва",
+      "color": "#A4D1FD",
+      "count": "38",
+      "points": "50",
+      "listen": "52",
+      "vocabulary": "50",
+      "grammar": "48",
+      "read": "49"
+  },
+  "vologodskaya_oblast":{
+      "name": "Вологодская область",
+      "color": "#87C0FD",
+      "count": "34",
+      "points": "63",
+      "listen": "67",
+      "vocabulary": "62",
+      "grammar": "54",
+      "read": "70"
+  },
+  "arkhangelskaya_oblast":{
+      "name": "Архангельская область",
+      "color": "#8AC2FD",
+      "count": "33",
+      "points": "59",
+      "listen": "65",
+      "vocabulary": "54",
+      "grammar": "48",
+      "read": "66"
+  },
+  "altaysky_kray":{
+      "name": "Алтайский край",
+      "color": "#87C0FD",
+      "count": "32",
+      "points": "67",
+      "listen": "67",
+      "vocabulary": "66",
+      "grammar": "59",
+      "read": "75"
+  },
+  "respublika_severnaya_osetiya_alaniya":{
+      "name": "Северная Осетия - Алания",
+      "color": "#87C0FD",
+      "count": "30",
+      "points": "68",
+      "listen": "71",
+      "vocabulary": "64",
+      "grammar": "65",
+      "read": "72"
+  },
+  "respublika_kalmykiya":{
+      "name": "Калмыкия",
+      "color": "#8AC2FD",
+      "count": "30",
+      "points": "58",
+      "listen": "58",
+      "vocabulary": "55",
+      "grammar": "56",
+      "read": "63"
+  }
+}
