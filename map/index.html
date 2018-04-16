@@ -480,24 +480,6 @@
             height: 100%;
 
             color: #3A3A3A;
-
-            background-image: linear-gradient(225deg, #73B2FF 0%, #8FF8FF 100%);
-        }
-
-        .greetings-screen__back {
-            display: block;
-            position: absolute;
-            z-index: 0;
-            left: 0;
-            top: 0;
-
-            width: 100%;
-            height: 100%;
-
-            background-image: url('images/welcome_page.jpg');
-            background-repeat: no-repeat;
-            background-position: center ;
-            background-size: cover;
         }
 
         .greetings-screen__inner {
@@ -509,6 +491,8 @@
 
             padding: 5% 7%;
             overflow: auto;
+
+            background-color: #fff;
         }
 
         .greetings-screen__text {
@@ -581,7 +565,7 @@
             top: 0;
             left: 0;
 
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
 
@@ -670,7 +654,6 @@
 </div>
 
 <div class="greetings-screen js-greetings-screen">
-    <div class="greetings-screen__back"></div>
     <div class="greetings-screen__inner">
         <div class="greetings-screen__logo">
             <svg width="186px" height="40px" viewBox="0 0 186 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -881,7 +864,7 @@
                         <p class="popup__text">Чтение</p>
                     </div>
                     <div class="popup__td">
-                        <p class="popup__text">68 - 78</p>
+                        <p class="popup__text js-read-prediction"></p>
                     </div>
                     <div class="popup__td">
                         <p class="popup__text">баллов</p>
@@ -893,7 +876,7 @@
                         <p class="popup__text">Грамматика</p>
                     </div>
                     <div class="popup__td">
-                        <p class="popup__text">54 - 64</p>
+                        <p class="popup__text js-grammar-prediction"></p>
                     </div>
                     <div class="popup__td">
                         <p class="popup__text">баллов</p>
@@ -905,7 +888,7 @@
                         <p class="popup__text">Лексика</p>
                     </div>
                     <div class="popup__td">
-                        <p class="popup__text">58 - 68</p>
+                        <p class="popup__text js-vocabulary-prediction"></p>
                     </div>
                     <div class="popup__td">
                         <p class="popup__text">баллов</p>
@@ -917,7 +900,7 @@
                         <p class="popup__text">Аудирование</p>
                     </div>
                     <div class="popup__td">
-                        <p class="popup__text">66 - 76</p>
+                        <p class="popup__text js-listen-prediction"></p>
                     </div>
                     <div class="popup__td">
                         <p class="popup__text">баллов</p>
@@ -1043,8 +1026,8 @@
         anychartMap.contextMenu().enabled(false);
 
         var pointsData = [
-            {id:"sankt-peterburg" , lat: 605, long: 128},
-            {id:"moskva",lat: 547, long: 76}
+            {id:"moskva", lat: 605, long: 128},
+            {id:"sankt-peterburg",lat: 547, long: 76}
         ];
 
         var points_data_series = anychartMap.marker(pointsData);
@@ -1093,9 +1076,14 @@
                 this.$popupRegionName = $('.js-popup-city');
                 this.$popupAveragePoint = $('.js-popup-average-value');
                 this.$popupReadPoint = $('.js-popup-read-point');
+                this.$popupReadPrediction = $('.js-read-prediction');
                 this.$popupGrammarPoint = $('.js-popup-grammar-point');
-                this.$popupVocabularyPoint = $('.js-popup-vocabulary-point ');
-                this.$popupListenPoint = $('.js-popup-listen-point ');
+                this.$popupGrammarPrediction = $('.js-grammar-prediction');
+                this.$popupVocabularyPoint = $('.js-popup-vocabulary-point');
+                this.$popupVocabularyPrediction = $('.js-vocabulary-prediction');
+                this.$popupListenPoint = $('.js-popup-listen-point');
+                this.$popupListenPrediction = $('.js-listen-prediction');
+
 
                 this.$greetingsScreen = $('.js-greetings-screen');
                 this.$goButton = $('.js-go');
@@ -1121,11 +1109,16 @@
 
             showPopup() {
                 this.$popupAveragePoint.text(this.mapRegionPoints);
-                this.$popupReadPoint.text(this.mapRegionRead);
                 this.$popupRegionName.text(this.mapRegionName);
+
+                this.$popupReadPoint.text(this.mapRegionRead);
+                this.$popupReadPrediction.text((this.mapRegionRead - 5) + ' – ' + (this.mapRegionRead + 5));
                 this.$popupGrammarPoint.text(this.mapRegionGrammar);
+                this.$popupGrammarPrediction.text((this.mapRegionGrammar - 5) + ' – ' + (this.mapRegionGrammar + 5));
                 this.$popupVocabularyPoint.text(this.mapRegionVocabulary);
+                this.$popupVocabularyPrediction.text((this.mapRegionVocabulary - 5) + ' – ' + (this.mapRegionVocabulary + 5));
                 this.$popupListenPoint.text(this.mapRegionListen);
+                this.$popupListenPrediction.text((this.mapRegionListen - 5) + ' – ' + (this.mapRegionListen + 5));
 
                 this.$popupHead.css({'background':this.mapRegionColor});
                 this.$popup.css({'display':'flex'}).hide().stop().fadeIn();
@@ -1149,12 +1142,12 @@
                 this.mapRegionId = this.json[id];
                 this.mapRegionColor = this.json[id].color;
                 this.mapRegionName = this.json[id].name;
-                this.mapRegionCount= this.json[id].count;
-                this.mapRegionPoints= this.json[id].points;
-                this.mapRegionListen= this.json[id].listen;
-                this.mapRegionVocabulary= this.json[id].vocabulary;
-                this.mapRegionGrammar= this.json[id].grammar;
-                this.mapRegionRead= this.json[id].read;
+                this.mapRegionCount= parseInt(this.json[id].count);
+                this.mapRegionPoints= parseInt(this.json[id].points);
+                this.mapRegionListen= parseInt(this.json[id].listen);
+                this.mapRegionVocabulary= parseInt(this.json[id].vocabulary);
+                this.mapRegionGrammar= parseInt(this.json[id].grammar);
+                this.mapRegionRead= parseInt(this.json[id].read);
             },
 
             bindEvents(){
@@ -1162,6 +1155,7 @@
                     e.stopPropagation();
 
                     this.$greetingsScreen.fadeOut();
+                    this.$guidePopup.css({'display':'flex'}).hide().fadeIn();
                 }.bind(this));
 
 
