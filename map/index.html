@@ -319,9 +319,10 @@
         }
 
         .legend__point {
+            display: none;
             position: absolute;
             top: calc(50% - 3px);
-            left: calc(0 - 3px);
+            left: calc(0% - 3px);
             z-index: 1;
 
             width: 6px;
@@ -1164,7 +1165,8 @@
             },
 
             hideLegendarea(){
-                this.$legendTitleArea.stop().fadeOut()
+                this.$legendTitleArea.stop().fadeOut();
+                this.$legendPoint.stop().fadeOut();
             },
 
             getNoun(number, one, two, five) {
@@ -1186,7 +1188,7 @@
             showLegendarea(){
                 this.$legendCity.text(this.mapRegionName);
                 this.$legendPoints.text(this.mapRegionPoints+' '+this.getNoun(this.mapRegionPoints, 'балл', 'балла', 'баллов'));
-                this.$legendPoint.css({'left':this.mapRegionPoints+'%'});
+                this.$legendPoint.stop().fadeIn().css({'left':'calc('+this.mapRegionPoints+'% - 4px'});
 
                 this.$legendTitleArea.stop().fadeIn();
             },
