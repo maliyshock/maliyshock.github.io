@@ -25,7 +25,7 @@
     <meta name="twitter:title" content="Content Title">
     <meta name="twitter:description" content="Описание контента короче 200 символов">
     <meta name="twitter:image" content="https://example.com/image.jpg">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="index.css">
 
     <!-- / favicon-->
 </head>
@@ -125,7 +125,7 @@
             <div class="wrapper">
                 <div class="section__inner  section__inner--m-height-medium section__row section__row--v-align-center">
                     <div class="section__column section__text-container">
-                        <h1 class="section__title section__title--align-left section__title--indent-big h1">Видеокурсы английскогок Чемпионату мирапо футболу</h1>
+                        <h1 class="section__title section__title--align-left section__title--indent-big h1">Видеокурсы английского к Чемпионату мира по футболу</h1>
 
                         <h5 class="h5">Пройдите видеокурс, чтобы без проблем подвозить болельщиков-иностранцев. А потом закрепите знания, продолжив обучение на специальных условиях.</h5>
                     </div>
@@ -393,9 +393,9 @@
             </p>
 
             <div class="popup__row popup__row--align-inline">
-                <input class="input" type="text" name="" id="" required placeholder="Имя">
+                <input class="input" type="text" name="" id="name" required placeholder="Имя">
 
-                <input class="input" type="tel" name="" id="" required placeholder="+7 ХХХ ХХХХХХХ">
+                <input class="input" type="tel" name="" id="phone" required placeholder="+7 ХХХ ХХХХХХХ">
 
                 <a href="#" class="button">
                     <span class="button__text">Перейти к тесту</span>
@@ -406,7 +406,68 @@
     </div>
 </div>
 
-<script src="main.js"></script>
+<script src="jquery.js"></script>
+
+<script>
+    'use strict';
+
+    var popup = {
+        init: function init() {
+            this.cacheDom();
+            this.bindEvents();
+        },
+
+        cacheDom: function cacheDom() {
+            this.$popupTriggers = $('.js-show-popup');
+            this.$body = $('body');
+            this.$close = $('.js-popup-close');
+            this.$popups = $('.js-popup');
+            this.$popupInners = $('.js-popup-inner');
+            this.$popupBody = $('.js-popup-body');
+        },
+
+        showPopup: function showPopup(target) {
+            target.fadeIn();
+            this.$body.addClass('ovh');
+        },
+
+        hidePopup: function hidePopup(target) {
+            target.fadeOut();
+            this.$body.removeClass('ovh');
+        },
+
+        bindEvents: function bindEvents() {
+            var _this = this;
+
+            this.$popupTriggers.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var $this = e.currentTarget;
+                var $target = $($($this).data('target'));
+
+                _this.showPopup($target);
+            });
+
+            this.$close.on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var $this = e.target;
+                var $targetPopup = $($this).closest('.js-popup');
+
+                _this.hidePopup($targetPopup);
+            });
+
+            this.$popupInners.on('click', function (e) {
+                if (e.currentTarget === e.target) {
+                    _this.hidePopup($(e.currentTarget).closest('.js-popup'));
+                }
+            });
+        }
+    };
+
+    popup.init();
+</script>
 
 </body>
 </html>
