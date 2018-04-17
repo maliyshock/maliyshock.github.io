@@ -262,7 +262,7 @@
             width: 96%;
             height: 11px;
 
-            background-image: linear-gradient(90deg, #DAF2FF 0%, #4D9DFF 100%);
+            background-image: linear-gradient(90deg, #DAF2FF 0%, #AAC4EE 33%, #79A0EE 66%, #457AEE 100%);
             border-radius: 16px 16px 16px 16px;
 
             box-shadow: 0 2px 4px rgba(0,0,0,.06);
@@ -1068,7 +1068,7 @@
                 this.mapRegionGrammar= "";
                 this.mapRegionRead= "";
 
-                $.getJSON( "olymp4.json", function( data ) {
+                $.getJSON( "olymp5.json", function( data ) {
                     this.json = data;
                 }.bind(this));
 
@@ -1145,9 +1145,25 @@
                 this.$legendTitleArea.stop().fadeOut()
             },
 
+            getNoun(number, one, two, five) {
+                number = Math.abs(number);
+                number %= 100;
+                if (number >= 5 && number <= 20) {
+                    return five;
+                }
+                number %= 10;
+                if (number == 1) {
+                    return one;
+                }
+                if (number >= 2 && number <= 4) {
+                    return two;
+                }
+                return five;
+            },
+
             showLegendarea(){
                 this.$legendCity .text(this.mapRegionName);
-                this.$legendPoints.text(this.mapRegionPoints+' баллов');
+                this.$legendPoints.text(this.mapRegionPoints+' '+this.getNoun(this.mapRegionPoints, 'балл', 'балла', 'баллов'));
                 this.$legendTitleArea.stop().fadeIn();
             },
 
