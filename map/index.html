@@ -259,6 +259,8 @@
         }
 
         .legend__bar {
+            position: relative;
+
             width: 96%;
             height: 11px;
 
@@ -314,6 +316,23 @@
 
         .legend__item:first-child:after, .legend__item:last-child:after {
             display: none;
+        }
+
+        .legend__point {
+            position: absolute;
+            top: calc(50% - 3px);
+            left: calc(0 - 3px);
+            z-index: 1;
+
+            width: 6px;
+            height: 6px;
+
+            background-color: #fff;
+            box-shadow: rgba(120,120,120,.3);
+
+            border-radius: 5px;
+
+            transition: left .5s;
         }
 
         .popup {
@@ -661,7 +680,9 @@
         <div class="legend__item">80</div>
         <div class="legend__item">100</div>
     </div>
-    <div class="legend__bar"></div>
+    <div class="legend__bar">
+        <div class="legend__point js-legend-point"></div>
+    </div>
 
     <div class="legend__title-area js-legend-title-area">
         <div class="legend__title js-legend-city">Москва</div>
@@ -1087,6 +1108,7 @@
 
                 this.$legendCity = $('.js-legend-city');
                 this.$legendPoints = $('.js-legend-points');
+                this.$legendPoint = $('.js-legend-point');
                 this.$legendTitleArea = $('.js-legend-title-area');
 
                 this.$popupHead = $('.js-popup-head');
@@ -1162,8 +1184,10 @@
             },
 
             showLegendarea(){
-                this.$legendCity .text(this.mapRegionName);
+                this.$legendCity.text(this.mapRegionName);
                 this.$legendPoints.text(this.mapRegionPoints+' '+this.getNoun(this.mapRegionPoints, 'балл', 'балла', 'баллов'));
+                this.$legendPoint.css({'left':this.mapRegionPoints+'%'});
+
                 this.$legendTitleArea.stop().fadeIn();
             },
 
