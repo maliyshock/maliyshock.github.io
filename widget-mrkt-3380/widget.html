@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="sideBanner__formText">
-                            <span>Оставьте заявку на бесплатный пробный урок</span>
+                            <span>Оставьте заявку на бесплатный вводный урок</span>
                         </div>
                         <div role="form" class="wpcf7" id="wpcf7-f7026-o2" lang="ru-RU" dir="ltr">
                             <div class="screen-reader-response"></div>
@@ -132,8 +132,8 @@
                     phone: $form.find('input[name=phone]').val(),
                     extraData: {
                         source_type: dataType,
-                        utm_source: utmMedium,
-                        utm_medium: utmSource,
+                        utm_source: utmSource,
+                        utm_medium: utmMedium,
                     }
                 }).then(function (result) {
                     /** обработка успешного результата */

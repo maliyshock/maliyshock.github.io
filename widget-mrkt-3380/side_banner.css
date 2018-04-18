@@ -71,6 +71,8 @@ textarea {
 	width: 100%;
 	height: 100%;
 
+	padding: 10px;
+
 	display: none;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -145,14 +147,14 @@ form .banner__form__item {
 	background-size: 100%;
 }
 .sideBanner__swapItem_1:before {
-	background-position: 0 0px;
-}
-.sideBanner__swapItem_2:before {
 	background-position: 0 -81px;
 }
-.sideBanner__swapItem_3:before {
+.sideBanner__swapItem_2:before {
 	background-size: 105%;
 	background-position: -2px -171px;
+}
+.sideBanner__swapItem_3:before {
+	background-position: 0px 0px;
 }
 .sideBanner__swapItem__text {
 	font-size: 22px;
@@ -251,3 +253,4 @@ input.parsley-error {
 .parsley-error:-ms-input-placeholder {
 	 color: black;
  }
+
