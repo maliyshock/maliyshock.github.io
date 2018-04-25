@@ -125,8 +125,6 @@
 
 
         .retractable-panel {
-            display: none;
-
             position: -webkit-sticky;
             position: sticky;
             bottom: 0;
@@ -136,7 +134,13 @@
 
             font-family: 'open-sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
 
-            transition: background-color .5s;
+            transform: translateY(100%);
+
+            transition: background-color .5s, transform .5s;
+        }
+
+        .retractable-panel.opened {
+            transform: translateY(0);
         }
 
         .retractable-panel__head {
@@ -452,7 +456,6 @@
     </div>
 
     <script src="jquery.js"></script>
-    <script src="jquery.cookie.js"></script>
 
     <script>
         $('document').ready(function(){
@@ -473,7 +476,7 @@
                     this.$retractablePanelBody2 = $('.js-retractable-panel-body-2');
                     this.$titleContainer1 = $('.js-title-container-1');
                     this.$titleContainer2 = $('.js-title-container-2');
-                    this.$jsrRetractablePanelClose = $('.js-retractable-panel-close');
+                    this.$retractablePanelClose = $('.js-retractable-panel-close');
                     this.$article = $('.js-article');
                 },
 
@@ -488,22 +491,27 @@
                         this.state = 1;
                     }.bind(this));
 
+                    if(this.isMobile()){
+                        this.$window.on('touchstart',function (e) {
+                            if(this.state === 1) {
+                                this.hideContent(this.$likeButton);
+                                this.hideContent(this.$retractablePanelBody1);
+                                this.showContent(this.$enrollButton);
 
-                    this.$window.click(function() {
-                        if(this.state === 1) {
-                            this.hideContent(this.$likeButton);
-                            this.hideContent(this.$retractablePanelBody1);
-                            this.showContent(this.$enrollButton);
+                                this.state = 0;
+                            }
+                        }.bind(this));
+                    } else {
+                        this.$window.on('click',function (e) {
+                            if(this.state === 1) {
+                                this.hideContent(this.$likeButton);
+                                this.hideContent(this.$retractablePanelBody1);
+                                this.showContent(this.$enrollButton);
 
-                            this.state = 0;
-                        }
-
-                        if ($.cookie("retractablePanel") === "true") {
-                            this.$retractablePanel.fadeOut()
-                        }
-
-                    }.bind(this));
-
+                                this.state = 0;
+                            }
+                        }.bind(this));
+                    }
 
                     this.$likeButton.on('click',function (e) {
                         e.stopPropagation();
@@ -515,7 +523,7 @@
                         this.showContent(this.$retractablePanelBody2);
 
                         this.$retractablePanel.removeClass('retractable-panel--bg-cyann').addClass('retractable-panel--bg-violet');
-                        this.hideForever();
+                        // this.hideForever();
 
                         this.state = 2;
 
@@ -525,12 +533,11 @@
                     }.bind(this));
 
 
-                    this.$jsrRetractablePanelClose.on('click',function (e) {
+                    this.$retractablePanelClose.on('click',function (e) {
                         e.preventDefault();
 
                         this.$retractablePanel.remove();
 
-                        this.hideForever();
                     }.bind(this));
 
                     this.$window.on('scroll',function (e) {
@@ -538,6 +545,14 @@
                     }.bind(this));
                 },
 
+
+                showPopup() {
+                    this.$retractablePanel.addClass('opened');
+                },
+
+                hidePopup(){
+                    this.$retractablePanel.removeClass('opened');
+                },
 
                 showContent(obj) {
                     obj.addClass('opened').removeClass('hidden').slideDown();
@@ -547,30 +562,20 @@
                     obj.removeClass('opened').addClass('hidden').slideUp();
                 },
 
-                hideForever() {
-                    $.cookie("retractablePanel", "true");
-                },
-
                 isMobile() {
                     return (window.orientation !== undefined || this.$window.width() < 600) ;
                 },
 
-                isShouldVisible() {
-                    return (! ($.cookie("retractablePanel") === "true") );
-                },
-
                 checkPosition() {
-                    if(! ($.cookie("retractablePanel") === "true")) {
-                        this.scrollTop = this.$document.scrollTop();
+                    this.scrollTop = this.$document.scrollTop();
 
-                        if(this.scrollTop > (this.articlePosition + this.articleHeight / 2)) {
-                            this.$retractablePanel.fadeIn();
-                        }
+                    if(this.scrollTop > (this.articlePosition + this.articleHeight / 2)) {
+                        this.showPopup();
                     }
                 },
 
                 init() {
-                    if( this.isMobile() && this.isShouldVisible()) {
+                    if( this.isMobile()) {
                         this.cacheDom();
                         this.bindEvents();
                         this.checkPosition();
