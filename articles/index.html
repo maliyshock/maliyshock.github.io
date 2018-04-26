@@ -500,7 +500,7 @@
                         }
                     }.bind(this));
 
-                    this.$likeButton.on('click',function (e) {
+                    this.$likeButton.on('click touchstart',function (e) {
                         e.stopPropagation();
 
                         this.hideContent(this.$retractablePanelBody1);
@@ -520,7 +520,7 @@
                     }.bind(this));
 
 
-                    this.$retractablePanelClose.on('click',function (e) {
+                    this.$retractablePanelClose.on('click touchstart',function (e) {
                         e.preventDefault();
 
                         this.hidePopup();
