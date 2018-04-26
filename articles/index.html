@@ -139,6 +139,10 @@
             transition: background-color .5s, transform .5s;
         }
 
+        .retractable-panel.hidden {
+            display: none;
+        }
+
         .retractable-panel.opened {
             transform: translateY(0);
         }
@@ -390,7 +394,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit atque voluptates incidunt suscipit, fugiat ad officiis porro. Ducimus accusantium id modi excepturi architecto reiciendis aliquam dolorem tempore itaque, animi voluptas. Nisi, modi, et enim, omnis esse eveniet quod dolorum quam adipisci fugiat sit tempore ipsam officia dolorem cumque culpa repellendus aperiam! Vel perferendis eius facere alias quibusdam autem modi animi non consectetur vitae, debitis consequuntur eum neque nulla reiciendis! Praesentium distinctio assumenda quas perferendis explicabo inventore suscipit, tenetur deserunt numquam iste sint autem nisi dolorem laboriosam eum ullam rerum molestias in hic officia adipisci iure culpa vero? Sit ut cumque consequatur a minima voluptatibus quasi facilis exercitationem tenetur dolores tempore, numquam eligendi, sunt similique optio voluptatem vel rem amet dicta! Dicta cupiditate, ad, provident distinctio animi voluptatem in quibusdam laudantium repudiandae sequi, saepe excepturi nemo inventore. Animi exercitationem sit illum.</p>
     </article>
 
-    <div class="retractable-panel retractable-panel--bg-cyan js-retractable-panel">
+    <div class="retractable-panel hidden retractable-panel--bg-cyan js-retractable-panel">
         <a class="retractable-panel__close js-retractable-panel-close">
             <svg class="svg-icon" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g >
@@ -439,8 +443,8 @@
                 </h5>
             </div>
 
-            <footer class="retractable-panel__footer  dnone js-like-button">
-                <button type="button" class="button button--radius-big button--indents-small">
+            <footer class="retractable-panel__footer dnone js-like-button-container">
+                <button type="button" class="button button--radius-big button--indents-small js-like-button">
                     <span class="button__icon">
                         <img class="button__img" src="img/thumb.png" srcset="img/thumb.png 1x, img/thumb@2x.png 2x" alt="thumb">
                     </span>
@@ -471,6 +475,7 @@
 
                 cacheDom() {
                     this.$enrollButton = $('.js-enroll-button');
+                    this.$likeButtonContainer = $('.js-like-button-container');
                     this.$likeButton = $('.js-like-button');
                     this.$retractablePanelBody1 = $('.js-retractable-panel-body-1');
                     this.$retractablePanelBody2 = $('.js-retractable-panel-body-2');
@@ -485,16 +490,16 @@
                         e.stopPropagation();
 
                         this.hideContent(this.$enrollButton);
-                        this.showContent(this.$likeButton);
+                        this.showContent(this.$likeButtonContainer);
                         this.showContent(this.$retractablePanelBody1);
 
                         this.state = 1;
                     }.bind(this));
 
                     if(this.isMobile()){
-                        this.$window.on('touchstart',function (e) {
+                        this.$window.on('click',function (e) {
                             if(this.state === 1) {
-                                this.hideContent(this.$likeButton);
+                                this.hideContent(this.$likeButtonContainer);
                                 this.hideContent(this.$retractablePanelBody1);
                                 this.showContent(this.$enrollButton);
 
@@ -504,7 +509,7 @@
                     } else {
                         this.$window.on('click',function (e) {
                             if(this.state === 1) {
-                                this.hideContent(this.$likeButton);
+                                this.hideContent(this.$likeButtonContainer);
                                 this.hideContent(this.$retractablePanelBody1);
                                 this.showContent(this.$enrollButton);
 
@@ -536,8 +541,10 @@
                     this.$retractablePanelClose.on('click',function (e) {
                         e.preventDefault();
 
-                        this.$retractablePanel.remove();
-
+                        this.hidePopup();
+                        setTimeout(function() {
+                            this.$retractablePanel.remove();
+                        }.bind(this), 500);
                     }.bind(this));
 
                     this.$window.on('scroll',function (e) {
@@ -547,11 +554,18 @@
 
 
                 showPopup() {
-                    this.$retractablePanel.addClass('opened');
+                    this.$retractablePanel.removeClass('hidden');
+                    setTimeout(function() {
+                        this.$retractablePanel.addClass('opened');
+                    }.bind(this), 1);
                 },
 
                 hidePopup(){
                     this.$retractablePanel.removeClass('opened');
+
+                    setTimeout(function() {
+                        this.$retractablePanel.addClass('hidden');
+                    }.bind(this), 500);
                 },
 
                 showContent(obj) {
