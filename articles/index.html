@@ -226,15 +226,7 @@
         }
 
         .button {
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
+            display: inline-block;
 
             min-width: 50px;
 
@@ -246,6 +238,8 @@
             background-color: transparent;
 
             cursor: pointer;
+
+            text-align: center;
         }
 
         .button--radius-big {
@@ -496,27 +490,15 @@
                         this.state = 1;
                     }.bind(this));
 
-                    if(this.isMobile()){
-                        this.$window.on('click',function (e) {
-                            if(this.state === 1) {
-                                this.hideContent(this.$likeButtonContainer);
-                                this.hideContent(this.$retractablePanelBody1);
-                                this.showContent(this.$enrollButton);
+                    this.$window.on('click touchstart',function (e) {
+                        if(this.state === 1) {
+                            this.hideContent(this.$likeButtonContainer);
+                            this.hideContent(this.$retractablePanelBody1);
+                            this.showContent(this.$enrollButton);
 
-                                this.state = 0;
-                            }
-                        }.bind(this));
-                    } else {
-                        this.$window.on('click',function (e) {
-                            if(this.state === 1) {
-                                this.hideContent(this.$likeButtonContainer);
-                                this.hideContent(this.$retractablePanelBody1);
-                                this.showContent(this.$enrollButton);
-
-                                this.state = 0;
-                            }
-                        }.bind(this));
-                    }
+                            this.state = 0;
+                        }
+                    }.bind(this));
 
                     this.$likeButton.on('click',function (e) {
                         e.stopPropagation();
