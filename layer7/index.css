@@ -205,10 +205,9 @@ p {
       border-top: 1px solid #eeeeee; }
       .block-list--mobile-separated .block-list__item:first-child {
         border: none; } }
-
-@media (min-width: 300px) and (min-width: 600px) {
-  .block-list--mobile-separated {
-    border: none; } }
+  @media (min-width: 300px) and (min-width: 600px) {
+    .block-list--mobile-separated .block-list__item {
+      border: none; } }
   .block-list__item {
     padding-top: 25px;
     padding-bottom: 25px;
