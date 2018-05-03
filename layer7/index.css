@@ -335,15 +335,13 @@ p {
   border: none;
   background-color: transparent;
   box-shadow: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   width: 100%;
   max-width: 270px;
   cursor: pointer;
   transition: background-color 0.5s;
-  padding: 16px 15px; }
+  padding: 16px 15px;
+  text-align: center; }
   .button:focus {
     outline: none;
     box-shadow: 0 0 10px #eeeeee; }
@@ -600,7 +598,16 @@ p {
     display: block;
     padding: 15px;
     font-weight: 600;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.15); }
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: #fff; }
+    .navigation__link:hover {
+      color: #fff;
+      fill: #fff; }
+    @media (min-width: 900px) {
+      .navigation__link:hover {
+        color: #45c5ff;
+        fill: #45c5ff; } }
     .navigation__link--tick {
       display: flex;
       align-items: flex-start;
@@ -621,18 +628,27 @@ p {
         background-repeat: no-repeat;
         background-size: cover; }
   .navigation__sub-list {
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
     width: 100%;
     display: none;
     overflow: hidden;
     border-radius: 2px; }
+    @media (min-width: 900px) {
+      .navigation__sub-list {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0; } }
   .navigation__sub-item {
     background-color: #23475F; }
     .navigation__sub-item:first-child {
+      display: none; }
+    @media (min-width: 900px) {
+      .navigation__sub-item:first-child {
+        display: block; } }
+    .navigation__sub-item:first-child {
       font-weight: 600; }
+    .navigation__sub-item:not(:first-child) .navigation__sub-link:hover {
+      color: #0099DE; }
   .navigation__sub-link {
     display: block;
     padding: 15px;
@@ -920,6 +936,7 @@ p {
 .section--img-rocket2 {
   background-image: url("images/rocket2.svg");
   background-repeat: no-repeat;
+  background-position: calc(100% - 1080px) calc(100% + 1px);
   background-position: calc(calc(100% - 920px)/2) calc(100% + 1px); }
   @media (min-width: 1260px) {
     .section--img-rocket2 .section__inner {
