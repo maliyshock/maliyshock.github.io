@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="44px" viewBox="0 0 38 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18,42.0881863 C18.0986668,42.0881863 36,27.9411255 36,18 C36,8.0588745 27.9411255,0 18,0 C8.0588745,0 0,8.0588745 0,18 C0,27.9411255 17.9013332,42.0881863 18,42.0881863 Z" id="path-1"></path>
+        <filter x="-2.8%" y="-2.4%" width="111.1%" height="109.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.193868886 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-5">
+            <g id="Group">
+                <g id="Oval-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M19,29 C12.372583,29 7,23.627417 7,17 C7,10.372583 12.372583,5 19,5 C25.627417,5 31,10.372583 31,17 C31,23.627417 25.627417,29 19,29 Z M13.4142136,16.9870877 L16.2941948,14.1071064 L15.5870881,13.3999996 L12,16.9870877 L15.5621099,20.5491976 L16.2692167,19.8420908 L13.4142136,16.9870877 Z M24.579982,16.9870877 L21.7249789,19.8420908 L22.4320857,20.5491976 L25.9941956,16.9870877 L22.4071075,13.3999996 L21.7000008,14.1071064 L24.579982,16.9870877 Z" id="Combined-Shape" fill="#808080"></path>
+            </g>
+        </g>
+    </g>
+</svg>
