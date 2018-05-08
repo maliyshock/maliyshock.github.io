@@ -120,8 +120,6 @@
         }
 
         body {
-            min-width: 768px;
-
             background-image: linear-gradient(225deg, #73B2FF 0%, #8FF8FF 100%);
 
             font-family: 'Open Sans', sans-serif;
@@ -227,7 +225,7 @@
             height: 40px;
 
             top: 35px;
-            left: 72px;
+            left: calc(50% - 95px);
         }
 
         .logo {
@@ -247,10 +245,10 @@
         .legend {
             position: absolute;
             z-index: 10;
-            right: 72px;
-            top: 35px;
+            right: 5%;
+            bottom: 35px;
 
-            width: 283px;
+            width: 90%;
         }
 
         .logo.show, .legend.show, .anychart-zoom.show {
@@ -508,23 +506,19 @@
 
             display: flex;
 
-            width: 50%;
             height: 100%;
 
             padding: 5% 7%;
             overflow: auto;
 
-            background-color: #fff;
+            background-color: rgba(255,255,255,.6);
         }
 
         .greetings-screen__inner {
             margin-top: auto;
             margin-bottom: auto;
-        }
 
-        .greetings-screen__text {
-            font-size: calc(0px + 2.0833333333vw);
-            line-height: 1.35em;
+            text-align: center;
         }
 
         .greetings-screen__title {
@@ -535,20 +529,14 @@
             margin-top: 7px;
         }
 
-        @media(min-width: 1200px) {
-            .greetings-screen__text {
-                font-size: 25px;
-            }
-
-            .greetings-screen__title {
-                font-size: 45px;
-                line-height: 61px;
-            }
+        .greetings-screen__text {
+            font-size: 18px;
+            line-height: 150%;
         }
 
         .greetings-screen__text-area {
-            padding-top: 15%;
-            padding-bottom: 13%;
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
 
         .button {
@@ -584,11 +572,11 @@
         }
 
         .button.button--big {
-            padding: 20px 70px;
+            padding: 15px 30px;
         }
 
         .button--big .button__text{
-            font-size: 25px;
+            font-size: 18px;
         }
 
         .guide-popup {
@@ -653,6 +641,66 @@
             cursor: pointer;
         }
 
+
+
+
+        @media(min-width: 900px) {
+            .greetings-screen__text {
+                font-size: calc(0px + 2.0833333333vw);
+                line-height: 1.35em;
+            }
+
+            .legend {
+                position: absolute;
+                z-index: 10;
+                right: 72px;
+                top: 35px;
+                bottom: auto;
+
+                width: 283px;
+            }
+
+            .logo {
+                position: absolute;
+                z-index: 10;
+                width: 189px;
+                height: 40px;
+
+                top: 35px;
+                left: 72px;
+            }
+        }
+        @media(min-width: 1200px) {
+            .greetings-screen__inner {
+                text-align: left;
+            }
+
+            .greetings-screen__inner-wrapper {
+                width: 50%;
+            }
+
+            .greetings-screen__text {
+                font-size: 25px;
+            }
+
+            .greetings-screen__title {
+                font-size: 45px;
+                line-height: 61px;
+            }
+
+            .greetings-screen__text-area {
+                padding-top: 15%;
+                padding-bottom: 13%;
+            }
+
+            .button.button--big {
+                padding: 20px 70px;
+            }
+
+            .button--big .button__text{
+                font-size: 25px;
+            }
+        }
     </style>
 </head>
 <body>
