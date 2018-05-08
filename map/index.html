@@ -677,6 +677,7 @@
 
             .greetings-screen__inner-wrapper {
                 width: 50%;
+                background-color: rgba(255,255,255, 1);
             }
 
             .greetings-screen__text {
@@ -1308,6 +1309,13 @@
                     $('.anychart-zoom ').addClass('show');
 
                     this.$guidePopup.fadeOut();
+
+                    this.$mapAreas.each( function(index, element) {
+                        var self =  $(element);
+                        var id =  $(self).attr("id")
+
+                        this.colorizeRegion(self, id);
+                    }.bind(this))
                 }.bind(this));
 
 
@@ -1372,13 +1380,6 @@
                             this.hideLegendarea();
                         }.bind(this)
                     );
-                } else {
-                    this.$mapAreas.each( function(index, element) {
-                        var self =  $(element);
-                        var id =  $(self).attr("id")
-
-                        this.colorizeRegion(self, id);
-                    }.bind(this))
                 }
 
 
