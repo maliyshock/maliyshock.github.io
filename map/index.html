@@ -351,6 +351,7 @@
 
         .popup__inner {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             align-content: flex-start;
 
@@ -375,6 +376,10 @@
 
         .popup__close-popup {
             margin-top: auto;
+
+            padding-bottom: 25px;
+
+            text-align: center;
         }
 
         .popup__head {
@@ -1038,8 +1043,8 @@
         </div>
 
         <div class="popup__close-popup">
-            <button class="button">
-                <span class="button__text">Назад к карте.</span>
+            <button class="button button--big js-close-popup">
+                <span class="button__text">Назад к карте</span>
             </button>
         </div>
     </div>
@@ -1206,6 +1211,7 @@
                 this.$legendPoint = $('.js-legend-point');
                 this.$legendTitleArea = $('.js-legend-title-area');
 
+                this.$popupClose = $('.js-close-popup');
                 this.$popupHead = $('.js-popup-head');
                 this.$popupRegionName = $('.js-popup-city');
                 this.$popupAveragePoint = $('.js-popup-average-value');
@@ -1344,6 +1350,11 @@
                     this.$guidePopup.css({'display':'flex'}).hide().fadeIn();
                 }.bind(this));
 
+                this.$popupClose.on('click',function (e) {
+                    e.stopPropagation();
+
+                    this.$popup.fadeOut();
+                }.bind(this));
 
                 this.$go2Button.on('click',function (e) {
                     e.stopPropagation();
