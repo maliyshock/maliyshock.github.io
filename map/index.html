@@ -680,6 +680,10 @@
                 left: 72px;
             }
 
+            .popup__inner {
+                height: auto;
+            }
+
             .popup__city {
                 max-width: 140px;
             }
@@ -1353,7 +1357,7 @@
                 this.$popupClose.on('click',function (e) {
                     e.stopPropagation();
 
-                    this.$popup.fadeOut();
+                    this.hidePopup();
                 }.bind(this));
 
                 this.$go2Button.on('click',function (e) {
