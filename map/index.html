@@ -1365,12 +1365,14 @@
 
                     this.$guidePopup.fadeOut();
 
-                    this.$mapAreas.each( function(index, element) {
-                        var self =  $(element);
-                        var id =  $(self).attr("id")
+                    if(this.isMobile()) {
+                        this.$mapAreas.each( function(index, element) {
+                            var self =  $(element);
+                            var id =  $(self).attr("id")
 
-                        this.colorizeRegion(self, id);
-                    }.bind(this))
+                            this.colorizeRegion(self, id);
+                        }.bind(this))
+                    }
                 }.bind(this));
 
 
