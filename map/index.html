@@ -1183,6 +1183,20 @@
                 this.$legend = $('.js-legend');
             },
 
+            isMobile() {
+                let windowWidth = $(window).width();
+
+                $(window).resize(function () {
+                    windowWidth = $(window).width();
+                })
+
+                if(window.orientation !== undefined || windowWidth < 900) {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+
             hideMapAreas(){
                 this.$aciveMapAreas.removeClass('active').css({"fill":"#fff"});
             },
@@ -1243,6 +1257,25 @@
 
             regionExist(id){
               return this.json[id] !== undefined;
+            },
+
+            colorizeRegion(obj, id){
+                if( this.regionExist(id) ) {
+                    this.getValuesFromJson(id);
+
+                    obj.css(
+                        {
+                            'fill':this.json[id].color,
+                            'opacity':'1',
+                            'stroke':'#fff'
+                        }
+                    );
+                    if(this.isMobile() ){
+                        this.showLegendarea();
+                    }
+                } else {
+                    obj.css({'cursor':'default'});
+                }
             },
 
             getValuesFromJson(id){
@@ -1322,33 +1355,31 @@
                     }
                 }.bind(this));
 
-                this.$mapAreas.hover(
-                    function (e) {
-                        var self =  e.currentTarget;
-                        var id =  $(self).attr("id");
 
-                        if( this.regionExist(id) ) {
-                            this.getValuesFromJson(id);
+                if (!this.isMobile()) {
+                    this.$mapAreas.hover(
+                        function (e) {
+                            var self =  $(e.currentTarget);
+                            var id =  $(self).attr("id");
 
-                            $(self).css(
-                                {
-                                    'fill':this.json[id].color,
-                                    'opacity':'1',
-                                    'stroke':'#fff'
-                                }
-                            );
-                            this.showLegendarea();
-                        } else {
-                            $(self).css({'cursor':'default'});
-                        }
-                    }.bind(this),
-                    function (e) {
-                        var self =  e.currentTarget;
+                            this.colorizeRegion(self, id);
+                        }.bind(this),
+                        function (e) {
+                            var self =  e.currentTarget;
 
-                        $(self).removeAttr('style');
-                        this.hideLegendarea();
-                    }.bind(this)
-                );
+                            $(self).removeAttr('style');
+                            this.hideLegendarea();
+                        }.bind(this)
+                    );
+                } else {
+                    this.$mapAreas.each( function(index, element) {
+                        var self =  $(element);
+                        var id =  $(self).attr("id")
+
+                        this.colorizeRegion(self, id);
+                    }.bind(this))
+                }
+
 
                 this.$window.click(function() {
                     this.hideMapAreas();
