@@ -156,7 +156,7 @@
         }
 
         .anychart-zoom .anychart-button {
-            display: inline-flex;
+            display: inline-block;
             justify-content: center;
             align-items: center;
 
@@ -177,6 +177,7 @@
 
             font-size: 25px;
             color: #76B9FF;
+            text-align: center;
         }
 
         .anychart-button .ac.ac-plus:before, .anychart-button .ac.ac-minus:before {
@@ -1394,7 +1395,7 @@
                     }
                 }.bind(this), true);
 
-                this.$mapAreas.on('click',function (e) {
+                this.$mapAreas.on('click touchstart',function (e) {
 
                     var self =  e.currentTarget;
                     var id =  $(self).attr("id");
