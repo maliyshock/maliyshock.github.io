@@ -1,97 +1,375 @@
-<head><link href="/Users/mac/works/projects/Layer7/dev/app.css" rel="stylesheet"></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Entry module not found: Error: Can't resolve '/Users/mac/works/projects/Layer7  /src/src-pug/models.pug' in '/Users/mac/works/projects/Layer7':
-  Error: Can't resolve '/Users/mac/works/projects/Layer7/src/src-pug/models.pug'   in '/Users/mac/works/projects/Layer7'
-  
-  - compiler.js:76 
-    [Layer7]/[html-webpack-plugin]/lib/compiler.js:76:16
-  
-  - Compiler.js:300 compile
-    [Layer7]/[webpack]/lib/Compiler.js:300:11
-  
-  - Compiler.js:510 applyPluginsAsync.err
-    [Layer7]/[webpack]/lib/Compiler.js:510:14
-  
-  - Tapable.js:202 next
-    [Layer7]/[tapable]/lib/Tapable.js:202:11
-  
-  - CachePlugin.js:78 Compiler.<anonymous>
-    [Layer7]/[webpack]/lib/CachePlugin.js:78:5
-  
-  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
-    [Layer7]/[tapable]/lib/Tapable.js:206:13
-  
-  - Compiler.js:507 compilation.seal.err
-    [Layer7]/[webpack]/lib/Compiler.js:507:11
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [Layer7]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:677 applyPluginsAsync.err
-    [Layer7]/[webpack]/lib/Compilation.js:677:19
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [Layer7]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:668 applyPluginsAsync.err
-    [Layer7]/[webpack]/lib/Compilation.js:668:11
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [Layer7]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:663 applyPluginsAsync.err
-    [Layer7]/[webpack]/lib/Compilation.js:663:10
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [Layer7]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:659 applyPluginsAsyncSeries
-    [Layer7]/[webpack]/lib/Compilation.js:659:9
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [Layer7]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:602 Compilation.seal
-    [Layer7]/[webpack]/lib/Compilation.js:602:8
-  
-  - Compiler.js:504 applyPluginsParallel.err
-    [Layer7]/[webpack]/lib/Compiler.js:504:17
-  
-  - Tapable.js:289 
-    [Layer7]/[tapable]/lib/Tapable.js:289:11
-  
-  - Compilation.js:505 _addModuleChain
-    [Layer7]/[webpack]/lib/Compilation.js:505:11
-  
-  - Compilation.js:388 errorAndCallback.bail
-    [Layer7]/[webpack]/lib/Compilation.js:388:4
-  
-  - Compilation.js:411 moduleFactory.create
-    [Layer7]/[webpack]/lib/Compilation.js:411:13
-  
-  - NormalModuleFactory.js:237 factory
-    [Layer7]/[webpack]/lib/NormalModuleFactory.js:237:20
-  
-  - NormalModuleFactory.js:60 resolver
-    [Layer7]/[webpack]/lib/NormalModuleFactory.js:60:20
-  
-  - NormalModuleFactory.js:127 asyncLib.parallel
-    [Layer7]/[webpack]/lib/NormalModuleFactory.js:127:20
-  
-  - async.js:3874 
-    [Layer7]/[async]/dist/async.js:3874:9
-  
-  - async.js:473 
-    [Layer7]/[async]/dist/async.js:473:16
-  
-  - async.js:1048 iteratorCallback
-    [Layer7]/[async]/dist/async.js:1048:13
-  
-  - async.js:958 
-    [Layer7]/[async]/dist/async.js:958:16
-  
-  - async.js:3871 
-    [Layer7]/[async]/dist/async.js:3871:13
-  
-</pre><script type="text/javascript" src="/Users/mac/works/projects/Layer7/dev/main.js"></script>
+<!DOCTYPE html>
+<html class="page" lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+<link href="./index.css" rel="stylesheet"></head>
+  <body>
+    <div class="page__inner">
+      <div class="pre-header section section--bg--dark-blue">
+        <div class="pre-header__inner section__inner">
+<ul class="list list--weight-bold list--size-small list--direction-horizontal">
+  <li class="list__item"><a class="list__link link" href="#">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
+</svg>
+
+      </div><span class="list__text">Call us: +32 (0)50 704 415</span></a></li>
+  <li class="list__item"><a class="list__link link" href="#">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg></div><span class="list__text">Live chat</span></a></li>
+  <li class="list__item"><a class="list__link link" href="#">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"/></svg></div><span class="list__text">Contact us</span></a></li>
+</ul>
+<ul class="list list--weight-bold list--size-small list--direction-horizontal">
+  <li class="list__item"><a class="list__link link" href="#">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"/></svg></div><span class="list__text">Login</span></a></li>
+  <li class="list__item"><a class="list__link link" href="#">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 0c77.32 0 140 62.68 140 140s-62.68 140-140 140S84 217.32 84 140 146.68 0 224 0zm151.283 289.821l-53.309-13.327c-65.557 47.154-145.021 36.631-195.948 0l-53.309 13.327C29.981 300.505 0 338.903 0 382.955V464c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48v-81.045c0-44.052-29.981-82.45-72.717-93.134z"/></svg></div><span class="list__text">Register</span></a></li>
+</ul>
+        </div>
+      </div>
+<header class="header section section--bg-light-blue">
+  <div class="header__inner section__inner"><a class="logo" href=""><img src="images/logo.svg" alt="layer 7"></a>
+    <button class="burger js-menu-trigger">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+      </svg>
+    </button>
+    <nav class="navigation js-navigation">
+      <div class="navigation__close js-menu-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512">
+          <path d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path>
+        </svg>
+      </div>
+      <ul class="list navigation__list navigation__list--hidden-frrom-landscape">
+        <li class="list__item navigation__item"><a class="list__link navigation__link" href="#">
+            <div class="icon navigation__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"/></svg></div><span class="list__text navigation__text">Login</span></a></li>
+        <li class="list__item navigation__item"><a class="list__link navigation__link" href="#">
+            <div class="icon navigation__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 0c77.32 0 140 62.68 140 140s-62.68 140-140 140S84 217.32 84 140 146.68 0 224 0zm151.283 289.821l-53.309-13.327c-65.557 47.154-145.021 36.631-195.948 0l-53.309 13.327C29.981 300.505 0 338.903 0 382.955V464c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48v-81.045c0-44.052-29.981-82.45-72.717-93.134z"/></svg></div><span class="list__text navigation__text">Register</span></a></li>
+      </ul>
+      <ul class="navigation__list">
+        <li class="navigation__item js-accordion"><span class="navigation__link navigation__link--tick js-accordion-head"><span>Cloud Servers</span></span>
+          <ul class="navigation__sub-list js-accordion-body">
+            <li class="navigation__sub-item"><span class="navigation__sub-link">Cloud Servers</span></li>
+            <li class="navigation__sub-item"><a class="navigation__sub-link" href="">Features</a></li>
+            <li class="navigation__sub-item"><a class="navigation__sub-link" href="">Pricing</a></li>
+            <li class="navigation__sub-item"><a class="navigation__sub-link" href="">Geek Included</a></li>
+          </ul>
+        </li>
+        <li class="navigation__item"><a class="navigation__link" href="#">Private Cloud</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="#">Colocation</a></li>
+        <li class="navigation__item"><a class="navigation__link" href="#">Other Services</a></li>
+      </ul>
+      <ul class="list navigation__list navigation__list--hidden-frrom-landscape">
+        <li class="list__item navigation__item"><a class="list__link navigation__link" href="#">
+            <div class="icon navigation__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
+</svg>
+
+            </div><span class="list__text navigation__text">Call us: +32 (0)50 704 415</span></a></li>
+        <li class="list__item navigation__item"><a class="list__link navigation__link" href="#">
+            <div class="icon navigation__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg></div><span class="list__text navigation__text">Live chat</span></a></li>
+        <li class="list__item navigation__item"><a class="list__link navigation__link" href="#">
+            <div class="icon navigation__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"/></svg></div><span class="list__text navigation__text">Contact us</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+      <section class="section section--bg-light-blue">
+        <div class="section__inner">
+          <div class="banner">
+            <div class="banner__text-container">
+              <h1 class="section__title section__title--align-left section__title--shadow h1">Providing Speed & Power</h1>
+              <h5 class="section__title section__title--align-left section__title--no-indents section__title--shadow h5">Integer leo tortor, dignissim nec, volutpat id, luctus non, nisi. Morbi iaculis mollis felis. Ut ullamcorper tortor.</h5>
+            </div>
+            <div class="banner__img-container"><img class="banner__img" src="images/speedometer.svg" alt="quote"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__inner page__wrapper">
+          <main class="container main main--shadow">
+            <div class="box">
+              <div class="js-slider-wrapper">
+                <div class="label"><span class="slider__text label">CPU NUMBERS</span><span class="slider__chosen-value label label--color-green">(<span class="js-value">4</span><span> CPU)</span></span></div>
+                <div class="slider">
+                  <div class="slider__inner">
+                    <div class="slider__bar js-slider js-slider-cpu"></div>
+                    <div class="slider__values js-slider-values"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="js-slider-wrapper">
+                <div class="label"><span class="slider__text label">ACCESS MEMORY (GB)</span><span class="slider__chosen-value label label--color-green">(<span class="js-value">80</span><span> GB)</span></span></div>
+                <div class="slider">
+                  <div class="slider__inner">
+                    <div class="slider__bar js-slider js-slider-memory"></div>
+                    <div class="slider__values js-slider-values"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="js-slider-wrapper">
+                <div class="label"><span class="slider__text label">HARD DRIVE SPACE</span><span class="slider__chosen-value label label--color-green">(<span class="js-value">400</span><span> CPU)</span></span></div>
+                <div class="slider">
+                  <div class="slider__inner">
+                    <div class="slider__bar js-slider js-slider-hard"></div>
+                    <div class="slider__values js-slider-values"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="js-slider-wrapper">
+                <div class="label"><span class="slider__text label">BACKUPS (AMOUNT OF DAYS)</span><span class="slider__chosen-value label label--color-green">(<span class="js-value">30</span><span> DAYS)</span></span></div>
+                <div class="slider">
+                  <div class="slider__inner">
+                    <div class="slider__bar js-slider js-slider-days"></div>
+                    <div class="slider__values js-slider-values"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="js-slider-wrapper">
+                <div class="label"><span class="slider__text label">IP ADDRESSES (AMOUNT IP ADDRESSES)</span><span class="slider__chosen-value label label--color-green">(<span class="js-value">3</span><span> IP)</span></span></div>
+                <div class="slider">
+                  <div class="slider__inner">
+                    <div class="slider__bar js-slider js-slider-ip"></div>
+                    <div class="slider__values js-slider-values"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="label">CONTROL PANEL</div>
+              <div class="list list--direction-horizontal list--has-separators">
+                <div class="list__item">
+                  <input class="radio" type="radio" name="control-panel" id="no_panel" checked>
+                  <label class="radio-label" for="no_panel">No Panel</label>
+                </div>
+                <div class="list__item">
+                  <input class="radio" type="radio" name="control-panel" id="direct_admin">
+                  <label class="radio-label" for="direct_admin">DirectAdmin</label>
+                </div>
+                <div class="list__item">
+                  <input class="radio" type="radio" name="control-panel" id="cpanel">
+                  <label class="radio-label" for="cpanel">CPanel</label>
+                </div>
+                <div class="list__item">
+                  <input class="radio" type="radio" name="control-panel" id="plesk">
+                  <label class="radio-label" for="plesk">Plesk</label>
+                </div>
+                <div class="list__item">
+                  <input class="radio" type="radio" name="control-panel" id="interworx">
+                  <label class="radio-label" for="interworx">Interworx</label>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="label">ADDITIONAL SERVICES</div>
+              <div class="list list--direction-horizontal">
+                <div class="list__item">
+                  <input class="checkbox" type="checkbox" name="additional_ervices" id="additional_ervices">
+                  <label class="checkbox-label js-geek" for="additional_ervices">Fully Managed Support (Geek Included package)</label>
+                </div>
+              </div>
+            </div>
+          </main>
+          <aside class="container sidebar">
+            <div class="sidebar__head">
+              <div class="tabs tabs--width-full">
+                <ul class="list list--direction-horizontal tabs__list" role="tablist">
+                  <li class="tabs__item"><a class="tabs__link active js-tab" href="#linux" aria-controls="find_something" role="tab" data-toggle="tab"><span class="tabs__icon"><img src="images/linux.png"></span><span class="tabs__text">Linux</span></a></li>
+                  <li class="tabs__item"><a class="tabs__link js-tab" href="#windows" aria-controls="learn_specific" role="tab" data-toggle="tab"><span class="tabs__icon"><img src="images/windows.png"></span><span class="tabs__text">Windows</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar__body">
+              <div class="tabs__content">
+                <div class="tabs__panel active fade show" id="linux" role="tabpanel">
+                  <div class="row sidebar__title-area">
+                    <div class="column">
+                      <div class="sidebar__title">Distribution</div>
+                    </div>
+                    <div class="column">
+                      <div class="input-wrapper js-input-wrapper">
+                        <input class="form__hidden-input js-hidden-input" type="hidden" name="distribution">
+                        <div class="form__input dropdown js-dropdown" id="distribution">
+                          <div class="dropdown__chosen js-dropdown-selected">CloudLinux1</div>
+                          <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                            <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">CloudLinux1</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">CloudLinux2</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">CloudLinux3</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">CloudLinux4</span></a>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="table">
+                    <thead class="table__thead"></thead>
+                    <tbody class="table__tbody">
+                      <tr class="table__tr">
+                        <td class="table__td">CPU Numbers</td>
+                        <td class="table__td">4 CPU</td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">Access Memory</td>
+                        <td class="table__td">80 GB</td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">Hard Drive Space</td>
+                        <td class="table__td">400 GB</td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">Backups days</td>
+                        <td class="table__td">30 DAYS</td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">IP Addresses</td>
+                        <td class="table__td">3 IP</td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">Control Panel</td>
+                        <td class="table__td">CPanel</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tabs__panel fade" id="windows" role="tabpanel"></div>
+              </div>
+              <div class="separator"></div>
+              <table class="table table--weight-fat">
+                <thead class="table__thead"></thead>
+                <tbody class="table__tbody">
+                  <tr class="table__tr">
+                    <td class="table__td">Hour</td>
+                    <td class="table__td js-calculator-hour">€ 0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--weight-fat">
+                <thead class="table__thead"></thead>
+                <tbody class="table__tbody">
+                  <tr class="table__tr">
+                    <td class="table__td">Day</td>
+                    <td class="table__td js-calculator-day">€ 0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table--weight-fat table--color-blue">
+                <thead class="table__thead"></thead>
+                <tbody class="table__tbody">
+                  <tr class="table__tr">
+                    <td class="table__td">Month</td>
+                    <td class="table__td js-calculator-month">€ 0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="sidebar__footer">
+              <button class="button button--color-green button--width-full"><span class="button__text">ORDER THIS SERVER</span></button>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <div class="section section--indents-small section--bg-light-gray section--img-rocket2">
+        <div class="section__inner">
+<form class="form form--direction-horizontal" action="">
+  <div class="form__item">
+    <div class="input-wrapper">
+      <div class="input-wrapper__icon input-wrapper__icon--position-left"></div>
+      <input class="input-wrapper__input" type="email" placeholder="Email Address" name="email">
+    </div>
+    <p class="form__notice"></p>
+  </div>
+  <div class="form__item input-wrapper">
+    <div class="input-wrapper">
+      <div class="input-wrapper__icon input-wrapper__icon--position-left"></div>
+      <input class="input-wrapper__input" type="password" placeholder="Password" name="password">
+    </div>
+    <p class="form__notice"></p>
+  </div>
+  <div class="form__item">
+    <button class="button button--color-blue"><span class="button__text">Create account</span></button>
+  </div>
+</form>
+        </div>
+      </div>
+<footer class="footer section section--indents section--bg--dark-blue">
+  <div class="section__inner">
+    <div class="footer__row">
+      <div class="footer__column">
+        <h6 class="footer__title">Cloud servers</h6>
+        <ul class="list list--text-opacity-weak">
+          <li class="list__item"><a class="link list__link" href="#">Features</a></li>
+          <li class="list__item"><a class="link list__link" href="#">Pricing</a></li>
+          <li class="list__item"><a class="link list__link" href="#">Geek Included</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h6 class="footer__title">Hosting</h6>
+        <ul class="list list--text-opacity-weak">
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text">Private Cloud</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text">Colocation</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text">Other Services</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h6 class="footer__title">Resources</h6>
+        <ul class="list list--text-opacity-weak">
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text"> Knowledgebase</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text"> Getting started</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text"> Service status</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__text"> Tutorials</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h6 class="footer__title">Connect</h6>
+        <ul class="list list--text-opacity-weak">
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__icon"></span><span class="list__text">Mail</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__icon"></span><span class="list__text">Twitter</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__icon"></span><span class="list__text">Facebook</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__icon"></span><span class="list__text">LinkedIn</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__icon"></span><span class="list__text">Google+</span></a></li>
+          <li class="list__item"><a class="link list__link" href="#"><span class="list__icon"></span><span class="list__text">Youtube</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__row footer__links-area">
+      <ul class="list list--weight-bold list--size-small list--direction-horizontal">
+        <li class="list__item"><a class="link list__link" href="#">About</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Blog</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Help</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Careers</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Press</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Developers</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Terms</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Privacy</a></li>
+        <li class="list__item"><a class="link list__link" href="#">Cookies</a></li>
+      </ul>
+      <div class="copyright">© 2007-2014 Layer7 BVBA - Alle rechten voorbehouden</div>
+    </div>
+  </div>
+</footer>
+    </div>
+  <script type="text/javascript" src="index.js"></script></body>
+</html>
+<!--script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')-->
