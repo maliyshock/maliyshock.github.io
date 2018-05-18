@@ -905,6 +905,13 @@
                 border-top: none;
             }
 
+            #container {
+                width: 100%;
+                height: calc(100% - 140px);
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
             #container:before, #container:after {
                 content:'';
                 display: block;
@@ -989,6 +996,12 @@
 
             .popup__inner {
                 overflow: auto;
+            }
+
+            body {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
             }
         }
     </style>
