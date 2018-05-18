@@ -668,9 +668,6 @@
             cursor: pointer;
         }
 
-
-
-
         @media(min-width: 900px) {
             .greetings-screen__text {
                 font-size: calc(0px + 2.0833333333vw);
@@ -756,20 +753,74 @@
         }
 
         @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
-            html {
-                transform: rotate(-90deg);
-                transform-origin: left top;
-                width: 100vh;
-                height: 100vw;
-                overflow-x: hidden;
-                position: absolute;
-                top: 100%;
-                left: 0;
+            .logo {
+                left: 5%;
+                right: auto;
+                top: 15px;
+
+                transition-delay: 0.5s;
             }
 
             .anychart-zoom {
-                right: auto;
-                left: 10px;
+                top: 15px;
+                position: fixed;
+                z-index: 2;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 90px;
+                padding: 5px 10px;
+
+                transition-delay: 0.5s;
+            }
+
+            .anychart-zoom .anychart-button {
+                padding: 0 3px;
+            }
+
+            .anychart-zoom .anychart-zoom-zoomIn + .anychart-zoom-zoomOut {
+                border-left: 1px solid rgba(151,151,151,.3);
+                border-top: none;
+            }
+
+            #container:before, #container:after {
+                content:'';
+                display: block;
+
+                position: absolute;
+
+                left: 0;
+                z-index: 1;
+
+                height: 70px;
+                width: 100%;
+                background-color: rgba(0,0,0,0.25);
+
+                transition: transform 0.5s;
+            }
+
+            .legend {
+                bottom: 15px;
+
+                transition-delay: 0.5s;
+            }
+
+            #container:before {
+                top: 0;
+
+                transform: translateY(-100%);
+            }
+
+            #container:after {
+                bottom: 0;
+
+                transform: translateY(100%);
+            }
+
+            #container.show:before, #container.show:after {
+                transform: translate(0);
             }
         }
     </style>
@@ -1388,13 +1439,14 @@
                     this.$logo.addClass('show');
                     this.$legend.addClass('show');
                     $('.anychart-zoom ').addClass('show');
+                    $('#container').addClass('show');
 
                     this.$guidePopup.fadeOut();
 
                     if(this.isMobile()) {
                         this.$mapAreas.each( function(index, element) {
                             var self =  $(element);
-                            var id =  $(self).attr("id")
+                            var id =  $(self).attr("id");
 
                             this.colorizeRegion(self, id);
                         }.bind(this))
