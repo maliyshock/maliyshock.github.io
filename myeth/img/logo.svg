@@ -1,0 +1,61 @@
+<svg width="231" height="105" viewBox="0 0 231 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-24829 1030)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 24829 -1030L 25060 -1030L 25060 -925L 24829 -925L 24829 -1030Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Frame 3" clip-path="url(#clip-0)">
+<path d="M 24829 -1030L 25060 -1030L 25060 -925L 24829 -925L 24829 -1030Z" fill="#FFFFFF"/>
+<g id="Group 5">
+<g id="Group 4.1">
+<g id="Subtract">
+<use xlink:href="#path0_fill" transform="matrix(1 0 0 -1 24829 -932.142)"/>
+</g>
+<g id="E">
+<use xlink:href="#path1_fill" transform="translate(24911.2 -1009.6)"/>
+</g>
+<g id="Rectangle 2.4">
+<use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24854 -924.982)"/>
+</g>
+<g id="Rectangle 2.5">
+<use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24883.9 -924.982)"/>
+</g>
+<g id="Rectangle 2.6">
+<use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24854 -1012.82)"/>
+</g>
+<g id="Rectangle 2.7">
+<use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24883.9 -1012.82)"/>
+</g>
+</g>
+<g id="Mask Group">
+<mask id="mask0_alpha" mask-type="alpha">
+<g id="Rectangle">
+<use xlink:href="#path3_fill" transform="matrix(1 0 0 -1 24838.5 -941.689)" fill="#FFFFFF"/>
+</g>
+</mask>
+<g id="MY" mask="url(#mask0_alpha)">
+<use xlink:href="#path4_fill" transform="translate(24845.7 -991.812)" fill="#EA064A"/>
+<use xlink:href="#path5_fill" transform="translate(24845.7 -991.812)" fill="#EA064A"/>
+</g>
+</g>
+<g id="ETH">
+<use xlink:href="#path6_fill" transform="translate(24911.2 -1009.6)"/>
+<use xlink:href="#path7_fill" transform="translate(24911.2 -1009.6)"/>
+<use xlink:href="#path8_fill" transform="translate(24911.2 -1009.6)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 83.2771 7.16199C 73.6501 -2.38342 16.8513 -2.39124 7.22241 7.16199C -2.40845 16.7151 -2.40649 73.0364 7.22241 82.584C 16.8494 92.1317 73.1697 92.6062 83.2771 82.584C 93.3826 72.5619 92.9021 16.7073 83.2771 7.16199ZM 75.0447 15.651C 67.4822 8.15173 22.8591 8.14563 15.2927 15.651C 7.72632 23.1565 7.72827 67.4053 15.2927 74.9064C 22.8572 82.4075 67.1052 82.7803 75.0447 74.9064C 82.9861 67.0325 82.6072 23.1504 75.0447 15.651Z"/>
+<path id="path1_fill" d="M 41.3204 47.6018L 41.3204 60.7482L 15.5488 60.7482L 0 60.7482L 0 0L 15.5488 0L 40.5473 0L 40.5473 13.1464L 15.5488 13.1464L 15.5488 23.8009L 36.5956 23.8009L 36.5956 36.9473L 15.5488 36.9473L 15.5488 47.6018L 41.3204 47.6018Z"/>
+<path id="path2_fill" d="M 0 0L 10.5899 0L 10.5899 17.1848L 0 17.1848L 0 0Z"/>
+<path id="path3_fill" d="M 5.67401 5.62677C 13.24 -1.87865 57.8642 -1.87253 65.4267 5.62677C 72.9891 13.1261 73.3667 57.0082 65.4267 64.8821C 57.4867 72.7559 13.2387 72.3832 5.67401 64.8821C -1.89065 57.3809 -1.89203 13.1322 5.67401 5.62677Z"/>
+<path id="path4_fill" d="M 22.9386 0L 30.5146 0L 30.5146 28.6413L 22.9386 28.6413L 22.9386 28.4793L 22.9386 26.7373L 22.9386 12.4774L 19.2347 18.9592L 19.0664 19.2833L 11.4903 19.2833L 11.2799 18.9592L 10.7748 18.0274L 7.61813 12.4774L 7.61813 26.7373L 7.61813 28.4793L 7.61813 28.6413L 6.60799 28.6413L 0 28.6413L 0 0L 7.61813 0L 15.2784 12.1938L 22.9386 0Z"/>
+<path id="path5_fill" d="M 49.6941 0L 57.2701 0L 48.5156 16.9741L 48.5156 28.6413L 40.9396 28.6413L 40.9396 16.9741L 32.185 0L 39.7611 0L 44.7276 9.76316L 49.6941 0Z"/>
+<path id="path6_fill" d="M 41.3204 47.6018L 41.3204 60.7482L 15.5488 60.7482L 0 60.7482L 0 0L 15.5488 0L 40.5473 0L 40.5473 13.1464L 15.5488 13.1464L 15.5488 23.8009L 36.5956 23.8009L 36.5956 36.9473L 15.5488 36.9473L 15.5488 47.6018L 41.3204 47.6018Z"/>
+<path id="path7_fill" d="M 93.9414 0L 93.9414 15.4663L 78.3925 15.4663L 78.3925 60.7482L 62.8437 60.7482L 62.8437 15.4663L 47.2948 15.4663L 47.2948 0L 62.8437 0L 78.3925 0L 93.9414 0Z"/>
+<path id="path8_fill" d="M 132.731 0L 148.194 0L 148.194 60.7482L 132.731 60.7482L 132.731 38.0643L 115.378 38.0643L 115.378 60.7482L 99.9151 60.7482L 99.9151 0L 115.378 0L 115.378 22.598L 132.731 22.598L 132.731 0Z"/>
+</defs>
+</svg>

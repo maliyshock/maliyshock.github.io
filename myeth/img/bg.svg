@@ -1,0 +1,36 @@
+<svg width="1440" height="1755" viewBox="0 0 1440 1755" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>bg</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-27227 534)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 27227 -534L 28667 -534L 28667 1290L 27227 1290L 27227 -534Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Desktop HD" clip-path="url(#clip-0)">
+<path d="M 27227 -534L 28667 -534L 28667 1290L 27227 1290L 27227 -534Z" fill="#FFFFFF"/>
+<g id="bg">
+<g id="Rectangle 3.1">
+<use xlink:href="#path0_fill" transform="translate(26755 -533)" fill="url(#paint0_linear)" fill-opacity="0.8"/>
+</g>
+<g id="Subtract">
+<use xlink:href="#path1_fill" transform="translate(27227 -534)" fill="url(#paint1_linear)"/>
+</g>
+</g>
+<g id="Line">
+<use xlink:href="#path2_stroke" transform="matrix(1 -2.44929e-16 2.44929e-16 1 27365 349)" fill="#F4F5F7"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.09598e-13 -1219.14 987.174 19.2629 295.913 1207.13)">
+<stop offset="0" stop-color="#F3F5F7"/>
+<stop offset="1" stop-color="#F3F5F7" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.0937e-13 -1030.04 985.122 16.275 295.298 1019.89)">
+<stop offset="0" stop-color="#F3F5F7"/>
+<stop offset="1" stop-color="#F3F5F7" stop-opacity="0"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 0L 726 1212L 1443 0L 0 0Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 1440 0L 0 0L 0 1L 1440 1L 723 1213L 0 6.00824L 0 1755L 1440 1755L 1440 1L 1440 0Z"/>
+<path id="path2_stroke" d="M 0 0L 1165 0L 1165 -1L 0 -1L 0 0Z"/>
+</defs>
+</svg>

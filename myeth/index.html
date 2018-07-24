@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Главная</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if (isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--' + key;
+            if (typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      } else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="manifest" href="/img/site.webmanifest">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/img/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a class="logo" href="/">
+            <svg class="svg-icon" viewbox="0 0 231 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Canvas" transform="translate(-24829 1030)">
+                <clippath id="clip-0" clip-rule="evenodd">
+                  <path d="M 24829 -1030L 25060 -1030L 25060 -925L 24829 -925L 24829 -1030Z" fill="#FFFFFF" />
+                </clippath>
+                <g id="Frame 3" clip-path="url(#clip-0)">
+                  <path d="M 24829 -1030L 25060 -1030L 25060 -925L 24829 -925L 24829 -1030Z" fill="#FFFFFF" />
+                  <g id="Group 5">
+                    <g id="Group 4.1">
+                      <g id="Subtract">
+                        <use xlink:href="#path0_fill" transform="matrix(1 0 0 -1 24829 -932.142)" />
+                      </g>
+                      <g id="E">
+                        <use xlink:href="#path1_fill" transform="translate(24911.2 -1009.6)" />
+                      </g>
+                      <g id="Rectangle 2.4">
+                        <use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24854 -924.982)" />
+                      </g>
+                      <g id="Rectangle 2.5">
+                        <use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24883.9 -924.982)" />
+                      </g>
+                      <g id="Rectangle 2.6">
+                        <use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24854 -1012.82)" />
+                      </g>
+                      <g id="Rectangle 2.7">
+                        <use xlink:href="#path2_fill" transform="matrix(1 0 0 -1 24883.9 -1012.82)" />
+                      </g>
+                    </g>
+                    <g id="Mask Group">
+                      <mask id="mask0_alpha" mask-type="alpha">
+                        <g id="Rectangle">
+                          <use xlink:href="#path3_fill" transform="matrix(1 0 0 -1 24838.5 -941.689)" fill="#FFFFFF" />
+                        </g>
+                      </mask>
+                      <g id="MY">
+                        <use class="logo__m" xlink:href="#path4_fill" />
+                        <use class="logo__y" xlink:href="#path5_fill" />
+                      </g>
+                    </g>
+                    <g id="TH">
+                      <use class="logo__t" xlink:href="#path7_fill" />
+                      <use class="logo__h" xlink:href="#path8_fill" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <defs>
+                <path id="path0_fill" fill-rule="evenodd" d="M 83.2771 7.16199C 73.6501 -2.38342 16.8513 -2.39124 7.22241 7.16199C -2.40845 16.7151 -2.40649 73.0364 7.22241 82.584C 16.8494 92.1317 73.1697 92.6062 83.2771 82.584C 93.3826 72.5619 92.9021 16.7073 83.2771 7.16199ZM 75.0447 15.651C 67.4822 8.15173 22.8591 8.14563 15.2927 15.651C 7.72632 23.1565 7.72827 67.4053 15.2927 74.9064C 22.8572 82.4075 67.1052 82.7803 75.0447 74.9064C 82.9861 67.0325 82.6072 23.1504 75.0447 15.651Z" />
+                <path id="path1_fill" d="M 41.3204 47.6018L 41.3204 60.7482L 15.5488 60.7482L 0 60.7482L 0 0L 15.5488 0L 40.5473 0L 40.5473 13.1464L 15.5488 13.1464L 15.5488 23.8009L 36.5956 23.8009L 36.5956 36.9473L 15.5488 36.9473L 15.5488 47.6018L 41.3204 47.6018Z" />
+                <path id="path2_fill" d="M 0 0L 10.5899 0L 10.5899 17.1848L 0 17.1848L 0 0Z" />
+                <path id="path3_fill" d="M 5.67401 5.62677C 13.24 -1.87865 57.8642 -1.87253 65.4267 5.62677C 72.9891 13.1261 73.3667 57.0082 65.4267 64.8821C 57.4867 72.7559 13.2387 72.3832 5.67401 64.8821C -1.89065 57.3809 -1.89203 13.1322 5.67401 5.62677Z" />
+                <path id="path4_fill" d="M 22.9386 0L 30.5146 0L 30.5146 28.6413L 22.9386 28.6413L 22.9386 28.4793L 22.9386 26.7373L 22.9386 12.4774L 19.2347 18.9592L 19.0664 19.2833L 11.4903 19.2833L 11.2799 18.9592L 10.7748 18.0274L 7.61813 12.4774L 7.61813 26.7373L 7.61813 28.4793L 7.61813 28.6413L 6.60799 28.6413L 0 28.6413L 0 0L 7.61813 0L 15.2784 12.1938L 22.9386 0Z" />
+                <path id="path5_fill" d="M 49.6941 0L 57.2701 0L 48.5156 16.9741L 48.5156 28.6413L 40.9396 28.6413L 40.9396 16.9741L 32.185 0L 39.7611 0L 44.7276 9.76316L 49.6941 0Z" />
+                <path id="path6_fill" d="M 41.3204 47.6018L 41.3204 60.7482L 15.5488 60.7482L 0 60.7482L 0 0L 15.5488 0L 40.5473 0L 40.5473 13.1464L 15.5488 13.1464L 15.5488 23.8009L 36.5956 23.8009L 36.5956 36.9473L 15.5488 36.9473L 15.5488 47.6018L 41.3204 47.6018Z" />
+                <path id="path7_fill" d="M 93.9414 0L 93.9414 15.4663L 78.3925 15.4663L 78.3925 60.7482L 62.8437 60.7482L 62.8437 15.4663L 47.2948 15.4663L 47.2948 0L 62.8437 0L 78.3925 0L 93.9414 0Z" />
+                <path id="path8_fill" d="M 132.731 0L 148.194 0L 148.194 60.7482L 132.731 60.7482L 132.731 38.0643L 115.378 38.0643L 115.378 60.7482L 99.9151 60.7482L 99.9151 0L 115.378 0L 115.378 22.598L 132.731 22.598L 132.731 0Z" />
+              </defs>
+            </svg>
+          </a>
+          <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Show main menu" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Show main menu</span></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item  main-nav__item--active"><button class="btn  btn--candy btn--hollow"><span class="btn__text">Sign up</span></button></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="">Log in</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="page__section section">
+        <div class="section__inner wrapper">
+          <div class="page__title-area">
+            <h1 class="h1 title title--margin-none title--center">Track your Ethereum and tokens balances</h1>
+            <h2 class="h2 title title--center">Check how it works – enter ETH adress</h2>
+          </div>
+          <div class="page__field-container"><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="000000000xxxt2Dcxh7CwByPc8WU"><span class="field-text__name">ETH adress</span></span></label>
+            <div class="page__balances">
+              <div class="balance">
+                <ul class="balance__list">
+                  <li class="balance__item"><span class="balance__icon"><svg width="11" height="18" viewbox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 6.74999L0 8.99999L5.5 12.2143L11 8.99999L5.5 6.74999Z" fill="#EA064A"/>
+<path d="M5.5 0L0 8.99999L5.5 6.74999V0Z" fill="#EA064A"/>
+<path d="M5.5 6.74999L11 8.99999L5.5 0V6.74999Z" fill="#EA064A"/>
+<path d="M5.5 13.5L11 10.2857L5.5 18V13.5Z" fill="#EA064A"/>
+<path d="M5.5 18L0 9.96429L5.5 13.5V18Z" fill="#EA064A"/>
+</svg>
+</span><span class="balance__currency">ETH</span><span class="balance__value"> balance: 12</span></li>
+                  <li class="balance__item"><span class="balance__icon"><svg width="8" height="17" viewbox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.14726 7.72239C5.54139 7.35373 4.89726 7.07284 4.2595 6.78142C3.8896 6.61289 3.53565 6.41627 3.22315 6.14241C2.60772 5.60171 2.7257 4.72394 3.44637 4.37634C3.65045 4.27804 3.86409 4.24644 4.08093 4.23239C4.91639 4.18324 5.7104 4.35177 6.46614 4.75203C6.84241 4.95216 6.96677 4.88896 7.09432 4.4571C7.22825 4.00066 7.33986 3.5372 7.46422 3.07725C7.54713 2.76828 7.44509 2.56464 7.18042 2.43473C6.69573 2.19949 6.19828 2.03096 5.67532 1.93967C4.99292 1.8238 4.99292 1.82029 4.98973 1.06541C4.98654 0.00156049 4.98654 0.00156047 4.01716 0.00156047C3.87685 0.00156047 3.73654 -0.00195059 3.59624 0.00156047C3.14343 0.0156047 3.0669 0.103381 3.05415 0.605463C3.04777 0.830171 3.05415 1.05488 3.05096 1.2831C3.04777 1.9502 3.04458 1.93967 2.46422 2.1714C1.06116 2.73317 0.193814 3.78649 0.10134 5.4718C0.0184316 6.964 0.72634 7.97167 1.83922 8.70549C2.52481 9.15841 3.28374 9.42525 4.01078 9.77987C4.29458 9.9168 4.56563 10.0748 4.80159 10.2925C5.49994 10.928 5.37239 11.9848 4.5433 12.3851C4.10006 12.5993 3.63131 12.6519 3.14981 12.5852C2.40682 12.4834 1.69573 12.2692 1.02608 11.8865C0.633865 11.6618 0.519069 11.7215 0.385141 12.1885C0.270345 12.5922 0.168304 12.9995 0.0662633 13.4068C-0.070854 13.9545 -0.0198339 14.0844 0.455294 14.3407C1.06116 14.6638 1.70848 14.8288 2.36856 14.9446C2.88514 15.0359 2.90108 15.0605 2.90746 15.6504C2.91065 15.9172 2.91065 16.1876 2.91384 16.4544C2.91703 16.7915 3.06371 16.9881 3.3794 16.9951C3.73654 17.0021 4.09687 17.0021 4.45402 16.9916C4.74739 16.9846 4.89726 16.809 4.89726 16.4825C4.89726 16.1173 4.9132 15.7487 4.90045 15.3835C4.8845 15.0114 5.03119 14.8218 5.35644 14.7234C6.1058 14.4987 6.74356 14.0563 7.23463 13.3963C8.59943 11.5705 8.07966 8.89859 6.14726 7.72239Z" fill="#EA064A"/>
+</svg>
+</span><span class="balance__currency">USD:</span><span class="balance__value">12</span></li>
+                  <li class="balance__item"><span class="balance__icon"><svg width="10" height="17" viewbox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.67201 9.71895C9.45428 9.25837 9.15949 8.89771 8.78764 8.64183C8.53118 8.45906 8.15854 8.28994 7.67367 8.13836C8.12653 7.94828 8.48969 7.70849 8.76709 7.418C9.04212 7.12752 9.25354 6.79318 9.40093 6.41302C9.54714 6.03432 9.62104 5.6332 9.62104 5.21161C9.62104 4.63114 9.48234 4.09794 9.20572 3.61153C8.92792 3.12511 8.53197 2.75275 8.01668 2.49298C7.71793 2.34237 7.34727 2.24051 6.91891 2.17715V0H5.46708V2.10355H4.53371V0H3.08188V2.10355H7.08491e-08V3.87374H0.408204C0.680076 3.87374 0.865012 3.90444 0.962222 3.96537C1.05825 4.02629 1.12661 4.10915 1.16613 4.21296C1.20683 4.31677 1.2254 4.55803 1.2254 4.93721V12.0716C1.2254 12.4439 1.20564 12.6847 1.16613 12.7914C1.12661 12.8991 1.05904 12.981 0.962222 13.039C0.865012 13.097 0.680076 13.1267 0.408204 13.1267H7.08491e-08V14.8974H3.08188V17H4.53292V14.8974H5.43468C5.44495 14.8974 5.45562 14.8964 5.46629 14.8964V17H6.91812V14.7921C7.38718 14.7171 7.78076 14.6021 8.09531 14.4466C8.7011 14.1468 9.17095 13.7111 9.50209 13.1389C9.83403 12.5677 10 11.9424 10 11.263C9.99921 10.6957 9.88975 10.181 9.67201 9.71895ZM3.79159 4.16714H4.92848C5.59314 4.16714 6.0539 4.21783 6.31155 4.31872C6.56919 4.41961 6.76598 4.59019 6.90271 4.82755C7.03865 5.06637 7.10741 5.35344 7.10741 5.69071C7.10741 6.01433 7.03549 6.29994 6.89125 6.54753C6.74781 6.79561 6.53323 6.98082 6.24832 7.10267C5.96341 7.225 5.52359 7.28641 4.92848 7.28641H3.79159V4.16714V4.16714ZM7.00387 12.0716C6.80076 12.3888 6.55457 12.5989 6.26531 12.6998C5.97645 12.8007 5.61171 12.8519 5.1715 12.8519H4.41476C4.16186 12.8519 4.00814 12.8348 3.95084 12.8012C3.89394 12.7671 3.85363 12.7081 3.82834 12.6223C3.80779 12.5546 3.79594 12.3269 3.7908 11.9341V9.16479H5.13277C5.72196 9.16479 6.15941 9.23254 6.44669 9.36657C6.73319 9.5006 6.94855 9.69994 7.09199 9.96264C7.23544 10.2263 7.30736 10.547 7.30736 10.9267C7.30815 11.3717 7.2062 11.7533 7.00387 12.0716Z" fill="#EA064A"/>
+</svg>
+</span><span class="balance__currency">BTC:</span><span class="balance__value">0.89</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <table class="page__table table" cellspacing="0" cellpadding="0">
+            <thead class="table__head">
+              <tr class="table__tr">
+                <th class="table__th">
+                  <div class="table__label"><span>Tokens</span>
+                    <div class="table__icon">
+                      <svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.03125 0H4.03125V6.79269L1.17578 4.04388L0 5.17722L4.03125 9.02821L5 9.99999L6.00781 9.02821H6.03125V9.00529L10 5.17722L8.82422 4.04388L6.03125 6.73253V0Z" fill="black" />
+                      </svg>
+                    </div>
+                  </div>
+                </th>
+                <th class="table__th">
+                  <div class="table__label"><span> Balance</span></div>
+                </th>
+                <th class="table__th">
+                  <div class="table__label"><span> Value</span></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td"><span>ROP</span></td>
+                <td class="table__td"><span>10.000</span></td>
+                <td class="table__td">
+                  <div class="table__value">
+                    <div class="balance">
+                      <ul class="balance__list">
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">ETH</span></li>
+                        <li class="balance__item"><span class="balance__value">12</span><span class="balance__currency">USD</span></li>
+                        <li class="balance__item"><span class="balance__value">0.89</span><span class="balance__currency">BTC</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="page__section section--cutted-edges section--bg-velvet">
+        <div class="wrapper section__inner">
+          <div class="page__field-container">
+            <h2 class="h2 title title--center">Register – it is free</h2>
+            <h3 class="h3 title title--center">And get instant notfications about any money movements by your Telegram, Email, SMS</h3><label class="field-text  field-text--color-white field-text--bg-hollow field-text--animated"><span class="field-text__input-wrap"><input class="field-text__input" type="text"><span class="field-text__name">Email</span></span></label>
+            <div class="button-container"><button class="btn  btn--color-white btn--size-medium"><span class="btn__text">Register</span></button></div>
+            <h2 class="h2 title title--center">Telegram bot</h2>
+            <h3 class="h3 title title--center"><a class="link link--white" href="http://telegram.me/MyETH_bot"><span class="icon"><svg width="38" height="33" viewbox="0 0 38 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.671193 15.8234L9.42717 19.083L12.8163 29.9541C13.0331 30.6504 13.8867 30.9077 14.4533 30.4457L19.334 26.4771C19.8456 26.0613 20.5744 26.0406 21.109 26.4277L29.9121 32.8025C30.5182 33.2419 31.3769 32.9106 31.5289 32.1801L37.9776 1.24059C38.1435 0.442627 37.3575 -0.223058 36.5957 0.0708089L0.660933 13.8976C-0.225862 14.2387 -0.218135 15.491 0.671193 15.8234ZM12.2701 17.3478L29.3825 6.83543C29.6901 6.64706 30.0065 7.06183 29.7424 7.30617L15.6197 20.4C15.1232 20.8609 14.803 21.4777 14.7123 22.1472L14.2313 25.7032C14.1675 26.178 13.4989 26.2251 13.3675 25.7656L11.5173 19.2812C11.3054 18.5416 11.6142 17.7516 12.2701 17.3478Z" fill="white"/>
+</svg>
+</span><span class="link__text">@MyETH_bot</span></a></h3>
+          </div>
+          <div class="wrapper section__inner">
+            <div class="roadmap">
+              <h2 class="h2 title title--center">Roadmap</h2>
+              <div class="roadmap__inner">
+                <div class="roadmap__pommel">
+                  <svg width="30" height="22" viewbox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13.5L13.5 0M0 13.5L13.5 27M0 13.5H19.5" transform="translate(1.5 20) rotate(-90)" stroke="white" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="roadmap__current-point"><span class="roadmap__pointer-text">we are here</span><span class="roadmap__icon"><svg width="31" height="24" viewbox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.9142 0L30.3284 11.4142L18.9142 22.8284L16.0858 20L22.6716 13.4142H0V9.41421H22.6716L16.0858 2.82843L18.9142 0Z" transform="translate(0 0.585815)" fill="#ADADFF"/>
+</svg>
+</span></div>
+                <div class="roadmap__line step3"></div>
+                <div class="roadmap__items">
+                  <div class="roadmap__item finished">
+                    <div class="roadmap__title">Launch beta telegram @MyETH_bot</div>
+                    <div class="roadmap__text">1 adress only ETH erc20 support</div>
+                  </div>
+                  <div class="roadmap__item finished">
+                    <div class="roadmap__title">ENG and RUS bot localization</div>
+                  </div>
+                  <div class="roadmap__item finished">
+                    <div class="roadmap__title">Webhook functionality</div>
+                    <div class="roadmap__text">You can specify url, which will be called at any tokens movement</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">Web personal area for setup two addresses</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">More than 1 address for monitoring (premium version)</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">Extended webhooks</div>
+                    <div class="roadmap__text">With bunch of notification logic and custom data (premium version)</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">2 factor authentication</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">iOS mobile application and push notifications</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">Bitcoin addresses monitoring</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">Neo addresses monitoring</div>
+                  </div>
+                  <div class="roadmap__item">
+                    <div class="roadmap__title">Automatic accounting toolkit</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="link"></div>
+          </div>
+        </div>
+      </section>
+<a class="to-top" id="to-top" href="#">↑</a></div>
+    <div class="page__footer-wrapper"></div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
