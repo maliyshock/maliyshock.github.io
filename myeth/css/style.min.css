@@ -184,47 +184,49 @@ hr {
       -webkit-transform: translateY(-7%) skewY(-6deg);
               transform: translateY(-7%) skewY(-6deg);
       background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%221440%22%20height%3D%221137%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cmask%20id%3D%22a%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%220%22%20width%3D%221440%22%20height%3D%221137%22%3E%3Cpath%20d%3D%22M1440%201137V0L0%20133v1004h1440z%22%20fill%3D%22%23C4C4C4%22%2F%3E%3C%2Fmask%3E%3Cg%20mask%3D%22url%28%23a%29%22%3E%3Cpath%20opacity%3D%22.5%22%20d%3D%22M0%200l726%201146L1443%200H0z%22%20transform%3D%22translate%28-3%20-765%29%22%20fill%3D%22url%28%23paint0_linear%29%22%2F%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200l366.673%20613.407L728.801%200H0z%22%20transform%3D%22rotate%28-96.095%20136.26%20369.722%29%22%20fill%3D%22url%28%23paint1_linear%29%22%2F%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200l366.673%20613.407L728.801%200H0z%22%20transform%3D%22scale%281%20-1%29%20rotate%2883.905%201162.82%20684.45%29%22%20fill%3D%22url%28%23paint2_linear%29%22%2F%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%20408.309L331.105%201428%20956.737%200%200%20408.309z%22%20transform%3D%22scale%281%20-1%29%20rotate%2866.869%201570.893%20183.981%29%22%20fill%3D%22url%28%23paint3_linear%29%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22paint0_linear%22%20x2%3D%221%22%20gradientUnits%3D%22userSpaceOnUse%22%20gradientTransform%3D%22matrix%2845%201198%20-1026.64%2015.5245%201190.32%2076.391%29%22%3E%3Cstop%2F%3E%3Cstop%20offset%3D%221%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint1_linear%22%20x2%3D%221%22%20gradientUnits%3D%22userSpaceOnUse%22%20gradientTransform%3D%22matrix%28273.262%20-193.336%20151.94%20223.841%20166.356%20293.684%29%22%3E%3Cstop%2F%3E%3Cstop%20offset%3D%221%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint2_linear%22%20x2%3D%221%22%20gradientUnits%3D%22userSpaceOnUse%22%20gradientTransform%3D%22matrix%28273.262%20-193.336%20151.94%20223.841%20166.356%20293.684%29%22%3E%3Cstop%2F%3E%3Cstop%20offset%3D%221%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22paint3_linear%22%20x2%3D%221%22%20gradientUnits%3D%22userSpaceOnUse%22%20gradientTransform%3D%22matrix%28-327.35%20-225.199%20277.857%20-221.64%20791.507%20517.508%29%22%3E%3Cstop%2F%3E%3Cstop%20offset%3D%221%22%20stop-opacity%3D%220%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E'), linear-gradient(7.93deg, #EA064A 25.43%, #260C69 93.36%); }
-.balance__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-.balance__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
+.balance {
   width: 100%; }
+.balance__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+.balance__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 100%; }
 .balance__currency {
-  text-transform: uppercase;
-  color: #EA064A;
-  padding-right: 5px;
-  padding-left: 5px; }
+    text-transform: uppercase;
+    color: #EA064A;
+    padding-right: 5px;
+    padding-left: 5px; }
 .balance__icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  padding-right: 5px;
-  padding-left: 5px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding-right: 5px;
+    padding-left: 5px; }
 .icon {
   padding-right: 5px;
   padding-left: 5px;
@@ -841,7 +843,7 @@ pre {
     padding-bottom: 16px;
     padding-left: 20px;
     padding-right: 20px; }
-.table__td:last-child .balance__item {
+.table__td:last-child .balance__list {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
@@ -1862,22 +1864,22 @@ input:checked ~ .field-toggler__name-text:after {
       .page__balances {
         padding-top: 20px;
         padding-bottom: 20px; }
-    .balance__item {
-      padding-right: 50px;
-      width: auto; }
-      .balance__item:after {
-        content: '=';
-        position: absolute;
-        font-size: 18px;
-        color: #A6A6A6;
-        right: 20px;
-        top: 0;
-        line-height: normal;
-        height: 100%; }
-      .balance__item:last-child {
-        padding-right: 0; }
-        .balance__item:last-child:after {
-          display: none; }
+      .balance__item {
+        padding-right: 50px;
+        width: auto; }
+        .balance__item:after {
+          content: '=';
+          position: absolute;
+          font-size: 18px;
+          color: #A6A6A6;
+          right: 20px;
+          top: 0;
+          line-height: normal;
+          height: 100%; }
+        .balance__item:last-child {
+          padding-right: 0; }
+          .balance__item:last-child:after {
+            display: none; }
       .roadmap__current-point {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1919,9 +1921,9 @@ input:checked ~ .field-toggler__name-text:after {
     .title--tablet-center {
       text-align: center; }
       .table__th:first-child {
-        width: 25%; }
+        width: 20%; }
       .table__th:last-child {
-        width: 45%; }
+        width: 50%; }
     .much-more {
       margin-left: auto;
       -webkit-transform: none;
