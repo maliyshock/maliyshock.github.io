@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Exrates</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto:400i,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <link rel='icon' href='img/favicon/16.png' sizes='16x16' type='image/png'>
+  <link rel='icon' href='img/favicon/32.png' sizes='32x32' type='image/png'>
+  <link rel='apple-touch-icon' href='img/favicon/256.png' type='image/png'>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__right-col">
+        <div class="header__logo">
+          <img src="img/logo.svg" alt="Exrates logo" class="header__logo-desktop" />
+          <img src="img/logo_mobile.svg" alt="Exrates logo" class="header__logo-mobile " />
+        </div>
+        <div class="header__nav">
+          <a href="index.html" class="header__link">Submit coin for listing</a>
+          <a href="listing.html" class="header__link">Future&nbsp;listing</a>
+          <a href="requirements.html" class="header__link header__link_active">Technical&nbsp;requirements</a>
+          <a href="kit.html" class="header__link">Media&nbsp;kit</a>
+        </div>
+        <button class="header__get-listed-btn button _listed">
+          Get listed
+        </button>
+      </div>
+      <div class="header__left-col">
+        <div class="header__dropdown dropdown dropdown_menu">
+          <button class="dropdown__toggle dropdown__button dropdown__button_without-icon">
+            <img src="img/burger.svg" alt="Burger icon" />
+          </button>
+          <div class="dropdown__menu dropdown__menu_column">
+            <a href="index.html" class="header__link">
+              <span>Submit coin for listing</span>
+            </a>
+            <a href="listing.html" class="header__link">
+              <span>Future&nbsp;listing</span>
+            </a>
+            <a href="requirements.html" class="header__link header__link_active">
+              <span>Technical&nbsp;requirements</span>
+            </a>
+            <a href="kit.html" class="header__link">
+              <span>Media&nbsp;kit</span>
+            </a>
+          </div>
+        </div>
+        <div class="header__dropdown dropdown dropdown_hover lang">
+          <button class="dropdown__toggle dropdown__button lang__current">
+            <img src="img/lang/En.svg" class="dropdown__icon" alt="Flag icon" />
+            <span>EN</span>
+          </button>
+          <div class="dropdown__menu">
+            <div class="dropdown__col">
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/In.svg" class="dropdown__icon" alt="Flag icon" />Indonesian
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/turkish.svg" class="dropdown__icon" alt="Flag icon" />Turkish
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/Hi.svg" class="dropdown__icon" alt="Flag icon" />Hindi
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/korean.svg" class="dropdown__icon" alt="Flag icon" />Korean
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/japanese.svg" class="dropdown__icon" alt="Flag icon" />Japanese
+              </button>
+            </div>
+            <div class="dropdown__col">
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/portugal.svg" class="dropdown__icon" alt="Flag icon" />Portuguese
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/It.svg" class="dropdown__icon" alt="Flag icon" />Italian
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/De.svg" class="dropdown__icon" alt="Flag icon" />German
+              </button>
+              <button class="dropdown__item dropdown__button">
+                <img src="img/lang/Ch.svg" class="dropdown__icon" alt="Flag icon" />Chinese
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <div class="wrap">
+      <div class="content">
+        <div class="form-container">
+          <div class="form-container__container">
+            <div class="form-container__wrapper">
+              <div class="form-container__caption">
+                <span class="blue">Get</span> Listed
+              </div>
+              <form class="form">
+                <div class="form__item">
+                  <label for="name" class="form__label">Name</label>
+                  <div class="form__wrapper">
+                    <input id="name" type="text" class="form__input" required/>
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label for="mail" class="form__label">E-mail</label>
+                  <div class="form__wrapper">
+                    <input id="mail" type="mail" class="form__input" required />
+                  </div>
+                </div>
+                <div class="form__item">
+                  <label for="telegram" class="form__label">Telegram</label>
+                  <div class="form__wrapper">
+                    <input id="telegram" type="text" class="form__input" required/>
+                  </div>
+                </div>
+                <button type="submit" class="form__button button">Send contacts</button>
+              </form>
+              <div class="form-container__contact">
+                <div class="form-container__el">
+                  <div class="form-container__el-content">
+                    Or
+                  </div>
+                </div>
+                <div class="form-container__link-wrapper">
+                  <a href="" class="form-container__link">Telegram us</a>
+                </div>
+              </div>
+              <div class="form-container__top">
+                <div class="form-container__top-logo">
+                  <img src="img/top.svg" alt="Top icon" />
+                </div>
+                <div class="form-container__text">
+                  <span class="bold">Top 30 exchange</span>
+                  <br />According to CoinMarketCap
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="first-slide requirements">
+          <div class="container">
+            <h1 class="first-slide__caption">
+      Technical requirements
+    </h1>
+            <p class="first-slide__descr">
+              To submit a coin or token for listing, you should provide us with technical information on it. The info should include general description of the technology, full node, detailed documentation for API node, production-ready solutions, etc. Before applying
+              for listing, please download the full version of requirements in PDF below and read it through.
+            </p>
+            <a href="" class="button button_with-icon">Download in PDF</a>
+          </div>
+        </section>
+
+        <section class="tabs tabs_desktop">
+          <div class="container">
+            <div class="tabs__container">
+              <button class="tabs__tab _default" onclick="openTab(event, 'ethereum')">Ethereum tokens</button>
+              <button class="tabs__tab" onclick="openTab(event, 'bitcoin')">Bitcoin-based coins</button>
+              <button class="tabs__tab" onclick="openTab(event, 'ethereum-forks')">Ethereum forks</button>
+              <button class="tabs__tab" onclick="openTab(event, 'unique')">Unique coins</button>
+            </div>
+            <div id="ethereum" class="tabs__content _ethereum">
+              <p class="tabs__text">
+                You have to provide next 3 most important things:
+              </p>
+              <ul class="tabs__list tabs__list_padding">
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle tabs__item_big-margin">
+                  <span>Link to smart contract, for example:</span>
+                  <ul class="tabs__list">
+                    <li class="tabs__item tabs__item_small-margin">
+                      <span>ERC</span>&nbsp;–&nbsp;
+                      <a href="https://etherscan.io/token/0x3fd8f39a962efda04956981c31ab89fab5fb8bc8">https://etherscan.io/token/0x3fd8f39a962efda04956981c31ab89fab5fb8bc8</a>
+                    </li>
+                    <li class="tabs__item tabs__item_small-margin">
+                      <span>QRC</span>&nbsp;–&nbsp;
+                      <a href="https://explorer.qtum.org/address/57931faffdec114056a49adfcaa1caac159a1a25">https://explorer.qtum.org/address/57931faffdec114056a49adfcaa1caac159a1a25</a>
+                    </li>
+                    <li class="tabs__item tabs__item_small-margin">
+                      <span>WAVES</span>&nbsp;–&nbsp;
+                      <a href="https://wavesexplorer.com/tx/GFiWx4dcceJXGWfHc53GMXEidpciUCN5tnHUwE18NEfY">https://wavesexplorer.com/tx/GFiWx4dcceJXGWfHc53GMXEidpciUCN5tnHUwE18NEfY</a>
+                    </li>
+                    <li class="tabs__item tabs__item_small-margin">
+                      <span>NEO</span>&nbsp;–&nbsp;
+                      <a href="https://neotracker.io/asset/ceab719b8baa2310f232ee0d277c061704541cfb">https://neotracker.io/asset/ceab719b8baa2310f232ee0d277c061704541cfb</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Test coins for the final test</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Specific requirements. For example: some minimal amount of coin must stay on account.</span>
+                </li>
+              </ul>
+              <p class="tabs__text">
+                In case of all technical information provided according to requirements above, your coin can be added in 2 days.
+              </p>
+            </div>
+            <div id="bitcoin" class="tabs__content _bitcoin">
+              <p class="tabs__text">
+                You have to provide next 6 most important things:
+              </p>
+              <ul class="tabs__list tabs__list_padding">
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Full node</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Where to download & how to install node (it can be binary file for Ubuntu or git-hub repository with sources).</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle tabs__item_big-margin">
+                  <span>Ensure that sources has detailed description how to build and all related dependencies.</span>
+                  <ul class="tabs__list">
+                    <li class="tabs__item tabs__item_italic tabs__item_margin-top-bottom">Dash example</li>
+                    <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                      <span>sources</span>&nbsp;–&nbsp;
+                      <a href="https://github.com/dashpay/dash">https://github.com/dashpay/dash</a>
+                    </li>
+                    <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                      <span>binary files</span>&nbsp;–&nbsp;
+                      <a href="https://github.com/dashpay/dash/releases">https://github.com/dashpay/dash/releases</a>
+                    </li>
+                    <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                      <span>manual for Unix build</span>&nbsp;–&nbsp;
+                      <a href="https://github.com/dashpay/dash/blob/master/doc/build-unix.md">https://github.com/dashpay/dash/blob/master/doc/build-unix.md</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Blockchain explorer</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Wallet (web or desktop)</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Test coins or access to testnet, faucets link to refill coins. Ex – <a href="https://testnet.manu.backend.hamburg/faucet">https://testnet.manu.backend.hamburg/faucet</a></span>
+                </li>
+              </ul>
+              <p class="tabs__text">
+                In case of all technical information provided according to requirements above, your coin can be added in 2 weeks (generally). In other cases, the process can take up to 1 month.
+              </p>
+            </div>
+            <div id="ethereum-forks" class="tabs__content _ethereum-forks">
+              <p class="tabs__text">
+                You have to provide next 5 most important things:
+              </p>
+              <ul class="tabs__list tabs__list_padding">
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Full node (geth of parity)</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Where to download & how to install node (it can be binary file for Ubuntu or git-hub repository with sources).</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle tabs__item_big-margin">
+                  <span>Ensure that sources has detailed description how to build and all related dependencies.</span>
+                  <ul class="tabs__list">
+                    <li class="tabs__item tabs__item_italic tabs__item_margin-top-bottom">EtherZero example</li>
+                    <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                      <span>sources</span>&nbsp;–&nbsp;
+                      <a href="https://github.com/dashpay/dash">https://github.com/dashpay/dash</a>
+                    </li>
+                    <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                      <span>binary files</span>&nbsp;–&nbsp;
+                      <a href="https://github.com/dashpay/dash/releases">https://github.com/dashpay/dash/releases</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Blockchain explorer</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Wallet (web or desktop)</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                  <span>Test coins or access to testnet, faucets link to refill coins. Ex – <a href="https://testnet.manu.backend.hamburg/faucet">https://testnet.manu.backend.hamburg/faucet</a></span>
+                </li>
+              </ul>
+              <p class="tabs__text">
+                In case of all technical information provided according to requirements above, your coin can be added in 2 weeks (generally). In other cases, the process can take up to 1 month.
+              </p>
+            </div>
+            <div id="unique" class="tabs__content _unique">
+              <p class="tabs__text">
+                If your coin is a fork of some existing coin that mentioned above, please provide detailed information about differences between your coin and base coin (API, launching, transactions processing etc.).
+              </p>
+              <p class="tabs__text">
+                Otherwise, if your coin is a unique one, please provide the following info:
+              </p>
+              <ul class="tabs__list tabs__list_list-type-number tabs__list_padding">
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>Assets</span>
+                  <ul class="tabs__list tabs__list_font-weight-regular tabs__list_margin-top-bottom">
+                    <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                      <span>Detailed documentation for node's API, primarily following methods:</span>
+                      <ul class="tabs__list tabs__list_margin-top-bottom">
+                        <li class="tabs__item tabs__item_list-type-hr">Create a new address (account)</li>
+                        <li class="tabs__item tabs__item_list-type-hr">Send transaction</li>
+                        <li class="tabs__item tabs__item_list-type-hr">Get transaction by ID</li>
+                        <li class="tabs__item tabs__item_list-type-hr">Find all transactions by parameters - receiver address (account), time period, starting/ending block etc.</li>
+                      </ul>
+                    </li>
+                    <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                      <span>Documentation about notifications (if you have some) in your blockchain.</span>
+                    </li>
+                    <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                      <span>Whether there is a system of notifications on a new block or incoming transaction (like in Bitcoin).</span>
+                    </li>
+                    <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                      <span>Libraries or SDK</span>
+                    </li>
+                    <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                      <span>Available production-ready solutions for different programming languages.</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>Links to GitHub and supporting community - slack, reddit, gitter etc.</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>Full node.</span>
+                  <ul class="tabs__list tabs__list_font-weight-regular">
+                    <li class="tabs__item tabs__item_margin-top-bottom">
+                      Where to download, how to install and run on Windows and Linux (Ubuntu), documented command line arguments.
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>Blockchain explorer</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>Wallet app or web wallet</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>Test coins</span>
+                  <ul class="tabs__list tabs__list_font-weight-regular">
+                    <li class="tabs__item tabs__item_margin-top-bottom">
+                      If testnet is available - test wallet, faucets or other ways to receive test coins. Provide some amount of real coins for testing.
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>How many symbols after the comma is the minimal unit of cryptocurrency</span>
+                </li>
+                <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                  <span>The commission range for your currency in the internal network (if it’s not the same %, please tell us the algorithm)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="tabs tabs_mobile">
+          <div class="tabs__section">
+            <div class="accordion">
+              Ethereum tokens
+              <span class="accordion__caret">
+        <img src="img/arrow.svg" alt="Arrow" />
+      </span>
+            </div>
+            <div class="panel">
+              <div class="accordion__content">
+                <p class="tabs__text">
+                  You have to provide next 3 most important things:
+                </p>
+                <ul class="tabs__list tabs__list_padding">
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle tabs__item_big-margin">
+                    <span>Link to smart contract, for example:</span>
+                    <ul class="tabs__list">
+                      <li class="tabs__item tabs__item_small-margin">
+                        <span>ERC</span>&nbsp;–&nbsp;
+                        <a href="https://etherscan.io/token/0x3fd8f39a962efda04956981c31ab89fab5fb8bc8">https://etherscan.io/token/0x3fd8f39a962efda04956981c31ab89fab5fb8bc8</a>
+                      </li>
+                      <li class="tabs__item tabs__item_small-margin">
+                        <span>QRC</span>&nbsp;–&nbsp;
+                        <a href="https://explorer.qtum.org/address/57931faffdec114056a49adfcaa1caac159a1a25">https://explorer.qtum.org/address/57931faffdec114056a49adfcaa1caac159a1a25</a>
+                      </li>
+                      <li class="tabs__item tabs__item_small-margin">
+                        <span>WAVES</span>&nbsp;–&nbsp;
+                        <a href="https://wavesexplorer.com/tx/GFiWx4dcceJXGWfHc53GMXEidpciUCN5tnHUwE18NEfY">https://wavesexplorer.com/tx/GFiWx4dcceJXGWfHc53GMXEidpciUCN5tnHUwE18NEfY</a>
+                      </li>
+                      <li class="tabs__item tabs__item_small-margin">
+                        <span>NEO</span>&nbsp;–&nbsp;
+                        <a href="https://neotracker.io/asset/ceab719b8baa2310f232ee0d277c061704541cfb">https://neotracker.io/asset/ceab719b8baa2310f232ee0d277c061704541cfb</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Test coins for the final test</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Specific requirements. For example: some minimal amount of coin must stay on account.</span>
+                  </li>
+                </ul>
+                <p class="tabs__text">
+                  In case of all technical information provided according to requirements above, your coin can be added in 2 days.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__section">
+            <div class="accordion">
+              Bitcoin-based coins
+              <span class="accordion__caret">
+        <img src="img/arrow.svg" alt="Arrow" />
+      </span>
+            </div>
+            <div class="panel">
+              <div class="accordion__content">
+                <p class="tabs__text">
+                  You have to provide next 6 most important things:
+                </p>
+                <ul class="tabs__list tabs__list_padding">
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Full node</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Where to download & how to install node (it can be binary file for Ubuntu or git-hub repository with sources).</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle tabs__item_big-margin">
+                    <span>Ensure that sources has detailed description how to build and all related dependencies.</span>
+                    <ul class="tabs__list">
+                      <li class="tabs__item tabs__item_italic tabs__item_margin-top-bottom">Dash example</li>
+                      <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                        <span>sources</span>&nbsp;–&nbsp;
+                        <a href="https://github.com/dashpay/dash">https://github.com/dashpay/dash</a>
+                      </li>
+                      <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                        <span>binary files</span>&nbsp;–&nbsp;
+                        <a href="https://github.com/dashpay/dash/releases">https://github.com/dashpay/dash/releases</a>
+                      </li>
+                      <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                        <span>manual for Unix build</span>&nbsp;–&nbsp;
+                        <a href="https://github.com/dashpay/dash/blob/master/doc/build-unix.md">https://github.com/dashpay/dash/blob/master/doc/build-unix.md</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Blockchain explorer</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Wallet (web or desktop)</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Test coins or access to testnet, faucets link to refill coins. Ex – <a href="https://testnet.manu.backend.hamburg/faucet">https://testnet.manu.backend.hamburg/faucet</a></span>
+                  </li>
+                </ul>
+                <p class="tabs__text">
+                  In case of all technical information provided according to requirements above, your coin can be added in 2 weeks (generally). In other cases, the process can take up to 1 month.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__section">
+            <div class="accordion">
+              Ethereum forks
+              <span class="accordion__caret">
+        <img src="img/arrow.svg" alt="Arrow" />
+      </span>
+            </div>
+            <div class="panel">
+              <div class="accordion__content">
+                <p class="tabs__text">
+                  You have to provide next 5 most important things:
+                </p>
+                <ul class="tabs__list tabs__list_padding">
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Full node (geth of parity)</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Where to download & how to install node (it can be binary file for Ubuntu or git-hub repository with sources).</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle tabs__item_big-margin">
+                    <span>Ensure that sources has detailed description how to build and all related dependencies.</span>
+                    <ul class="tabs__list">
+                      <li class="tabs__item tabs__item_italic tabs__item_margin-top-bottom">EtherZero example</li>
+                      <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                        <span>sources</span>&nbsp;–&nbsp;
+                        <a href="https://github.com/dashpay/dash">https://github.com/dashpay/dash</a>
+                      </li>
+                      <li class="tabs__item tabs__item_small-margin tabs__item_italic">
+                        <span>binary files</span>&nbsp;–&nbsp;
+                        <a href="https://github.com/dashpay/dash/releases">https://github.com/dashpay/dash/releases</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Blockchain explorer</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Wallet (web or desktop)</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                    <span>Test coins or access to testnet, faucets link to refill coins. Ex – <a href="https://testnet.manu.backend.hamburg/faucet">https://testnet.manu.backend.hamburg/faucet</a></span>
+                  </li>
+                </ul>
+                <p class="tabs__text">
+                  In case of all technical information provided according to requirements above, your coin can be added in 2 weeks (generally). In other cases, the process can take up to 1 month.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__section">
+            <div class="accordion">
+              Unique coins
+              <span class="accordion__caret">
+        <img src="img/arrow.svg" alt="Arrow" />
+      </span>
+            </div>
+            <div class="panel">
+              <div class="accordion__content">
+                <p class="tabs__text">
+                  If your coin is a fork of some existing coin that mentioned above, please provide detailed information about differences between your coin and base coin (API, launching, transactions processing etc.).
+                </p>
+                <p class="tabs__text">
+                  Otherwise, if your coin is a unique one, please provide the following info:
+                </p>
+                <ul class="tabs__list tabs__list_list-type-number tabs__list_padding">
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>Assets</span>
+                    <ul class="tabs__list tabs__list_font-weight-regular tabs__list_margin-top-bottom">
+                      <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                        <span>Detailed documentation for node's API, primarily following methods:</span>
+                        <ul class="tabs__list tabs__list_margin-top-bottom">
+                          <li class="tabs__item tabs__item_list-type-hr">Create a new address (account)</li>
+                          <li class="tabs__item tabs__item_list-type-hr">Send transaction</li>
+                          <li class="tabs__item tabs__item_list-type-hr">Get transaction by ID</li>
+                          <li class="tabs__item tabs__item_list-type-hr">Find all transactions by parameters - receiver address (account), time period, starting/ending block etc.</li>
+                        </ul>
+                      </li>
+                      <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                        <span>Documentation about notifications (if you have some) in your blockchain.</span>
+                      </li>
+                      <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                        <span>Whether there is a system of notifications on a new block or incoming transaction (like in Bitcoin).</span>
+                      </li>
+                      <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                        <span>Libraries or SDK</span>
+                      </li>
+                      <li class="tabs__item tabs__item_list-type tabs__item_list-type-circle">
+                        <span>Available production-ready solutions for different programming languages.</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>Links to GitHub and supporting community - slack, reddit, gitter etc.</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>Full node.</span>
+                    <ul class="tabs__list tabs__list_font-weight-regular">
+                      <li class="tabs__item tabs__item_margin-top-bottom">
+                        Where to download, how to install and run on Windows and Linux (Ubuntu), documented command line arguments.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>Blockchain explorer</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>Wallet app or web wallet</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>Test coins</span>
+                    <ul class="tabs__list tabs__list_font-weight-regular">
+                      <li class="tabs__item tabs__item_margin-top-bottom">
+                        If testnet is available - test wallet, faucets or other ways to receive test coins. Provide some amount of real coins for testing.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>How many symbols after the comma is the minimal unit of cryptocurrency</span>
+                  </li>
+                  <li class="tabs__item tabs__item_list-type tabs__item_list-type-number">
+                    <span>The commission range for your currency in the internal network (if it’s not the same %, please tell us the algorithm)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__col">
+              <div class="footer__logo-container">
+                <img src="img/logo.svg" alt="Exrates logo" class="footer__logo" />
+              </div>
+              <div class="footer__license">
+                © 2018 EXRATES LTD trade marks belong to their corresponding owners. All rights are reserved
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__item">
+                <div class="footer__caption">
+                  Contacts
+                </div>
+                <div class="footer__links footer__links_column">
+                  <a href="mailto:listing@exrates.me" class="footer__link">listing@exrates.me</a>
+                  <a href="www.exrates.me" class="footer__link">www.exrates.me</a>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__caption">
+                  Social media
+                </div>
+                <div class="footer__social-icons">
+                  <a class="footer__social-icon">
+                    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.423911 9.58993L5.954 11.5654L8.09448 18.154C8.23144 18.576 8.77056 18.732 9.1284 18.4519L12.211 16.0467C12.5341 15.7948 12.9943 15.7822 13.332 16.0168L18.8919 19.8803C19.2747 20.1466 19.817 19.9458 19.913 19.5031L23.9859 0.751873C24.0907 0.268259 23.5942 -0.135187 23.1131 0.0429145L0.417431 8.42278C-0.142649 8.62951 -0.137769 9.38847 0.423911 9.58993ZM7.74952 10.5138L18.5574 4.14268C18.7516 4.02852 18.9515 4.2799 18.7847 4.42798L9.86504 12.3637C9.55152 12.643 9.34928 13.0168 9.292 13.4225L8.98816 15.5777C8.94792 15.8654 8.5256 15.894 8.44264 15.6155L7.27408 11.6856C7.14024 11.2373 7.33528 10.7585 7.74952 10.5138Z"
+                      fill="#ECECEC" />
+                    </svg>
+                  </a>
+                  <a class="footer__social-icon">
+                    <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24.7619 2.36631C23.8505 2.76787 22.8726 3.0402 21.8452 3.16178C22.8943 2.5371 23.6973 1.54627 24.078 0.369248C23.0939 0.947741 22.0076 1.3678 20.8502 1.59551C19.9234 0.612368 18.605 0 17.1428 0C14.3375 0 12.0629 2.26171 12.0629 5.04962C12.0629 5.44501 12.1078 5.8312 12.1944 6.20049C7.97335 5.98967 4.23037 3.97877 1.72524 0.923119C1.28734 1.66781 1.03822 2.53553 1.03822 3.46179C1.03822 5.21424 1.93568 6.76051 3.29734 7.66517C2.46487 7.63749 1.68191 7.40978 0.996466 7.03127V7.09436C0.996466 9.54069 2.74805 11.5824 5.07057 12.0471C4.64505 12.1609 4.19634 12.224 3.73213 12.224C3.40412 12.224 3.08691 12.1917 2.77589 12.1301C3.42265 14.138 5.29804 15.5981 7.52002 15.6381C5.78236 16.9921 3.59133 17.7967 1.21156 17.7967C0.801526 17.7967 0.397648 17.7721 0 17.7275C2.24828 19.163 4.91743 20 7.78617 20C17.1305 20 22.2383 12.304 22.2383 5.62968L22.2212 4.97579C23.2192 4.26799 24.0826 3.37871 24.7619 2.36631Z"
+                      fill="#ECECEC" />
+                    </svg>
+                  </a>
+                  <a class="footer__social-icon">
+                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0817 0.00416133L7.56893 0C4.74592 0 2.92158 1.9319 2.92158 4.92203V7.19141H0.395108C0.176791 7.19141 0 7.37409 0 7.59943V10.8875C0 11.1128 0.176992 11.2953 0.395108 11.2953H2.92158V19.5922C2.92158 19.8175 3.09837 20 3.31668 20H6.61301C6.83133 20 7.00812 19.8173 7.00812 19.5922V11.2953H9.96215C10.1805 11.2953 10.3573 11.1128 10.3573 10.8875L10.3585 7.59943C10.3585 7.49123 10.3167 7.38762 10.2428 7.31105C10.1688 7.23448 10.068 7.19141 9.96316 7.19141H7.00812V5.26763C7.00812 4.34298 7.22159 3.87358 8.38857 3.87358L10.0813 3.87295C10.2994 3.87295 10.4762 3.69027 10.4762 3.46514V0.411972C10.4762 0.187052 10.2996 0.00457747 10.0817 0.00416133Z"
+                      fill="#ECECEC" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__item">
+                <div class="footer__caption">
+                  Telegram
+                </div>
+                <div class="footer__links">
+                  <a href="" class="footer__link">@listingexrates</a>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__caption">
+                  Address
+                </div>
+                <div class="footer__address">
+                  Sedung Menara Kadin Indonesia LT. 30JL, HR, Rasuna Said Blok X-5 KAV. 2-3, KEL, Kuningan Timur, KEC. Setiabudi, Jakarta Selatan
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

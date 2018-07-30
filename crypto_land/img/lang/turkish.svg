@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>turkish</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="13" cy="13" r="13"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="turkish">
+            <g id="Group">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Oval" fill="#E30A17" xlink:href="#path-1"></use>
+                <path d="M15.9004,8.68347 C14.9551,7.85767 13.74048,7.36108 12.41528,7.36108 C9.4021,7.36108 6.95923,9.9292 6.95923,13.09717 C6.95923,16.2651 9.4021,18.8333 12.41528,18.8333 C13.5332,18.8333 14.573,18.4798 15.4382,17.8733 C14.228,19.1849 12.53369,20 10.65845,20 C6.98096,20 4,16.866 4,13 C4,9.13403 6.98096,6 10.65845,6 C12.78662,6 14.6814,7.04968 15.9004,8.68347 Z" id="Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(19.349925, 12.777149) rotate(-18.395779) translate(-19.349925, -12.777149) " points="19.3499187 9.40132349 20.1555386 11.9802236 22.7625884 11.9802236 20.6534486 13.5740736 21.4590685 16.1529737 19.3499187 14.5591237 17.2407788 16.1529737 18.0463988 13.5740736 15.9372619 11.9802236 18.5442987 11.9802236"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
