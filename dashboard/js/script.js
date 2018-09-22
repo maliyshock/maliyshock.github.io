@@ -26,6 +26,7 @@ $(document).ready(function () {
     });
 
     $('.sidenav').sidenav();
+
     $('.search_wrap').on('click', function () {
         $(this).addClass('active');
     });
