@@ -42,7 +42,7 @@ $(document).ready(function () {
             e.stopPropagation();
             if ( !$(this).hasClass('active') ) {
                 $('html, body').animate({
-                    scrollTop: $(this).offset().top - 60
+                    scrollTop: $(this).offset().top - 75
                 }, 500);
             }
             $(this).toggleClass('active');
