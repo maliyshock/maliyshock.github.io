@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dental App</title>
+</head>
+<body class="product_order_steps">
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 header">
+                <div class="menu_icon sidenav-trigger" data-target="slide-out"><span></span><span></span><span></span>
+                </div>
+                <div class="search_header"><input type="search" value="" placeholder="Search..."></div>
+                <div class="header_right_items"><a class="cart_header" href=""><i
+                        class="material-icons">shopping_cart</i><span>3</span></a><a href="#" class="doc_name"><i
+                        class="material-icons">account_circle</i>Dr. Peter Strellson</a></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="slide-out" class="sidenav">
+    <div class="sidenav_top_link"><a href="#" class="logo_sidebar">Logo</a></div>
+    <ul class="menu">
+        <li class="active"><a href="#"><i class="material-icons">dashboard</i>Dashboard</a></li>
+        <li><a href="#"><i class="material-icons">create_new_folder</i>Create New Case</a></li>
+        <li><a href="#"><i class="material-icons">folder_shared</i>Case Manager</a></li>
+        <li><a href="#"><i class="material-icons">chat</i>Communication</a></li>
+        <li><a href="#"><i class="material-icons">view_day</i>Report Templates</a></li>
+        <li><a href="#"><i class="material-icons">insert_chart</i>System Analytics</a></li>
+        <li><a href="#" class="icon_support">Support</a></li>
+    </ul>
+</div>
+<div class="container-fluid">
+    <div class="row product_ordering">
+        <div class="col-12 col-md-7">
+            <h5 class="product_ordering_ttl">Product Ordering</h5>
+            <!--<p class="sub_details">2018: 472 Implants Placed<a href="#">Favourite Implants</a></p>-->
+            <div class="step_select_group">
+                <p>Create a new order by selecting a brand</p>
+                <div class="dropdown select_dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        select brand
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Straumann 1</a>
+                        <a class="dropdown-item" href="#">Straumann 2</a>
+                        <a class="dropdown-item" href="#">Straumann 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="step_select_group">
+                <p>Product Category</p>
+                <div class="dropdown select_dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        implants
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Straumann 1</a>
+                        <a class="dropdown-item" href="#">Straumann 2</a>
+                        <a class="dropdown-item" href="#">Straumann 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="step_select_group">
+                <div class="search_order"><input type="search" value=""
+                                                 placeholder="Type what are you looking for... (ex 3.3X10)"></div>
+                <table class="implants_table" id="implants_datatable" role="grid">
+                    <thead>
+                    <tr role="row">
+                        <th tabindex="0" rowspan="1" colspan="1"
+                        >Implant Description
+                        </th>
+                        <th tabindex="0" rowspan="1" colspan="1"
+                        >
+                        </th>
+                        <th tabindex="0" rowspan="1" colspan="1">Ref
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td class="icon_cart"><i class="material-icons">add_shopping_cart</i><a href="#">Bone Level
+                            Tapered</a>
+                            <span>Roxolid Slactive</span></td>
+                        <td><span class="num">3.3 x 10</span>
+                            <span>Plat: NC</span></td>
+                        <td><span class="num">021.2121a</span>
+                            <span class="stat stat_yellow"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="order_details_wrap">
+                <table class="items_list">
+                    <thead>
+                    <tr>
+                        <th><h5>Items added to order</h5></th>
+                        <th class="items_list_price">Price</th>
+                        <th>Qty</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><h6>Bone Level Tapered 3.3x10 - NC</h6>
+                            <span>Roxolid Slactive Ref. 021.2321</span>
+                            <a href="#">Delete</a></td>
+                        <td class="items_list_price"><span>$499</span></td>
+                        <td>
+                            <div class="input-field">
+                                <select>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h6>Bone Level Tapered 3.3x10 - NC</h6>
+                            <span>Roxolid Slactive Ref. 021.2321</span>
+                            <a href="#">Delete</a></td>
+                        <td class="items_list_price"><span>$499</span></td>
+                        <td>
+                            <div class="input-field">
+                                <select>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h6>Bone Level Tapered 3.3x10 - NC</h6>
+                            <span>Roxolid Slactive Ref. 021.2321</span>
+                            <a href="#">Delete</a></td>
+                        <td class="items_list_price"><span>$499</span></td>
+                        <td>
+                            <div class="input-field">
+                                <select>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="items_list_total">
+                    <h5>Subtotal: (1 Item):<span class="items_list_total_price">$998.00</span></h5>
+                    <button class="btn btn_proceed">Proceed to Checkout</button>
+                    <button class="btn btn_cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="js/Chart.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/materialize.min.js"></script>
+<script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
