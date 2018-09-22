@@ -2048,3 +2048,7 @@ body .search_wrap input[type="text"]::placeholder, body .search_wrap input[type=
         align-items: center;
     }
 }
+
+.collapse {
+    display: none;
+}
