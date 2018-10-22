@@ -1,0 +1,66 @@
+html,
+body {
+  overflow-x: hidden;
+  background-color: $black;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  &.--toggle-active {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+a {
+  color: $primary-brand;
+  text-decoration: none;
+  @include transition(color, .15s, ease-in-out);
+  &:hover, &:focus {
+    color: $primary-brand;
+  }
+}
+
+.img-circle {
+  padding: .5rem;
+  > img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+}
+
+.img-half {
+  padding: .5rem;
+  > img {
+    width: 50%;
+    height: 12rem;
+    margin: 0 auto;
+  }
+}
+
+.img-h-100 > img {
+  max-height: 100px;
+
+  @include bp-md {
+    height: 50px;
+  }
+
+  @include bp-lg {
+    height: 100px;
+  }
+}
+
+.img-column {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.spacer-container {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}

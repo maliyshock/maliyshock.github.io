@@ -1,0 +1,57 @@
+.image-group {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 320px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include bp-lg {
+    max-width: 470px;
+  }
+
+  &--shifted-right {
+    @include bp-lg {
+      transform: translateX(10%);
+    }
+  }
+
+  &--bg-shapes {
+    &:after {
+      content:'';
+      display: block;
+      position: absolute;
+      z-index: 0;
+
+      background-image: url('/assets/img/fitness/shapes.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      width: 135%;
+      height: 135%;
+
+      @include bp-lg {
+        width: 625px;
+        height: 635px;
+      }
+    }
+  }
+
+  &--shapes-2 {
+    &:after {
+      background-image: url('/assets/img/fitness/shapes-2.png');
+      left: 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+  }
+}

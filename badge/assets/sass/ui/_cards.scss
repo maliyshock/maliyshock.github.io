@@ -1,0 +1,106 @@
+.cards {
+ $c: &;
+
+  &__list {
+    padding: 0;
+
+    margin: 0;
+
+    list-style-type: none;
+
+    @include bp-md {
+      width: calc(100% + 30px);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  // TODO: bring this more in line with .site-form
+  &__card {
+    flex-grow: 1;
+
+    max-width: 370px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 32px;
+
+    border: 1px solid $card-border;
+    border-radius: 4px;
+
+    box-shadow: 0 2px 4px rgba(0,0,0, .15);
+
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    color: $black;
+
+    &--color-red #{$c}__title:after {
+      background-color: $card-red;
+    }
+
+    &--color-blue #{$c}__title:after {
+      background-color: $card-blue;
+    }
+
+    #{$c}__item:nth-child(2n+1) & {
+      background-image: url('/assets/img/fitness/card-shapes.svg');
+    }
+
+    #{$c}__item:nth-child(2n+2) &  {
+      background-image: url('/assets/img/fitness/card-shapes-2.svg'), url('/assets/img/fitness/card-shapes-3.svg');
+      background-size: contain;
+    }
+
+    #{$c}__item:nth-child(2n+3) & {
+      background-image: url('/assets/img/fitness/card-shapes-4.svg');
+      background-position: right bottom;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    min-height: 78px;
+
+    padding-bottom: 20px;
+
+    &:after {
+      content:'';
+      display: block;
+      position: absolute;
+      left: calc(50% - 50px);
+      bottom: 0px;
+
+      width: 100px;
+      height: 2px;
+      background-color: $card-default;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__icon {
+    max-width: 220px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,84 @@
+.btn {
+  display: inline-block;
+  font-weight: $primary-font-weight-bold;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: .35rem .85rem;
+  cursor: pointer;
+  @include transition(all, .15s, ease-in-out);
+
+  &__color-red {
+    color: $white;
+    background-color: $primary-brand;
+    border-color: $primary-brand;
+  }
+}
+
+.btn__large {
+  height: 48px;
+  border-width: 4px;
+  padding: .5rem 1.85rem;
+  margin: 1rem auto;
+}
+
+.btn__light--fill {
+  color: $black;
+  background-color: $white;
+  border-color: $white;
+}
+
+.btn__light--ghost {
+  color: $white;
+  background-color: transparent;
+  border-color: $white;
+  &:hover, &:focus {
+    color: $white !important;
+    background-color: $primary-brand;
+    border-color: $primary-brand;
+  }
+}
+
+.btn__dark-gray--ghost {
+  color: $dark-gray;
+  background-color: transparent;
+  border-color: $dark-gray;
+
+  &:hover, &:focus {
+    color: $white;
+    background-color: $primary-brand;
+    border-color: $primary-brand;
+  }
+}
+
+.btn__light--ghost-dark-fill {
+  &:hover, &:focus {
+    color: $white !important;
+    background-color: $black;
+    border-color: $black;
+  }
+}
+
+.btn__dark--fill {
+  background-color: $black;
+  border-color: $black;
+  &:hover, &:focus {
+    color: $white !important;
+    background-color: $primary-brand;
+    border-color: $primary-brand;
+  }
+}
+
+.btn--disabled {
+  cursor: not-allowed;
+  color: $medium-gray;
+  background-color: $dark-gray;
+  border-color: $dark-gray;
+  transition: none;
+  &:hover, &:focus {
+    color: $medium-gray !important;
+    background-color: $dark-gray;
+    border-color: $dark-gray;
+  }
+}

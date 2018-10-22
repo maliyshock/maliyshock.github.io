@@ -1,0 +1,55 @@
+// Transitions
+@mixin transition($property, $duration, $timing) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+// Breakpoints
+@mixin bp-sm {
+  @media screen and (min-width: 0) {
+    @content;
+  }
+}
+@mixin bp-md {
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+@mixin bp-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin bp-xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin bp-xl {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+// Linear gradient
+@mixin gradient($start, $stop, $angle, $firstColor, $secondColor) {
+  background: $firstColor; /* Old browsers */
+  background: -webkit-gradient(linear, $start, $stop, color-stop(0%, $firstColor), color-stop(100%, $secondColor)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient($angle,  $firstColor 0%, $secondColor 100%); /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient($angle,  $firstColor 0%, $secondColor 100%); /* FF3.6+ */
+  background: -ms-linear-gradient($angle,  $firstColor 0%, $secondColor 100%); /* IE10+ */
+  background: -o-linear-gradient($angle,  $firstColor 0%, $secondColor 100%); /* Opera 11.10+ */
+  background: linear-gradient($angle,  $firstColor 0%, $secondColor 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$firstColor}', endColorstr='#{$secondColor}', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+// Centerer
+@mixin centerer($position) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

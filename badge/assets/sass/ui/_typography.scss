@@ -1,0 +1,71 @@
+h1,h2,h3,h4,h5,h6,
+p,
+ul,ol {
+  letter-spacing: .085rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $secondary-font-family;
+  font-weight: $secondary-font-weight-bold;
+  line-height: $heading-line-height;
+}
+
+h1 {
+  font-size: $header-font-size-xxl;
+}
+
+.h1 {
+  font-size: $header-font-size-xl;
+
+  @include bp-md {
+    font-size: $header-font-size-xxl;
+  }
+}
+
+h2 {
+  font-size: $header-font-size-xl;
+  > small {
+    display: block;
+    font-size: 55%;
+  }
+}
+h3 {
+  font-size: $header-font-size-lg;
+  > small {
+    display: block;
+    font-size: 55%;
+  }
+}
+h4 {
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight-bold;
+  text-transform: uppercase;
+}
+
+p,
+address,
+dt,
+dd {
+  line-height: $paragraph-line-height;
+}
+
+address {
+  font-style: normal;
+}
+
+.small-text-center {
+  @include bp-sm {
+    text-align: center;
+  }
+}
+
+.large-text-right {
+  @include bp-lg {
+    text-align: right;
+  }
+}
+.large-text-left {
+  @include bp-lg {
+    text-align: left;
+  }
+}

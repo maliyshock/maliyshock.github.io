@@ -1,0 +1,45 @@
+.icn {
+  display: inline-block;
+  > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.icn-small {
+  width: 24px;
+  height: 24px
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  > li {
+    display: inline-block;
+    > a {
+      display: block;
+      width: 36px;
+      height: 36px;
+      > svg {
+        width: 36px;
+        height: 36px;
+        fill: $light-gray;
+      }
+    }
+  }
+}
+.icon-list--wide {
+  > li {
+    margin: 10px 12px;
+  }
+}
+.icon-list--narrow {
+  > li {
+    margin: 2px 4px;
+  }
+}
+.icon-list--inline {
+  display: inline-block;
+  vertical-align: middle;
+}
