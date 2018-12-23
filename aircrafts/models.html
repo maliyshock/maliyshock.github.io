@@ -1,0 +1,463 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">{% if not debug %}
+  <!-- Global site tag (gtag.js) - Google Analytics-->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-110077892-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-110077892-1');
+  </script>{% endif %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Aircraft Values,Aircraft Prices,Aircraft Appraisals,Airplane Values,Airplane Prices,Airplane Values,aircraft cost evaluator,aircraft ownership costs,aircraft cost analysis,Aircraft costs,aircraft operating costs calculator,Aircraft,airplane sale,aircraft for sale,airplane sales,planes for sale,small aircraft for sale,buy aircraft,buy airplane,buying airplane,for sale airplane,private aircraft for sale,small airplanes for sale,small planes for sale,used aeroplane for sale,used aircraft brokers,used aircraft dealers,used aircraft ,for sale,used aircraft sale,used aircraft sales,used aircrafts for sale,used airplane for sale,used airplane sales,used airplanes for sale">
+    <meta name="description" content="Planephd allows comparison of thousands of airplanes.  We calculate Aircraft Valuations, Total Ownership Cost which include Fixed Costs such as Insurance, Hangar, and Depreciation, as well as Variable Costs such as Fuel Consumption (GPH and dollar cost).  We also provide performance specifications such as cruise speed, range,  takeoff distance, etc.  Our PlaneBrain makes it easy to compare aircraft side-by-side.  And best of all, it’s Free.">
+    <title>Aircraft Operating Costs, Valuations, and Performance Specs</title>
+    <link rel="icon" href="{% static 'images/16x16.png' %}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{% static 'images/32x32.png' %}" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'images/180x180.png' %}" sizes="180x180" type="image/png">
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet"></head>
+  <body>
+<div class="action-panel">
+  <div class="action-panel__button hidden js-wizard-trigger" data-target=".js-wizard" role="button"><span class="action-panel__icon"><?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="32px" height="32px" class="svg-icon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <path d="M21.9253239,22.9923822 C19.603494,24.9293547 16.5947471,26.0980502 13.3074314,26.0980502 C5.95814258,26.0980502 0,20.2555667 0,13.0490251 C0,5.84244623 5.95814258,0 13.3074314,0 C20.6566821,0 26.6148627,5.84244623 26.6148627,13.0490251 C26.6148627,16.5868022 25.1779136,19.7968624 22.8461982,22.1476754 C22.8560837,22.1561261 22.8672366,22.1658197 22.8771221,22.1756375 L31.8142663,30.9392385 C32.0619112,31.1819504 32.0619112,31.575161 31.8142663,31.8178729 C31.5667481,32.060709 31.1657508,32.060709 30.9182326,31.8178729 L21.9810884,23.0542719 C21.9611906,23.0348848 21.942687,23.0142549 21.9253239,22.9923822 Z M25.3474883,13.0490251 C25.3474883,6.52815385 19.9574717,1.2427643 13.3074314,1.2427643 C6.65742909,1.2427643 1.26737442,6.52815385 1.26737442,13.0490251 C1.26737442,19.5699336 6.65742909,24.8552859 13.3074314,24.8552859 C19.9574717,24.8552859 25.3474883,19.5699336 25.3474883,13.0490251 Z"></path>
+    </g>
+</svg></span><span class="action-panel__text">Find Plane</span></div>
+  <div class="action-panel__button js-show-popup" data-target=".js-popup-feedback" role="button"><span class="action-panel__icon"><svg class="svg-icon" viewBox="0 0 32 32">
+    <g transform="translate(1.000000, 5.000000)">
+        <g>
+            <path d="M29.3181429,0 L0.681818571,0 C0.304773214,0 0,0.3073125 0,0.6875 L0,21.3125 C0,21.69266 0.304773214,22 0.681818571,22 L29.3181429,22 C29.6945357,22 30,21.69266 30,21.3125 L30,0.6875 C30,0.3073125 29.6945357,0 29.3181429,0 Z M28.6363929,18.96191 L20.19,10.445875 L19.2259286,11.418 L28.3568571,20.625 L1.64318571,20.625 L10.7740714,11.418 L9.81,10.445875 L1.36363929,18.96191 L1.36363929,1.375 L28.6363929,1.375 L28.6363929,18.96191 Z" id="path0_fill"></path>
+        </g>
+        <g transform="translate(1.000000, 1.000000)">
+            <g transform="translate(0.322222, 0.228571)">
+                <path d="M25.9587593,0 L13.670063,12.8421714 L1.38135593,0 L0,0 L0,0.576428571 L13.186837,14.3571429 C13.4540667,14.6364571 13.8860593,14.6364571 14.1532889,14.3571429 L27.3400185,0.576428571 L27.3400185,0 L25.9587593,0 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg></span><span class="action-panel__text">Leave Feedback</span></div>
+</div>
+    <div class="wizard js-wizard" data-behaviour="collapsed">
+      <div class="wizard__inner js-wizard-inner">
+        <div class="wizard__sections-wrapper">
+          <div class="wizard__section wizard__menu-section opened js-wizard-menu">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Find your perfect plane</h3>
+              <div class="wizard__menu">
+                <button class="button button--hollow button--full button--middle wizard__menu-item js-wizard-button" data-target="#jsWizardGetHelp"><span class="button__text">Help me find my Perfect Plane</span></button>
+                <button class="button button--hollow button--full button--middle wizard__menu-item js-wizard-button" data-target="#jsWizardSearch"><span class="button__text">Advanced mission match</span></button>
+                <button class="button button--hollow button--full button--middle wizard__menu-item js-wizard-button" data-target="#jsWizardPickManufacturer"><span class="button__text">Pick a manufacturer / model</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="wizard__section js-wizard-section" id="jsWizardGetHelp">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Help Me Find My Perfect Plane</h3>
+              <form class="form form--short">
+                <div class="row">
+                  <div class="input-wrapper js-input-wrapper">
+                    <input class="form__hidden-input js-hidden-input" type="hidden" name="reason" value="[&quot;Business travel&quot;]">
+                    <label class="form__label js-label" for="reason">Reason for Flying</label>
+                    <div class="form__input dropdown js-dropdown" id="reason">
+                      <div class="dropdown__chosen js-dropdown-selected">Business travel</div>
+                      <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                        <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">Business travel</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Personal travel</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Pleasure</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Training</span></a>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-wrapper js-input-wrapper">
+                    <input class="form__hidden-input js-hidden-input" type="hidden" name="seats" value="[&quot;2&quot;]">
+                    <label class="form__label js-label" for="seats">Minimum number of seats</label>
+                    <div class="form__input dropdown js-dropdown" id="seats">
+                      <div class="dropdown__chosen js-dropdown-selected">2</div>
+                      <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                        <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">2</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">3</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">4</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">5</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">6</span></a>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="wizard__button-area">
+                    <button class="button button--hollow button--middle button--iconed"><span class="button__icon"><?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="32px" height="32px" class="svg-icon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <path d="M21.9253239,22.9923822 C19.603494,24.9293547 16.5947471,26.0980502 13.3074314,26.0980502 C5.95814258,26.0980502 0,20.2555667 0,13.0490251 C0,5.84244623 5.95814258,0 13.3074314,0 C20.6566821,0 26.6148627,5.84244623 26.6148627,13.0490251 C26.6148627,16.5868022 25.1779136,19.7968624 22.8461982,22.1476754 C22.8560837,22.1561261 22.8672366,22.1658197 22.8771221,22.1756375 L31.8142663,30.9392385 C32.0619112,31.1819504 32.0619112,31.575161 31.8142663,31.8178729 C31.5667481,32.060709 31.1657508,32.060709 30.9182326,31.8178729 L21.9810884,23.0542719 C21.9611906,23.0348848 21.942687,23.0142549 21.9253239,22.9923822 Z M25.3474883,13.0490251 C25.3474883,6.52815385 19.9574717,1.2427643 13.3074314,1.2427643 C6.65742909,1.2427643 1.26737442,6.52815385 1.26737442,13.0490251 C1.26737442,19.5699336 6.65742909,24.8552859 13.3074314,24.8552859 C19.9574717,24.8552859 25.3474883,19.5699336 25.3474883,13.0490251 Z"></path>
+    </g>
+</svg></span><span class="button__text">Show results (13)</span></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="wizard__back button button--link-skin button--big centered js-wizard-back" type="submit">
+                    <div class="button__icon reversed"><svg  viewBox="-4 -4 40 40" xmlns="http://www.w3.org/2000/svg" >
+        <path d="M29.7002618,15.933516 L30.7627496,17.0800711 L32,15.933516 L30.7627496,14.7869608 L29.7002618,15.933516 Z M0,17.4966876 L29.7002618,17.4966876 L29.7002618,14.3703443 L0,14.3703443 L0,17.4966876 Z M28.637774,14.7869608 L14.2997069,28.0738888 L16.4247137,30.3670616 L30.7627496,17.0800711 L28.637774,14.7869608 Z M30.7627496,14.7869608 L16.4247137,1.5 L14.2997069,3.79311345 L28.637774,17.0800711 L30.7627496,14.7869608 Z"></path>
+</svg>
+                    </div>
+                    <div class="button__text">Step Back</div>
+                  </button>
+                </div>
+                <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardPickManufacturer">Pick a manufacturer / model</a></div>
+                <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardSearch">Advanced mission match</a></div>
+              </form>
+            </div>
+          </div>
+          <div class="wizard__section js-wizard-section" id="jsWizardPickManufacturer">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Pick a manufacturer / model</h3>
+              <div class="row">
+                <div class="grid grid--2-columns">
+                  <div class="grid__item">
+                    <ul class="list list--reset list--big">
+                      <li class="list__item"><a class="link" href="#">Aeronca</a></li>
+                      <li class="list__item"><a class="link" href="#">Aeronca</a></li>
+                      <li class="list__item"><a class="link" href="#">American champion</a></li>
+                      <li class="list__item"><a class="link" href="#">American general</a></li>
+                      <li class="list__item"><a class="link" href="#">Beechcraft</a></li>
+                      <li class="list__item"><a class="link" href="#">Bellanca</a></li>
+                      <li class="list__item"><a class="link" href="#">Cessna</a></li>
+                      <li class="list__item"><a class="link" href="#">Cirrus</a></li>
+                      <li class="list__item"><a class="link" href="#">Commander</a></li>
+                    </ul>
+                  </div>
+                  <div class="grid__item">
+                    <ul class="list list--reset list--big">
+                      <li class="list__item"><a class="link" href="#">Diamond</a></li>
+                      <li class="list__item"><a class="link" href="#">Extra</a></li>
+                      <li class="list__item"><a class="link" href="#">Lake</a></li>
+                      <li class="list__item"><a class="link" href="#">Luscombe</a></li>
+                      <li class="list__item"><a class="link" href="#">Maule</a></li>
+                      <li class="list__item"><a class="link" href="#">Mooney</a></li>
+                      <li class="list__item"><a class="link" href="#">Piper</a></li>
+                      <li class="list__item"><a class="link" href="#">Socata</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="wizard__button-area">
+                  <button class="wizard__back button button--link-skin button--big centered js-wizard-back">
+                    <div class="button__icon reversed"><svg  viewBox="-4 -4 40 40" xmlns="http://www.w3.org/2000/svg" >
+        <path d="M29.7002618,15.933516 L30.7627496,17.0800711 L32,15.933516 L30.7627496,14.7869608 L29.7002618,15.933516 Z M0,17.4966876 L29.7002618,17.4966876 L29.7002618,14.3703443 L0,14.3703443 L0,17.4966876 Z M28.637774,14.7869608 L14.2997069,28.0738888 L16.4247137,30.3670616 L30.7627496,17.0800711 L28.637774,14.7869608 Z M30.7627496,14.7869608 L16.4247137,1.5 L14.2997069,3.79311345 L28.637774,17.0800711 L30.7627496,14.7869608 Z"></path>
+</svg>
+                    </div>
+                    <div class="button__text">Step Back</div>
+                  </button>
+                </div>
+              </div>
+              <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardGetHelp">Help me pick my PerfectPlane</a></div>
+              <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardSearch">Advanced mission match</a></div>
+            </div>
+          </div>
+          <div class="wizard__section js-wizard-section" id="jsWizardSearch">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Advanced Mission Match</h3>
+              <form class="form" ation="{% url 'wizard:home' %}" method="">
+                <div class="row">
+                  <div class="toggler"><a class="toggler__item active js-toggler-item" data-target="#jsCrossCountry">Cross country</a><a class="toggler__item js-toggler-item" data-target="#jsLocal">Local</a></div>
+                </div>
+                <div class="row">
+                  <div class="form__list">
+                    <div class="form__item">
+                      <div class="toggler-area js-toggler-area fadeIn active" id="jsCrossCountry">
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="trip_range">Typical Trip in NM</label>
+                            <input class="form__input js-form-input" id="trip_range" type="text" name="trip_range" value="400">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="trips_yr">Trips Per Year</label>
+                            <input class="form__input js-form-input" id="trips_yr" type="number" name="trips_yr" value="20">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="avg_trip_duration_hrs_max">Max Trip Time (Hrs)</label>
+                            <input class="form__input js-form-input" id="avg_trip_duration_hrs_max" type="number" name="avg_trip_duration_hrs_max" value="10">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="toggler-area js-toggler-area" id="jsLocal">
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="annual_hrs">Annual Hours</label>
+                            <input class="form__input js-form-input" id="annual_hrs" type="number" name="annual_hrs" value="100">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="min_speed">Min cruise speed</label>
+                            <input class="form__input js-form-input" id="min_speed" type="number" name="min_speed" value="50">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="purchase_price_max">Max Purchase Price ( in $) </label>
+                          <input class="form__input js-form-input" id="purchase_price_max" type="number" name="purchase_price_max" value="1000000">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="ownership_cost_p_year_max">Max Ownership Costs ( in $) </label>
+                          <input class="form__input js-form-input" id="ownership_cost_p_year_max" type="number" name="ownership_cost_p_year_max" value="10000000">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="aircraft_age">Max Age</label>
+                          <input class="form__input js-form-input" id="aircraft_age" type="number" name="aircraft_age" value="100">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="required_seats_min">Min Seats</label>
+                          <input class="form__input js-form-input" id="required_seats_min" type="number" name="required_seats_min" value="1">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper js-input-wrapper small">
+                          <input class="form__hidden-input js-hidden-input" type="hidden" name="hangar_storage" value="[&quot;Tie Down&quot;]">
+                          <label class="form__label js-label" for="hangar_storage">Storage</label>
+                          <div class="form__input dropdown js-dropdown" id="hangar_storage">
+                            <div class="dropdown__chosen js-dropdown-selected">Tie Down</div>
+                            <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                              <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">Tie Down</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Hangar</span></a>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="wizard__button-area">
+                    <button class="button button--hollow button--middle button--iconed" type="submit"><span class="button__icon"><?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="32px" height="32px" class="svg-icon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <path d="M21.9253239,22.9923822 C19.603494,24.9293547 16.5947471,26.0980502 13.3074314,26.0980502 C5.95814258,26.0980502 0,20.2555667 0,13.0490251 C0,5.84244623 5.95814258,0 13.3074314,0 C20.6566821,0 26.6148627,5.84244623 26.6148627,13.0490251 C26.6148627,16.5868022 25.1779136,19.7968624 22.8461982,22.1476754 C22.8560837,22.1561261 22.8672366,22.1658197 22.8771221,22.1756375 L31.8142663,30.9392385 C32.0619112,31.1819504 32.0619112,31.575161 31.8142663,31.8178729 C31.5667481,32.060709 31.1657508,32.060709 30.9182326,31.8178729 L21.9810884,23.0542719 C21.9611906,23.0348848 21.942687,23.0142549 21.9253239,22.9923822 Z M25.3474883,13.0490251 C25.3474883,6.52815385 19.9574717,1.2427643 13.3074314,1.2427643 C6.65742909,1.2427643 1.26737442,6.52815385 1.26737442,13.0490251 C1.26737442,19.5699336 6.65742909,24.8552859 13.3074314,24.8552859 C19.9574717,24.8552859 25.3474883,19.5699336 25.3474883,13.0490251 Z"></path>
+    </g>
+</svg></span><span class="button__text">Show 24 results</span></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="wizard__back button button--link-skin button--big centered js-wizard-back">
+                    <div class="button__icon reversed"><svg  viewBox="-4 -4 40 40" xmlns="http://www.w3.org/2000/svg" >
+        <path d="M29.7002618,15.933516 L30.7627496,17.0800711 L32,15.933516 L30.7627496,14.7869608 L29.7002618,15.933516 Z M0,17.4966876 L29.7002618,17.4966876 L29.7002618,14.3703443 L0,14.3703443 L0,17.4966876 Z M28.637774,14.7869608 L14.2997069,28.0738888 L16.4247137,30.3670616 L30.7627496,17.0800711 L28.637774,14.7869608 Z M30.7627496,14.7869608 L16.4247137,1.5 L14.2997069,3.79311345 L28.637774,17.0800711 L30.7627496,14.7869608 Z"></path>
+</svg>
+                    </div>
+                    <div class="button__text">Step Back</div>
+                  </button>
+                </div>
+                <div class="row center-content"><a class="link link--hidden-border link--big centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardPickManufacturer">Help me pick my PerfectPlane</a></div>
+                <div class="row center-content"><a class="link link--hidden-border link--big centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardPickManufacturer">Pick a manufacturer / model</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="button button--big wizard__close js-wizard-close" role="button">
+          <div class="wizard__close-icon icon button__icon"><svg class="svg-icon" viewBox="0 0 32 32">
+    <g>
+        <path d="M-5.13725395,15.1373027 C-5.61356109,15.1373027 -6,15.5236701 -6,16 C-6,16.4763299 -5.61356109,16.8626973 -5.13725395,16.8626973 L15.1373027,16.8626973 L15.1373027,37.1373027 C15.1373027,37.6136327 15.5236701,38 16,38 C16.4763299,38 16.8626973,37.6136327 16.8626973,37.1373027 L16.8626973,16.8626973 L37.1373027,16.8626973 C37.6136327,16.8626973 38,16.4763299 38,16 C38,15.5236701 37.6136327,15.1373027 37.1373027,15.1373027 L16.8626973,15.1373027 L16.8626973,-5.13725395 C16.8626973,-5.61356109 16.4763299,-6 16,-6 C15.5236701,-6 15.1373027,-5.61356109 15.1373027,-5.13725395 L15.1373027,15.1373027 L-5.13725395,15.1373027 Z" id="path0_fill" transform="translate(16.000000, 16.000000) rotate(45.000000) translate(-16.000000, -16.000000) "></path>
+    </g>
+</svg>
+          </div>
+          <div class="wizard__close-text button__text">Close that window</div>
+        </div>
+      </div>
+    </div>
+    <div class="app-wrapper app-wrapper--dark-background">
+<header class="header">
+  <div class="wrapper">
+<div class="burger bt-menu-trigger js-bt-menu-trigger show-for-tablet-landscape-down">
+  <div></div>
+</div>
+<nav class="navigation js-navigation">
+  <ul class="navigation__list">
+    <li class="navigation__item"><a class="logo" href="/">planephd.com</a></li>
+  </ul>
+  <ul class="navigation__list">
+    <li class="navigation__item navigation__item--separated"><a class="button sign-in-button" href="{% url &quot;account_signup&quot; %}"><span class="button__text">Sign up</span></a></li>{% if request.user.is_authenticated %}
+    <li class="navigation__item"><a class="navigation__link" href="&quot;{% url &quot;account_logout&quot; %}">Log Out</a></li>{% else %}
+    <li class="navigation__item"><a class="navigation__link" href="{% url &quot;account_login&quot; %}">Log In</a></li>{% endif %}
+  </ul>
+</nav>
+  </div>
+</header>
+      <div class="page">
+        <section class="section">
+          <div class="wrapper">
+            <h1 class="h1">CESSNA models</h1>
+            <div class="grid grid--3-columns">
+              <div class="grid__item">
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion"><a class="link link--big link--black" href="#">Сessna 120</a></div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__item">
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__item">
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion js-accordion"><a class="accordion__head js-accordion-head" href="#"><span class="accordion__title">Сessna 120</span><span class="accordion__count">(3)</span></a>
+                  <div class="accordion__body js-accordion-body">
+                    <ul class="list list--big list--reset">
+                      <li class="list__item"><a class="link">Some model 1</a></li>
+                      <li class="list__item"><a class="link">Some model 2</a></li>
+                      <li class="list__item"><a class="link">Some model 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+<footer class="footer">
+  <div class="wrapper">
+    <div class="grid grid--6-columns">
+      <div class="grid__item footer__item"><a class="logo" href="/">planephd.com</a>
+        <p class="copyright">2017 © planephd.com</p>
+      </div>
+      <div class="grid__item footer__item">
+        <div class="footer__title">Information:</div>
+        <ul class="list list--reset list--no-indents">
+          <li class="list__item"><a class="footer__link" href="{% url 'terms' %}">Terms</a></li>
+          <li class="list__item"><a class="footer__link" href="{% url 'privacy' %}">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="{% static 'index.js' %}"></script>
+    </div>
+  <script type="text/javascript" src="index.js"></script></body>
+</html>

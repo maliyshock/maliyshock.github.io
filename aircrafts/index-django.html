@@ -1,0 +1,885 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">{% if not debug %}
+  <!-- Global site tag (gtag.js) - Google Analytics-->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-110077892-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-110077892-1');
+  </script>{% endif %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Aircraft Values,Aircraft Prices,Aircraft Appraisals,Airplane Values,Airplane Prices,Airplane Values,aircraft cost evaluator,aircraft ownership costs,aircraft cost analysis,Aircraft costs,aircraft operating costs calculator,Aircraft,airplane sale,aircraft for sale,airplane sales,planes for sale,small aircraft for sale,buy aircraft,buy airplane,buying airplane,for sale airplane,private aircraft for sale,small airplanes for sale,small planes for sale,used aeroplane for sale,used aircraft brokers,used aircraft dealers,used aircraft ,for sale,used aircraft sale,used aircraft sales,used aircrafts for sale,used airplane for sale,used airplane sales,used airplanes for sale">
+    <meta name="description" content="Planephd allows comparison of thousands of airplanes.  We calculate Aircraft Valuations, Total Ownership Cost which include Fixed Costs such as Insurance, Hangar, and Depreciation, as well as Variable Costs such as Fuel Consumption (GPH and dollar cost).  We also provide performance specifications such as cruise speed, range,  takeoff distance, etc.  Our PlaneBrain makes it easy to compare aircraft side-by-side.  And best of all, it’s Free.">
+    <title>Aircraft Operating Costs, Valuations, and Performance Specs</title>
+    <link rel="icon" href="{% static 'images/16x16.png' %}" sizes="16x16" type="image/png">
+    <link rel="icon" href="{% static 'images/32x32.png' %}" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'images/180x180.png' %}" sizes="180x180" type="image/png">
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet"></head>
+  <body>
+<div class="action-panel">
+  <div class="action-panel__button hidden js-wizard-trigger" data-target=".js-wizard" role="button"><span class="action-panel__icon"><?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="32px" height="32px" class="svg-icon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <path d="M21.9253239,22.9923822 C19.603494,24.9293547 16.5947471,26.0980502 13.3074314,26.0980502 C5.95814258,26.0980502 0,20.2555667 0,13.0490251 C0,5.84244623 5.95814258,0 13.3074314,0 C20.6566821,0 26.6148627,5.84244623 26.6148627,13.0490251 C26.6148627,16.5868022 25.1779136,19.7968624 22.8461982,22.1476754 C22.8560837,22.1561261 22.8672366,22.1658197 22.8771221,22.1756375 L31.8142663,30.9392385 C32.0619112,31.1819504 32.0619112,31.575161 31.8142663,31.8178729 C31.5667481,32.060709 31.1657508,32.060709 30.9182326,31.8178729 L21.9810884,23.0542719 C21.9611906,23.0348848 21.942687,23.0142549 21.9253239,22.9923822 Z M25.3474883,13.0490251 C25.3474883,6.52815385 19.9574717,1.2427643 13.3074314,1.2427643 C6.65742909,1.2427643 1.26737442,6.52815385 1.26737442,13.0490251 C1.26737442,19.5699336 6.65742909,24.8552859 13.3074314,24.8552859 C19.9574717,24.8552859 25.3474883,19.5699336 25.3474883,13.0490251 Z"></path>
+    </g>
+</svg></span><span class="action-panel__text">Find Plane</span></div>
+  <div class="action-panel__button js-show-popup" data-target=".js-popup-feedback" role="button"><span class="action-panel__icon"><svg class="svg-icon" viewBox="0 0 32 32">
+    <g transform="translate(1.000000, 5.000000)">
+        <g>
+            <path d="M29.3181429,0 L0.681818571,0 C0.304773214,0 0,0.3073125 0,0.6875 L0,21.3125 C0,21.69266 0.304773214,22 0.681818571,22 L29.3181429,22 C29.6945357,22 30,21.69266 30,21.3125 L30,0.6875 C30,0.3073125 29.6945357,0 29.3181429,0 Z M28.6363929,18.96191 L20.19,10.445875 L19.2259286,11.418 L28.3568571,20.625 L1.64318571,20.625 L10.7740714,11.418 L9.81,10.445875 L1.36363929,18.96191 L1.36363929,1.375 L28.6363929,1.375 L28.6363929,18.96191 Z" id="path0_fill"></path>
+        </g>
+        <g transform="translate(1.000000, 1.000000)">
+            <g transform="translate(0.322222, 0.228571)">
+                <path d="M25.9587593,0 L13.670063,12.8421714 L1.38135593,0 L0,0 L0,0.576428571 L13.186837,14.3571429 C13.4540667,14.6364571 13.8860593,14.6364571 14.1532889,14.3571429 L27.3400185,0.576428571 L27.3400185,0 L25.9587593,0 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg></span><span class="action-panel__text">Leave Feedback</span></div>
+</div>
+    <div class="popup js-popup js-popup-feedback">
+      <div class="popup__inner js-popup-inner">
+        <div class="popup__icon"><svg class="svg-icon" viewBox="0 0 32 32">
+    <g transform="translate(1.000000, 5.000000)">
+        <g>
+            <path d="M29.3181429,0 L0.681818571,0 C0.304773214,0 0,0.3073125 0,0.6875 L0,21.3125 C0,21.69266 0.304773214,22 0.681818571,22 L29.3181429,22 C29.6945357,22 30,21.69266 30,21.3125 L30,0.6875 C30,0.3073125 29.6945357,0 29.3181429,0 Z M28.6363929,18.96191 L20.19,10.445875 L19.2259286,11.418 L28.3568571,20.625 L1.64318571,20.625 L10.7740714,11.418 L9.81,10.445875 L1.36363929,18.96191 L1.36363929,1.375 L28.6363929,1.375 L28.6363929,18.96191 Z" id="path0_fill"></path>
+        </g>
+        <g transform="translate(1.000000, 1.000000)">
+            <g transform="translate(0.322222, 0.228571)">
+                <path d="M25.9587593,0 L13.670063,12.8421714 L1.38135593,0 L0,0 L0,0.576428571 L13.186837,14.3571429 C13.4540667,14.6364571 13.8860593,14.6364571 14.1532889,14.3571429 L27.3400185,0.576428571 L27.3400185,0 L25.9587593,0 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+        </div>
+        <button class="popup__close js-popup-close"><svg class="svg-icon" viewBox="0 0 32 32">
+    <g>
+        <path d="M-5.13725395,15.1373027 C-5.61356109,15.1373027 -6,15.5236701 -6,16 C-6,16.4763299 -5.61356109,16.8626973 -5.13725395,16.8626973 L15.1373027,16.8626973 L15.1373027,37.1373027 C15.1373027,37.6136327 15.5236701,38 16,38 C16.4763299,38 16.8626973,37.6136327 16.8626973,37.1373027 L16.8626973,16.8626973 L37.1373027,16.8626973 C37.6136327,16.8626973 38,16.4763299 38,16 C38,15.5236701 37.6136327,15.1373027 37.1373027,15.1373027 L16.8626973,15.1373027 L16.8626973,-5.13725395 C16.8626973,-5.61356109 16.4763299,-6 16,-6 C15.5236701,-6 15.1373027,-5.61356109 15.1373027,-5.13725395 L15.1373027,15.1373027 L-5.13725395,15.1373027 Z" id="path0_fill" transform="translate(16.000000, 16.000000) rotate(45.000000) translate(-16.000000, -16.000000) "></path>
+    </g>
+</svg>
+        </button>
+        <div class="popup__result js-result">
+          <div class="popup__result-item popup__pending popup__result-item--hidden fadeIn active js-pending js-result-item">
+            <div class="popup__pic popup__pic--white"><svg viewBox="0 0 32 34" >
+    <g class="plane" transform="translate(0.000000, 7.000000)">
+        <path d="M21.9848727,3.993165 C21.9848727,4.828125 22.6628848,5.5073 23.4971636,5.5073 L29.5180121,5.5073 C30.0539636,5.5073 30.4877091,5.9551 30.4877091,6.5073 L30.4877091,11.99315 C30.4877091,12.5459 30.0539636,12.99315 29.5180121,12.99315 L22.9024485,12.99315 C22.6998303,13.5757 22.1458424,13.99465 21.4961939,13.99465 L20.4838788,13.99465 L20.4838788,15.10255 C21.0653576,15.3052 21.4848485,15.8594 21.4848485,16.50975 C21.4848485,17.33155 20.8162909,18 19.9952485,18 C19.1751758,18 18.5066182,17.33155 18.5066182,16.50975 C18.5066182,15.8594 18.9261576,15.3052 19.5075879,15.10255 L19.5075879,13.99465 L12.4924121,13.99465 C11.7111758,13.99465 11.0691394,13.3882 11.0094545,12.6211 L8.72441212,11.9453 L6.35796364,13.91945 C6.43558788,14.0996 6.47917576,14.29835 6.47917576,14.5073 C6.47917576,15.3291 5.81061818,15.99755 4.98957576,15.99755 C4.16950788,15.99755 3.50094545,15.3291 3.50094545,14.5073 C3.50094545,13.68555 4.16950788,13.0171 4.98957576,13.0171 C5.24620606,13.0171 5.48770909,13.0825 5.69793939,13.1968 L7.59752727,11.6123 L0.702652121,9.57275 C0.286931879,9.4502 0,9.0576 0,8.6118 L0,1 C0,0.447754 0.433712,0 0.96969697,0 L2.21117576,0 C2.56250182,0 2.88541576,0.194824 3.05681939,0.510255 L5.78031515,5.5073 L9.49149091,5.5073 L9.99146667,5.5073 C10.8257455,5.5073 11.5047273,4.828125 11.5047273,3.993165 C11.5047273,2.61963 12.6211879,1.501955 13.9933576,1.501955 L17.5066182,1.501955 L18.4829576,1.501955 L19.4952727,1.501955 C20.8683636,1.501955 21.9848727,2.61963 21.9848727,3.993165 Z M9.99146667,6.48485 L9.49149091,6.48485 L5.768,6.48485 C5.4176,6.48485 5.0937697,6.28955 4.92232727,5.9746 L2.42045576,1.3833 C2.28409212,1.13281 2.02651636,0.97754 1.74810667,0.97754 C1.32196848,0.97754 0.976324848,1.333495 0.976324848,1.77295 L0.976324848,6.50975 C0.976324848,7.062 1.41098667,7.50975 1.94602182,7.50975 L26.5132606,7.50975 C26.7878788,7.50975 27.0104242,7.28025 27.0104242,6.99755 C27.0104242,6.71435 26.7878788,6.48485 26.5132606,6.48485 L23.4971636,6.48485 L9.99146667,6.48485 Z M21.5217939,5.5073 C21.1998061,5.0874 21.0075636,4.5625 21.0075636,3.993165 C21.0075636,3.15869 20.3295515,2.47949 19.4952727,2.47949 L15.4819879,2.47949 L15.4819879,5.5073 L21.5217939,5.5073 Z M4.47822061,14.5073 C4.47822061,14.79005 4.70738424,15.01955 4.98957576,15.01955 C5.27272727,15.01955 5.50191515,14.79005 5.50191515,14.5073 C5.50191515,14.2246 5.27272727,13.99465 4.98957576,13.99465 C4.70738424,13.99465 4.47822061,14.2246 4.47822061,14.5073 Z M12.4924121,13.0171 L21.4961939,13.0171 C21.7784242,13.0171 22.0085333,12.7871 22.0085333,12.5044 C22.0085333,12.22215 21.7784242,11.9922 21.4961939,11.9922 L12.4924121,11.9922 C12.2102303,11.9922 11.9810424,12.22215 11.9810424,12.5044 C11.9810424,12.7871 12.2102303,13.0171 12.4924121,13.0171 Z M19.4838788,16.50975 C19.4838788,16.7925 19.7130667,17.02245 19.9952485,17.02245 C20.2784,17.02245 20.5075879,16.7925 20.5075879,16.50975 C20.5075879,16.22705 20.2784,15.99705 19.9952485,15.99705 C19.7130667,15.99705 19.4838788,16.22705 19.4838788,16.50975 Z M14.505697,2.47949 L13.9933576,2.47949 C13.3304727,2.47949 12.7661091,2.90918 12.5625212,3.504395 L14.505697,3.504395 L14.505697,2.47949 Z M14.5020108,4.48892396 C14.3374421,4.48892396 12.948424,4.48892396 12.4371225,4.48892396 C12.3289491,4.97231982 12.1251571,5.29287042 11.9752513,5.50564131 L14.5020108,5.50564131 C14.5020108,5.14125773 14.5020108,4.80235194 14.5020108,4.48892396 Z M21.4961939,11.01465 C22.1458424,11.01465 22.6998303,11.4336 22.9024485,12.0161 L26.0407273,12.0161 C26.5757576,12.0161 27.0104242,11.56835 27.0104242,11.0161 L27.0104242,9.4873 C27.0104242,8.93505 26.5757576,8.4873 26.0407273,8.4873 L0.976324848,8.4873 L0.976324848,8.63475 L11.2566303,11.6748 C11.5246061,11.27685 11.9782303,11.01465 12.4924121,11.01465 L21.4961939,11.01465 Z M28.7490424,12.0161 C29.169503,12.0161 29.5113697,11.66405 29.5113697,11.23 L29.5113697,7.2705 C29.5113697,6.83645 29.169503,6.48485 28.7490424,6.48485 C28.3276606,6.48485 27.9867636,6.83645 27.9867636,7.2705 L27.9867636,11.23 C27.9867636,11.66405 28.3276606,12.0161 28.7490424,12.0161 Z"></path>
+        <path d="M31.4744242,8.51125 C31.2121212,8.51125 31,8.73 31,9 C31,9.27 31.2121212,9.48875 31.4744242,9.48875 L31.526497,9.48875 C31.7878788,9.48875 32,9.27 32,9 C32,8.73 31.7878788,8.51125 31.526497,8.51125 L31.4744242,8.51125 Z" ></path>
+        <g class="plane__propeller" transform="translate(31.000000, 1.000000)">
+            <path d="M0.987684848,6.4951 L0.987684848,0.99365 C0.987684848,0.71582 0.768921212,0.490235 0.500024242,0.490235 C0.230109091,0.490235 0.0113454545,0.71582 0.0113454545,0.99365 L0.0113454545,6.4951 C0.0113454545,6.77345 0.230109091,6.99855 0.500024242,6.99855 C0.768921212,6.99855 0.987684848,6.77345 0.987684848,6.4951 Z" ></path>
+            <path d="M0.987684848,9.5586 L0.987684848,15.06005 C0.987684848,15.3384 0.768921212,15.5635 0.500024242,15.5635 C0.230109091,15.5635 0.0113454545,15.3384 0.0113454545,15.06005 L0.0113454545,9.5586 C0.0113454545,9.28075 0.230109091,9.0552 0.500024242,9.0552 C0.768921212,9.0552 0.987684848,9.28075 0.987684848,9.5586 Z" ></path>
+        </g>
+    </g>
+</svg>
+            </div>
+            <h4 class="popup__title">Please wait.</h4>
+            <p class="popup__text">We are sending your feedback.</p>
+          </div>
+          <div class="popup__result-item popup__result-item--hidden popup__error js-error js-result-item">
+            <div class="popup__pic popup__pic--white"><svg viewBox="0 0 32 32">
+    <g transform="translate(0.000000, 9.000000)">
+        <g >
+            <g transform="translate(6.848017, 4.818263) rotate(-4.999996) translate(-6.848017, -4.818263) translate(0.348017, 0.818263)">
+                <path d="M12.1624778,0.00663062177 L1.25753039,0.00663062177 C1.11394844,0.00663062177 0.997888742,0.114944183 0.997888742,0.248943047 L0.997888742,7.51833874 C0.997888742,7.65233878 1.11394844,7.76063292 1.25753039,7.76063292 L12.1624778,7.76063292 C12.3057873,7.76063292 12.4221064,7.65233878 12.4221064,7.51833874 L12.4221064,0.248943047 C12.4221064,0.114944183 12.3057873,0.00663062177 12.1624778,0.00663062177 Z M11.9028491,6.6898679 L8.68640055,3.68832583 L8.3192433,4.03095535 L11.7963729,7.27598572 L1.62362226,7.27598572 L5.10074567,4.03095535 L4.73361318,3.68832583 L1.51717204,6.6898679 L1.51717204,0.491255472 L11.9028491,0.491255472 L11.9028491,6.6898679 Z" ></path>
+            </g>
+        </g>
+        <g  transform="translate(0.000000, 0.588235)">
+            <g transform="translate(6.770290, 3.249247) rotate(-4.999996) translate(-6.770290, -3.249247) translate(0.770290, 0.749247)">
+                <path d="M10.8583298,0.00454847987 L6.19022655,4.36108507 L1.52212883,0.00454847987 L0.997393577,0.00454847987 L0.997393577,0.200095009 L6.0066603,4.87503228 C6.10817795,4.96977348 6.27226895,4.96977348 6.37379279,4.87503228 L11.3830348,0.200095009 L11.3830348,0.00454847987 L10.8583298,0.00454847987 Z" ></path>
+            </g>
+        </g>
+    </g>
+    <g  transform="translate(5.000000, 0.000000)">
+        <g>
+            <g>
+                <path d="M1.23564375,1.23564375 C2.88316687,-0.411881063 5.55433312,-0.411881063 7.20185625,1.23564375 L12.7045125,6.7383 C13.143825,7.1776125 13.856175,7.1776125 14.2954875,6.7383 L19.7981437,1.23564375 C21.44565,-0.411881063 24.11685,-0.411881063 25.7643562,1.23564375 C27.4118625,2.88316688 27.4118625,5.55433313 25.7643562,7.20185625 L20.2617,12.7045125 C19.8223875,13.143825 19.8223875,13.856175 20.2617,14.2954875 L25.7643562,19.7981438 C27.4118625,21.44565 27.4118625,24.11685 25.7643562,25.7643563 C24.11685,27.4118625 21.44565,27.4118625 19.7981437,25.7643563 L14.2954875,20.2617 C13.856175,19.8223875 13.143825,19.8223875 12.7045125,20.2617 L7.20185625,25.7643563 C5.55433312,27.4118625 2.88316687,27.4118625 1.23564375,25.7643563 C-0.411881062,24.11685 -0.411881062,21.44565 1.23564375,19.7981438 L6.7383,14.2954875 C7.1776125,13.856175 7.1776125,13.143825 6.7383,12.7045125 L1.23564375,7.20185625 C-0.411881062,5.55433313 -0.411881062,2.88316688 1.23564375,1.23564375 Z" ></path>
+            </g>
+        </g>
+    </g>
+</svg>
+            </div>
+            <h4 class="popup__title">Server Error!</h4>
+            <p class="popup__text">Something happened, you can try again</p>
+            <div class="popup__button-container">
+              <button class="button button--white button--hollow js-try-again">
+                <div class="button__text">Try Again</div>
+              </button>
+            </div>
+            <p class="popup__text">You can always email to reach out to us:</p><a class="link link--white" href="mailto:feedback@planephd.com">feedback@planephd.com</a>
+          </div>
+          <div class="popup__result-item popup__result-item--hidden popup__success js-success js-result-item">
+            <div class="popup__pic popup__pic--white"><svg viewBox="0 0 32 32">
+    <g transform="translate(1.000000, 4.000000)">
+        <g transform="translate(14.000000, 10.000000)">
+            <g>
+                <g transform="translate(7.503127, 5.902242) rotate(-4.999996) translate(-7.503127, -5.902242) translate(0.503127, 0.902242)">
+                    <path d="M12.7770267,-0.00808093068 L0.304312813,-0.00808093068 C0.140088564,-0.00808093068 0.00734285829,0.119965982 0.00734285829,0.278377488 L0.00734285829,8.87213004 C0.00734285829,9.03053009 0.140088564,9.15858846 0.304312813,9.15858846 L12.7770267,9.15858846 C12.9409667,9.15858846 13.0740134,9.03053009 13.0740134,8.87213004 L13.0740134,0.278377488 C13.0740134,0.119965982 12.9409667,-0.00808093068 12.7770267,-0.00808093068 Z M12.4800866,7.89271725 L8.80121214,4.34436828 L8.38130535,4.74942048 L12.3583332,8.58567162 L0.723041738,8.58567162 L4.70005092,4.74942048 L4.28014413,4.34436828 L0.601283701,7.89271725 L0.601283701,0.564835906 L12.4800866,0.564835906 L12.4800866,7.89271725 Z"></path>
+                </g>
+            </g>
+            <g transform="translate(0.466667, 0.916667)">
+                <g transform="translate(6.522902, 3.573960) rotate(-4.999996) translate(-6.522902, -3.573960) translate(0.522902, 0.573960)">
+                    <path d="M11.2789901,0.00116669348 L5.93976185,5.15141406 L0.600528933,0.00116669348 L0.000353421071,0.00116669348 L0.000353421071,0.232338637 L5.72980846,5.7589809 C5.84591516,5.8709976 6.03360855,5.8709976 6.14971525,5.7589809 L11.8791236,0.232338637 L11.8791236,0.00116669348 L11.2789901,0.00116669348 Z"></path>
+                </g>
+            </g>
+        </g>
+        <g>
+            <g transform="translate(0.234848, 0.235294)">
+                <path d="M29.2636712,1.03374118 C30.6393667,2.41206118 30.6393667,4.64676235 29.2636712,6.02508235 L13.0591258,22.2603765 C11.6834303,23.6386824 9.45293333,23.6386824 8.07723788,22.2603765 L1.03178333,15.2015529 C-0.343927621,13.8232471 -0.343927621,11.5885176 1.03178333,10.2102118 C2.40749288,8.83190588 4.63796167,8.83190588 6.01367121,10.2102118 L9.90393636,14.1078588 C10.2707697,14.4753882 10.8655939,14.4753882 11.2324273,14.1078588 L24.2817833,1.03374118 C25.6574788,-0.344580235 27.8879758,-0.344580235 29.2636712,1.03374118 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+            </div>
+            <h4 class="popup__title">Your message has been successfully sent</h4>
+            <p class="popup__text">You can close this window now</p>
+            <div class="popup__button-container">
+              <button class="button button--white button--hollow js-popup-close">
+                <div class="button__text">Close</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="popup__header">
+          <h4 class="popup__title">Leave Feedback</h4>
+          <h6 class="popup__subtitle">You can share your experience or ask a question</h6>
+        </div>
+        <div class="popup__body">
+          <form class="form js-form" action="put/some/url/here">
+            <div class="row">
+              <div class="input-wrapper">
+                <label class="form__label" for="email">Your email</label>
+                <input class="form__input js-form-input" id="email" type="email" name="email" required="required">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-wrapper hint hint--left hint--triggered-on-focus">
+                <label class="form__label" for="feedback">Your feedback</label>
+                <textarea class="form__input js-form-input form__textarea" id="feedback" name="feedback" required="required"></textarea>
+                <!---->
+                <label class="hint__parent-wrapper" for="feedback">
+                  <div class="hint__wrapper">
+                    <div class="hint__inner">
+                      <div class="hint__body">
+                        <p>Please tel us:</p>
+                        <ul class="list list--no-indents">
+                          <li class="list__item">Features that would be useful to you.</li>
+                          <li class="list__item">Aircraft data that you believe is inaccurate or have specific experiences.</li>
+                          <li class="list__item">Aircraft specific reviews and articles.</li>
+                          <li class="list__item">Send us pictures of your plane.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <button class="button button--hollow js-form-submit" type="submit"><span class="button__text">Send Feedback</span></button>
+            </div>
+            <div class="row">
+              <p class="text--gray">Use this form or email to reach out to us:</p>
+              <p class="text--gray"><a class="link" href="mailto:feedback@planephd.com">feedback@planephd.com </a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wizard js-wizard">
+      <div class="wizard__inner js-wizard-inner">
+        <div class="wizard__sections-wrapper">
+          <div class="wizard__section wizard__menu-section opened js-wizard-menu">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Find your perfect plane</h3>
+              <div class="wizard__menu">
+                <button class="button button--hollow button--full button--middle wizard__menu-item js-wizard-button" data-target="#jsWizardGetHelp"><span class="button__text">Help me find my Perfect Plane</span></button>
+                <button class="button button--hollow button--full button--middle wizard__menu-item js-wizard-button" data-target="#jsWizardSearch"><span class="button__text">Advanced mission match</span></button>
+                <button class="button button--hollow button--full button--middle wizard__menu-item js-wizard-button" data-target="#jsWizardPickManufacturer"><span class="button__text">Pick a manufacturer / model</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="wizard__section js-wizard-section" id="jsWizardGetHelp">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Help Me Find My Perfect Plane</h3>
+              <form class="form form--short">
+                <div class="row">
+                  <div class="input-wrapper js-input-wrapper">
+                    <input class="form__hidden-input js-hidden-input" type="hidden" name="reason" value="[&quot;Business travel&quot;]">
+                    <label class="form__label js-label" for="reason">Reason for Flying</label>
+                    <div class="form__input dropdown js-dropdown" id="reason">
+                      <div class="dropdown__chosen js-dropdown-selected">Business travel</div>
+                      <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                        <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">Business travel</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Personal travel</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Pleasure</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Training</span></a>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-wrapper js-input-wrapper">
+                    <input class="form__hidden-input js-hidden-input" type="hidden" name="seats" value="[&quot;2&quot;]">
+                    <label class="form__label js-label" for="seats">Minimum number of seats</label>
+                    <div class="form__input dropdown js-dropdown" id="seats">
+                      <div class="dropdown__chosen js-dropdown-selected">2</div>
+                      <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                        <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">2</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">3</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">4</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">5</span></a><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">6</span></a>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="wizard__button-area">
+                    <button class="button button--hollow button--middle button--iconed"><span class="button__icon"><?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="32px" height="32px" class="svg-icon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <path d="M21.9253239,22.9923822 C19.603494,24.9293547 16.5947471,26.0980502 13.3074314,26.0980502 C5.95814258,26.0980502 0,20.2555667 0,13.0490251 C0,5.84244623 5.95814258,0 13.3074314,0 C20.6566821,0 26.6148627,5.84244623 26.6148627,13.0490251 C26.6148627,16.5868022 25.1779136,19.7968624 22.8461982,22.1476754 C22.8560837,22.1561261 22.8672366,22.1658197 22.8771221,22.1756375 L31.8142663,30.9392385 C32.0619112,31.1819504 32.0619112,31.575161 31.8142663,31.8178729 C31.5667481,32.060709 31.1657508,32.060709 30.9182326,31.8178729 L21.9810884,23.0542719 C21.9611906,23.0348848 21.942687,23.0142549 21.9253239,22.9923822 Z M25.3474883,13.0490251 C25.3474883,6.52815385 19.9574717,1.2427643 13.3074314,1.2427643 C6.65742909,1.2427643 1.26737442,6.52815385 1.26737442,13.0490251 C1.26737442,19.5699336 6.65742909,24.8552859 13.3074314,24.8552859 C19.9574717,24.8552859 25.3474883,19.5699336 25.3474883,13.0490251 Z"></path>
+    </g>
+</svg></span><span class="button__text">Show results (13)</span></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="wizard__back button button--link-skin button--big centered js-wizard-back" type="submit">
+                    <div class="button__icon reversed"><svg  viewBox="-4 -4 40 40" xmlns="http://www.w3.org/2000/svg" >
+        <path d="M29.7002618,15.933516 L30.7627496,17.0800711 L32,15.933516 L30.7627496,14.7869608 L29.7002618,15.933516 Z M0,17.4966876 L29.7002618,17.4966876 L29.7002618,14.3703443 L0,14.3703443 L0,17.4966876 Z M28.637774,14.7869608 L14.2997069,28.0738888 L16.4247137,30.3670616 L30.7627496,17.0800711 L28.637774,14.7869608 Z M30.7627496,14.7869608 L16.4247137,1.5 L14.2997069,3.79311345 L28.637774,17.0800711 L30.7627496,14.7869608 Z"></path>
+</svg>
+                    </div>
+                    <div class="button__text">Step Back</div>
+                  </button>
+                </div>
+                <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardPickManufacturer">Pick a manufacturer / model</a></div>
+                <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardSearch">Advanced mission match</a></div>
+              </form>
+            </div>
+          </div>
+          <div class="wizard__section js-wizard-section" id="jsWizardPickManufacturer">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Pick a manufacturer / model</h3>
+              <div class="row">
+                <div class="grid grid--2-columns">
+                  <div class="grid__item">
+                    <ul class="list list--reset list--big">
+                      <li class="list__item"><a class="link" href="#">Aeronca</a></li>
+                      <li class="list__item"><a class="link" href="#">Aeronca</a></li>
+                      <li class="list__item"><a class="link" href="#">American champion</a></li>
+                      <li class="list__item"><a class="link" href="#">American general</a></li>
+                      <li class="list__item"><a class="link" href="#">Beechcraft</a></li>
+                      <li class="list__item"><a class="link" href="#">Bellanca</a></li>
+                      <li class="list__item"><a class="link" href="#">Cessna</a></li>
+                      <li class="list__item"><a class="link" href="#">Cirrus</a></li>
+                      <li class="list__item"><a class="link" href="#">Commander</a></li>
+                    </ul>
+                  </div>
+                  <div class="grid__item">
+                    <ul class="list list--reset list--big">
+                      <li class="list__item"><a class="link" href="#">Diamond</a></li>
+                      <li class="list__item"><a class="link" href="#">Extra</a></li>
+                      <li class="list__item"><a class="link" href="#">Lake</a></li>
+                      <li class="list__item"><a class="link" href="#">Luscombe</a></li>
+                      <li class="list__item"><a class="link" href="#">Maule</a></li>
+                      <li class="list__item"><a class="link" href="#">Mooney</a></li>
+                      <li class="list__item"><a class="link" href="#">Piper</a></li>
+                      <li class="list__item"><a class="link" href="#">Socata</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="wizard__button-area">
+                  <button class="wizard__back button button--link-skin button--big centered js-wizard-back">
+                    <div class="button__icon reversed"><svg  viewBox="-4 -4 40 40" xmlns="http://www.w3.org/2000/svg" >
+        <path d="M29.7002618,15.933516 L30.7627496,17.0800711 L32,15.933516 L30.7627496,14.7869608 L29.7002618,15.933516 Z M0,17.4966876 L29.7002618,17.4966876 L29.7002618,14.3703443 L0,14.3703443 L0,17.4966876 Z M28.637774,14.7869608 L14.2997069,28.0738888 L16.4247137,30.3670616 L30.7627496,17.0800711 L28.637774,14.7869608 Z M30.7627496,14.7869608 L16.4247137,1.5 L14.2997069,3.79311345 L28.637774,17.0800711 L30.7627496,14.7869608 Z"></path>
+</svg>
+                    </div>
+                    <div class="button__text">Step Back</div>
+                  </button>
+                </div>
+              </div>
+              <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardGetHelp">Help me pick my PerfectPlane</a></div>
+              <div class="row center-content"><a class="link link--big link--hidden-border centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardSearch">Advanced mission match</a></div>
+            </div>
+          </div>
+          <div class="wizard__section js-wizard-section" id="jsWizardSearch">
+            <div class="wizard__section-inner">
+              <h3 class="h3 wizard__title">Advanced Mission Match</h3>
+              <form class="form" ation="{% url 'wizard:home' %}" method="">
+                <div class="row">
+                  <div class="toggler"><a class="toggler__item active js-toggler-item" data-target="#jsCrossCountry">Cross country</a><a class="toggler__item js-toggler-item" data-target="#jsLocal">Local</a></div>
+                </div>
+                <div class="row">
+                  <div class="form__list">
+                    <div class="form__item">
+                      <div class="toggler-area js-toggler-area fadeIn active" id="jsCrossCountry">
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="trip_range">Typical Trip in NM</label>
+                            <input class="form__input js-form-input" id="trip_range" type="text" name="trip_range" value="400">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="trips_yr">Trips Per Year</label>
+                            <input class="form__input js-form-input" id="trips_yr" type="number" name="trips_yr" value="20">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="avg_trip_duration_hrs_max">Max Trip Time (Hrs)</label>
+                            <input class="form__input js-form-input" id="avg_trip_duration_hrs_max" type="number" name="avg_trip_duration_hrs_max" value="10">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="toggler-area js-toggler-area" id="jsLocal">
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="annual_hrs">Annual Hours</label>
+                            <input class="form__input js-form-input" id="annual_hrs" type="number" name="annual_hrs" value="100">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-wrapper small">
+                            <label class="form__label" for="min_speed">Min cruise speed</label>
+                            <input class="form__input js-form-input" id="min_speed" type="number" name="min_speed" value="50">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="purchase_price_max">Max Purchase Price ( in $) </label>
+                          <input class="form__input js-form-input" id="purchase_price_max" type="number" name="purchase_price_max" value="1000000">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="ownership_cost_p_year_max">Max Ownership Costs ( in $) </label>
+                          <input class="form__input js-form-input" id="ownership_cost_p_year_max" type="number" name="ownership_cost_p_year_max" value="10000000">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="aircraft_age">Max Age</label>
+                          <input class="form__input js-form-input" id="aircraft_age" type="number" name="aircraft_age" value="100">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <div class="row">
+                        <div class="input-wrapper small">
+                          <label class="form__label" for="required_seats_min">Min Seats</label>
+                          <input class="form__input js-form-input" id="required_seats_min" type="number" name="required_seats_min" value="1">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-wrapper js-input-wrapper small">
+                          <input class="form__hidden-input js-hidden-input" type="hidden" name="hangar_storage" value="[&quot;Tie Down&quot;]">
+                          <label class="form__label js-label" for="hangar_storage">Storage</label>
+                          <div class="form__input dropdown js-dropdown" id="hangar_storage">
+                            <div class="dropdown__chosen js-dropdown-selected">Tie Down</div>
+                            <ul class="dropdown__list dropdown-menu js-dropdown-list">
+                              <li class="dropdown__item"><a class="dropdown__link js-dropdown-link active" href=""><span class="dropdown__text">Tie Down</span></a></li><a class="dropdown__link js-dropdown-link" href=""><span class="dropdown__text">Hangar</span></a>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="wizard__button-area">
+                    <button class="button button--hollow button--middle button--iconed" type="submit"><span class="button__icon"><?xml version="1.0" encoding="UTF-8"?>
+
+<svg width="32px" height="32px" class="svg-icon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <path d="M21.9253239,22.9923822 C19.603494,24.9293547 16.5947471,26.0980502 13.3074314,26.0980502 C5.95814258,26.0980502 0,20.2555667 0,13.0490251 C0,5.84244623 5.95814258,0 13.3074314,0 C20.6566821,0 26.6148627,5.84244623 26.6148627,13.0490251 C26.6148627,16.5868022 25.1779136,19.7968624 22.8461982,22.1476754 C22.8560837,22.1561261 22.8672366,22.1658197 22.8771221,22.1756375 L31.8142663,30.9392385 C32.0619112,31.1819504 32.0619112,31.575161 31.8142663,31.8178729 C31.5667481,32.060709 31.1657508,32.060709 30.9182326,31.8178729 L21.9810884,23.0542719 C21.9611906,23.0348848 21.942687,23.0142549 21.9253239,22.9923822 Z M25.3474883,13.0490251 C25.3474883,6.52815385 19.9574717,1.2427643 13.3074314,1.2427643 C6.65742909,1.2427643 1.26737442,6.52815385 1.26737442,13.0490251 C1.26737442,19.5699336 6.65742909,24.8552859 13.3074314,24.8552859 C19.9574717,24.8552859 25.3474883,19.5699336 25.3474883,13.0490251 Z"></path>
+    </g>
+</svg></span><span class="button__text">Show 24 results</span></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="wizard__back button button--link-skin button--big centered js-wizard-back">
+                    <div class="button__icon reversed"><svg  viewBox="-4 -4 40 40" xmlns="http://www.w3.org/2000/svg" >
+        <path d="M29.7002618,15.933516 L30.7627496,17.0800711 L32,15.933516 L30.7627496,14.7869608 L29.7002618,15.933516 Z M0,17.4966876 L29.7002618,17.4966876 L29.7002618,14.3703443 L0,14.3703443 L0,17.4966876 Z M28.637774,14.7869608 L14.2997069,28.0738888 L16.4247137,30.3670616 L30.7627496,17.0800711 L28.637774,14.7869608 Z M30.7627496,14.7869608 L16.4247137,1.5 L14.2997069,3.79311345 L28.637774,17.0800711 L30.7627496,14.7869608 Z"></path>
+</svg>
+                    </div>
+                    <div class="button__text">Step Back</div>
+                  </button>
+                </div>
+                <div class="row center-content"><a class="link link--hidden-border link--big centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardPickManufacturer">Help me pick my PerfectPlane</a></div>
+                <div class="row center-content"><a class="link link--hidden-border link--big centered js-wizard-button" href="#" data-type="link" data-target="#jsWizardPickManufacturer">Pick a manufacturer / model</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="button button--big wizard__close js-wizard-close" role="button">
+          <div class="wizard__close-icon icon button__icon"><svg class="svg-icon" viewBox="0 0 32 32">
+    <g>
+        <path d="M-5.13725395,15.1373027 C-5.61356109,15.1373027 -6,15.5236701 -6,16 C-6,16.4763299 -5.61356109,16.8626973 -5.13725395,16.8626973 L15.1373027,16.8626973 L15.1373027,37.1373027 C15.1373027,37.6136327 15.5236701,38 16,38 C16.4763299,38 16.8626973,37.6136327 16.8626973,37.1373027 L16.8626973,16.8626973 L37.1373027,16.8626973 C37.6136327,16.8626973 38,16.4763299 38,16 C38,15.5236701 37.6136327,15.1373027 37.1373027,15.1373027 L16.8626973,15.1373027 L16.8626973,-5.13725395 C16.8626973,-5.61356109 16.4763299,-6 16,-6 C15.5236701,-6 15.1373027,-5.61356109 15.1373027,-5.13725395 L15.1373027,15.1373027 L-5.13725395,15.1373027 Z" id="path0_fill" transform="translate(16.000000, 16.000000) rotate(45.000000) translate(-16.000000, -16.000000) "></path>
+    </g>
+</svg>
+          </div>
+          <div class="wizard__close-text button__text">Close that window</div>
+        </div>
+      </div>
+    </div>
+    <div class="app-wrapper app-wrapper--dark-background">
+<header class="header">
+  <div class="wrapper">
+<div class="burger bt-menu-trigger js-bt-menu-trigger show-for-tablet-landscape-down">
+  <div></div>
+</div>
+<nav class="navigation js-navigation">
+  <ul class="navigation__list">
+    <li class="navigation__item"><a class="logo" href="/">planephd.com</a></li>
+  </ul>
+  <ul class="navigation__list">
+    <li class="navigation__item navigation__item--separated"><a class="button sign-in-button" href="{% url &quot;account_signup&quot; %}"><span class="button__text">Sign up</span></a></li>{% if request.user.is_authenticated %}
+    <li class="navigation__item"><a class="navigation__link" href="&quot;{% url &quot;account_logout&quot; %}">Log Out</a></li>{% else %}
+    <li class="navigation__item"><a class="navigation__link" href="{% url &quot;account_login&quot; %}">Log In</a></li>{% endif %}
+  </ul>
+</nav>
+  </div>
+</header>
+<section class="greetings-section section js-greetings">
+  <div class="greetings-section__inner">
+    <div class="greetings-section__title-area">
+      <h1 class="greetings-section__title">Planephd</h1>
+      <h3 class="h3 greetings-section__sub-title">Data-driven Insights</h3>
+    </div>
+    <div class="greetings-section__text-area">
+      <p class="greetings-section__text">Would you like to compare thousands of models of aircraft on price, operating cost, performance, and safety?</p>
+      <p class="greetings-section__text">Planephd is the only place you can do that.</p>
+    </div>
+  </div>
+  <div class="greetings-section__notice-area">
+    <p class="greetings-section__notice">Alpha Release v1: We are slowly rolling out our years of hard work.</p>
+    <p class="greetings-section__notice">We’re currently showing only Single Engine Piston <br> with limited features as we test the system.</p>
+    <p class="greetings-section__notice">Sign up to receive notifications of further releases. <br> Planephd will change your GA.</p>
+  </div>
+</section>
+<section class="section defenition-section section--lighten section--gray">
+  <div class="grid grid--3-columns">
+    <div class="grid__item defenition-section__item">
+      <div class="defenition-section__pic defenition-section__pic--questions"></div>
+      <div class="defenition-section__title">Questions no one can answer</div>
+      <ul class="list">
+        <li class="list__item">
+          <p class="p text text--big">Should I buy a new plane or one that's 20 years old?</p>
+        </li>
+        <li class="list__item">
+          <p class="p text text--big">What’s the total cost of ownership of each? How does the resale liquidity compare?</p>
+        </li>
+        <li class="list__item">
+          <p class="p text text--big">Are they equally safe?</p>
+        </li>
+        <li class="list__item">
+          <p class="p text text--big">How likely am I to make it to TBO on this model?</p>
+        </li>
+        <li class="list__item">
+          <p class="p text text--big">Am I paying too much for insurance?</p>
+        </li>
+        <li class="list__item">
+          <p class="p text text--big">Who has experience replacing the windshield and what will it cost?</p>
+        </li>
+      </ul>
+      <p class="p text text--big">We can even tell you if your vintage aircraft was built when your registration claims.</p>
+      <p class="p text text--big">It's amazing what we learned when we connected all the dots.</p>
+    </div>
+    <div class="grid__item defenition-section__item">
+      <div class="defenition-section__pic defenition-section__pic--server"></div>
+      <div class="defenition-section__title">How did we do it?</div>
+      <p class="p text text--big">Planephd has the largest aircraft database ever assembled.  We started with data on over 700,000 aircraft, and then using advanced statistical models, artificial intelligence, and financial techniques, we cleaned and built up that data to become something much greater.</p>
+      <p class="p text text--big">But that data is meaningless without a community.</p>
+    </div>
+    <div class="grid__item defenition-section__item">
+      <div class="defenition-section__pic defenition-section__pic--community"></div>
+      <div class="defenition-section__title">This is a community</div>
+      <p class="p text text--big">We built planephd so that you could make it grow.  It learns every day from its users.  If you want improved transparency for the costs, safety, and reliability of aircraft, products and services, become a part of the solution.</p>
+      <p class="p text text--big"><a class="link" href="{% url &quot;account_signup&quot; %}">Sign up today.</a><span> It’s free.  It’s fun.</span></p>
+    </div>
+  </div>
+</section>
+<section class="section buyers-and-sellers-section section--darken">
+  <div class="wrapper">
+    <div class="grid grid--2-columns">
+      <div class="grid__item buyers-and-sellers-section__item">
+        <h2 class="h2">For Aircraft Buyers:</h2>
+        <h4 class="h4">Compare Mission and Performance, Acquisition and Ownership Cost, Resale Liquidity, and Safety across all models and ages.</h4>
+      </div>
+      <div class="grid__item buyers-and-sellers-section__item">
+        <h2 class="h2">For Aircraft Sellers:</h2>
+        <h4 class="h4">Which brokers sell your aircraft?</h4>
+        <h4 class="h4">How quickly and at what price relative to valuation? <br>Premium Service - TBA</h4>
+      </div>
+    </div>
+    <div class="buyers-and-sellers-section__button-area"><a class="button" href="{% url &quot;account_signup&quot; %}"><span class="button__text">Sign up</span></a></div>
+  </div>
+</section>
+<section class="section owners-section section--lighten section--wallpapered">
+  <div class="owners-section__title">For <br> Aircraft <br> Owners, Pilots, and <br> Operators</div>
+  <div class="wrapper">
+    <div class="owners-section__text-area">
+      <h2 class="h2">Planephd.com was born from frustration with the status quo.</h2>
+      <p class="text text--big">People who want to make things better are at the core of planehd.</p>
+      <p class="text text--big">We mean you.</p>
+      <div class="owners-section__button-area"><a class="button" href="{% url &quot;account_signup&quot; %}"><span class="button__text">Sign up</span></a></div>
+    </div>
+  </div>
+</section>
+      <section class="section section--lighten section--white">
+        <div class="wrapper">
+          <div class="section__title-area">
+            <h2 class="h2 section__title">Most often searched results of this week</h2>
+            <div class="section__title-dash show-for-tablet-landscape-up"></div>
+            <!--h4.h4.section__title.show-for-tablet-landscape-down Swipe to see different cards-->
+            <h4 class="h4 section__title show-for-tablet-landscape-down">Tap to see more information</h4>
+          </div>
+          <div class="grid grid--3-columns">
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/577/CIRRUS-SR22-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=2001">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/2130001_1.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">2001 CIRRUS SR22</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$8,598.12</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$178,413.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 183 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">3 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/241/CESSNA-182P-Skylane-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=1972">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/2075816_1.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">1972 CESSNA 182P Skylane</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$17,305.25</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$89,267.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 143 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">3 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/246/CESSNA-182T-Skylane-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=2001">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/2072703_1.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">2001 CESSNA 182T Skylane</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$27,326.52</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$180,178.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 145 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">3 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/526/PIPER-PA-28RT-201-Arrow-IV-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=1979">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/7102818_1.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">1979 PIPER PA-28RT-201 Arrow IV</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$16,838.85</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$67,625.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 138 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">3 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/62/BEECHCRAFT-A36-Bonanza-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=1969">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/1151604_1.JPG);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">1969 BEECHCRAFT A36 Bonanza</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$19,018.51</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$138,009.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 168 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">5 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/198/CESSNA-172S-Skyhawk-SP-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=1998">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/2072439_1.JPG);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">1998 CESSNA 172S Skyhawk SP</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$20,492.90</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$105,355.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 124 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">3 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/453/PIPER-J-3-Cub-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=1938">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/7100502_1.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">1938 PIPER J-3 Cub</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$12,358.65</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$45,363.00</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 65 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">1 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+            <div class="grid__item"><a class="card" target="_blank" href="http://planephd.com/wizard/details/359/CESSNA-T210L-Turbo-specifications-performance-operating-cost-valuation?trips_yr=20&amp;required_seats_min=2&amp;trip_range=400&amp;selected_yearmfr=1972">
+                <div class="card__header">
+                  <div class="card__pic">
+                    <div class="card__pic-inner">
+                      <div class="card__pic-img" style="background-image: url(images/2073449_1.jpg);"></div>
+                    </div>
+                  </div>
+                  <div class="card__title"><span class="card__title-text">1972 CESSNA T210L Turbo</span></div>
+                  <div class="card__general-info"><strong class="card__label">Ownership Cost:</strong><span class="card__text">$19,018.51</span></div>
+                  <div class="card__general-info"><strong class="card__label">Price:</strong><span class="card__text">$19,018.51</span></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__additional-info">
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>s</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.5762,9.48482 C23.6356,6.47912 19.7125,4.898158 15.5794,5.00508895 C7.54,5.231564 1,12.28386 1,20.7281 L1,24.249 C1.00720703,25.2211 1.761719,26.004 2.6875,26 L29.3125,26 C30.238,26.004 30.9924,25.2215 31,24.2497 L31,20.4217 C31,16.2871 29.4288,12.40064 26.5762,9.48482 Z M29.75,24.2509 C29.7432,24.4981 29.548,24.6934 29.3125,24.6887 L2.6875,24.6887 C2.45201,24.6935 2.25684,24.4981 2.24998,24.2509 L2.24998,20.7281 C2.24998,12.98931 8.24436,6.52372 15.6125,6.317 C19.3695,6.18053 23.0159,7.66484 25.7037,10.42462 C28.3125,13.09237 29.75,16.6421 29.75,20.4216 L29.75,24.2509 Z" id="path1_fill" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M15.9764,18.17064 C15.35958,18.17254 14.76556,18.41563 14.31017,18.85252 L10.038916,16.2878346 C9.73915,16.1065805 9.356181,16.2148653 9.1836228,16.529691 C9.0110642,16.844456 9.1141305,17.24659 9.413955,17.42778 L13.61835,19.95051 C13.52665,20.22202 13.47872,20.50768 13.47649,20.79581 C13.47649,22.24559 14.59575,23.42091 15.97651,23.42091 C17.35727,23.42091 18.47653,22.24565 18.47653,20.79581 C18.47641,19.3459 17.3571,18.17064 15.9764,18.17064 Z M15.9764,22.10827 C15.28604,22.10827 14.72642,21.52064 14.72642,20.79574 C14.72642,20.07085 15.28604,19.48322 15.9764,19.48322 C16.66675,19.48322 17.22638,20.07085 17.22638,20.79574 C17.22638,21.52064 16.66675,22.10827 15.9764,22.10827 Z M16.025019,10.93769 C15.679844,10.93769 15.3999996,10.64385 15.3999996,10.2814 L15.3999996,7.656292 C15.3999996,7.293845 15.679844,6.99999978 16.025019,6.99999978 C16.370195,6.99999978 16.65004,7.293845 16.65004,7.656292 L16.65004,10.2814 C16.65004,10.64385 16.370195,10.93769 16.025019,10.93769 Z M25.4,20.756292 C25.4,20.393846 25.679843,20.1000002 26.025019,20.1000002 L28.52504,20.1000002 C28.87022,20.1000002 29.15006,20.393846 29.15006,20.756292 C29.15006,21.11874 28.87022,21.41258 28.52504,21.41258 L26.025019,21.41258 C25.679843,21.41258 25.4,21.11874 25.4,20.756292 Z M6.02498,20.1000002 C6.37016,20.1000002 6.65006,20.393846 6.65006,20.756292 C6.65006,21.11874 6.37021,21.41258 6.02504,21.41258 L3.525019,21.41258 C3.179844,21.41258 2.9,21.11874 2.9,20.756292 C2.9,20.393846 3.179844,20.1000002 3.525019,20.1000002 L6.02498,20.1000002 Z M10.4492,11.78449 L9.3867149,9.889818 C9.2114024,9.577576 9.3103084,9.175199 9.607672,8.9910531 C9.905035,8.8069689 10.288238,8.9108246 10.46361,9.223066 L11.52609,11.11774 C11.7014,11.42999 11.6025,11.83236 11.30513,12.01651 C11.00777,12.20059 10.62457,12.09674 10.4492,11.78449 Z M24.1806266,15.57733 C24.0111735,15.26159 24.1175217,14.86149 24.418108,14.68355 L26.26246,13.5901846 C26.2685,13.5864931 26.27453,13.5828629 26.28063,13.5794174 C26.58408,13.4067154 26.96342,13.5250288 27.12789,13.843669 C27.29236,14.16231 27.17969,14.56063 26.87623,14.73333 L25.031877,15.8267 C24.731233,16.00463 24.350138,15.89296 24.1806266,15.57733 Z M7.58543,14.68351 C7.87624,14.86243 7.97954,15.25127 7.81893,15.56246 C7.65452,15.88116 7.27512,15.99948 6.97166,15.82677 L5.127309,14.73341 C5.121216,14.7299 5.115121,14.72633 5.109145,14.72264 C4.8113128,14.53935 4.7113521,14.137347 4.8858443,13.824613 C5.060336,13.5118788 5.443247,13.4069169 5.741079,13.5901398 L7.58608,14.68351 L7.58543,14.68351 Z M22.40813,8.9925999 C22.70497,9.177545 22.80276,9.58023 22.62657,9.891918 L21.56409,11.7866 C21.38825,12.09884 21.004577,12.20226 20.707214,12.01762 C20.4098505,11.83299 20.3113559,11.43012 20.4871957,11.11787 L21.54968,9.223197 C21.72493,8.9110171 22.10796,8.8069775 22.40532,8.9908772 C22.40626,8.9914309 22.4072,8.9919846 22.40813,8.9925999 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Best cruise 168 knots</span></div>
+                    <div class="card__row centered"><span class="card__icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.56664,14.13331 C25.13985,14.13331 27.23328,12.03982 27.23328,9.46666 C27.23328,6.8935 25.13979,4.8000001 22.56664,4.8000001 C19.99349,4.8000001 17.9000001,6.8935 17.9000001,9.46666 C17.9000001,12.03982 19.99343,14.13331 22.56664,14.13331 Z M20.23329,12.26666 C19.97571,12.26666 19.76664,12.05759 19.76664,11.80001 C19.76664,11.54243 19.97571,11.33336 20.23329,11.33336 C20.49087,11.33336 20.69994,11.54243 20.69994,11.80001 C20.69994,12.05759 20.49087,12.26666 20.23329,12.26666 Z M22.56664,13.19996 C22.30906,13.19996 22.09999,12.99089 22.09999,12.73331 C22.09999,12.47573 22.30906,12.26666 22.56664,12.26666 C22.82422,12.26666 23.03329,12.47573 23.03329,12.73331 C23.03329,12.99089 22.82422,13.19996 22.56664,13.19996 Z M24.89993,12.26666 C24.64235,12.26666 24.43328,12.05759 24.43328,11.80001 C24.43328,11.54243 24.64235,11.33336 24.89993,11.33336 C25.15751,11.33336 25.36658,11.54243 25.36658,11.80001 C25.36658,12.05759 25.15756,12.26666 24.89993,12.26666 Z M25.83328,8.99995 C26.09086,8.99995 26.29993,9.20902 26.29993,9.4666 C26.29993,9.72418 26.09086,9.93325 25.83328,9.93325 C25.57571,9.93325 25.36663,9.72418 25.36663,9.4666 C25.36663,9.20902 25.57571,8.99995 25.83328,8.99995 Z M24.89993,6.66665 C25.15751,6.66665 25.36658,6.87572 25.36658,7.1333 C25.36658,7.39088 25.15751,7.59995 24.89993,7.59995 C24.64235,7.59995 24.43328,7.39088 24.43328,7.1333 C24.43328,6.87572 24.64235,6.66665 24.89993,6.66665 Z M22.56664,5.733299 C22.82422,5.733299 23.03329,5.94237 23.03329,6.19995 C23.03329,6.45753 22.82422,6.6666 22.56664,6.6666 C22.30906,6.6666 22.09999,6.45753 22.09999,6.19995 C22.09999,5.94237 22.30901,5.733299 22.56664,5.733299 Z M22.56664,7.59995 C23.59613,7.59995 24.43328,8.43716 24.43328,9.4666 C24.43328,10.49604 23.59608,11.33325 22.56664,11.33325 C21.5372,11.33325 20.7,10.49604 20.7,9.4666 C20.7,8.43716 21.53715,7.59995 22.56664,7.59995 Z M20.23329,6.66665 C20.49087,6.66665 20.69994,6.87572 20.69994,7.1333 C20.69994,7.39088 20.49087,7.59995 20.23329,7.59995 C19.97571,7.59995 19.76664,7.39088 19.76664,7.1333 C19.76664,6.87572 19.97571,6.66665 20.23329,6.66665 Z M18.833296,9.46666 C18.833296,9.20908 19.04237,9.00001 19.29994,9.00001 C19.55752,9.00001 19.76659,9.20908 19.76659,9.46666 C19.76659,9.72424 19.55752,9.93331 19.29994,9.93331 C19.04237,9.93331 18.833296,9.72424 18.833296,9.46666 Z M22.53335,10.36671 C22.018578,10.36671 21.5999997,9.94813 21.5999997,9.433353 C21.5999997,8.918579 22.018578,8.49999986 22.53335,8.49999986 C23.04812,8.49999986 23.4667,8.918634 23.4667,9.433353 C23.4667,9.94813 23.04807,10.36671 22.53335,10.36671 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+        <path d="M22.5333,2 C19.6059,2 17.0738,3.69728 15.8507,6.15566 L4.00342,18.0035 C4.00107,18.0053 4.00063,18.0086 3.99828,18.0109 C2.78542,18.9503 2,20.417 2,22.0667 C2,24.8798 4.27549,27.1692 7.08248,27.1972 L25.254,29.8567 C25.5764,29.9477 25.9152,30 26.2666,30 L26.2671,30 L26.2676,30 C28.3256,29.9991 30,28.3246 30,26.2666 L30,9.46661 C29.9999,5.34929 26.6502,2 22.5333,2 Z M22.5333,3.86665 C25.6212,3.86665 28.1333,6.37824 28.1333,9.46666 C28.1333,12.5546 25.6212,15.0667 22.5333,15.0667 C19.4454,15.0667 16.9333,12.5546 16.9333,9.46666 C16.9333,6.37829 19.4454,3.86665 22.5333,3.86665 Z M7.13334,24.4 C5.84677,24.4 4.79999,23.3533 4.79999,22.0667 C4.79999,20.7801 5.84671,19.7333 7.13334,19.7333 C8.41992,19.7333 9.46669,20.7801 9.46669,22.0667 C9.46663,23.3533 8.41992,24.4 7.13334,24.4 Z M26.2666,26.7334 C26.009,26.7334 25.8,26.5243 25.8,26.2668 C25.8,26.0087 26.009,25.8001 26.2666,25.8001 C26.5242,25.8001 26.7332,26.0087 26.7332,26.2668 C26.7333,26.5243 26.5242,26.7334 26.2666,26.7334 Z M29.0666,23.8055 C28.382,23.0276 27.382,22.5334 26.2666,22.5334 C24.2081,22.5334 22.5333,24.2083 22.5333,26.2668 C22.5333,27.1674 22.8538,27.9948 23.3873,28.6402 L9.5147,26.6102 C11.14849,25.7502 12.2666,24.0375 12.2666,22.0667 C12.2666,19.2359 9.96363,16.9334 7.13329,16.9334 C6.85701,16.9334 6.58729,16.9614 6.32271,17.0039 L15.1926,8.13393 C15.1142,8.567 15.0666,9.01128 15.0666,9.46672 C15.0666,13.5837 18.4163,16.9334 22.5333,16.9334 C25.3426,16.9334 27.7921,15.3719 29.0666,13.0731 L29.0666,23.8055 Z M7.1,20.6999997 C7.87186,20.6999997 8.49999,21.328142 8.49999,22.1 C8.49999,22.87186 7.87186,23.50001 7.1,23.50001 C6.328139,23.50001 5.69999991,22.87186 5.69999991,22.1 C5.69999991,21.328142 6.328139,20.6999997 7.1,20.6999997 Z" id="Combined-Shape" fill="#23B3FF" fill-rule="nonzero"></path>
+    </g>
+</svg></span><span class="card__text">Single Engine Piston</span></div>
+                  </div>
+                  <div class="card__seats-area">
+                    <div class="card__seats">5 Seats</div>
+                    <div class="card__seats card__seats--small">+ 1 pilot</div>
+                  </div>
+                </div>
+                <!--.card__footer//p.card__notice Time to travel 400 NM - 5.4 Flying + 2 Hrs (2 Stops)
+                --></a>
+            </div>
+          </div>
+        </div>
+      </section>
+<footer class="footer">
+  <div class="wrapper">
+    <div class="grid grid--6-columns">
+      <div class="grid__item footer__item"><a class="logo" href="/">planephd.com</a>
+        <p class="copyright">2017 © planephd.com</p>
+      </div>
+      <div class="grid__item footer__item">
+        <div class="footer__title">Information:</div>
+        <ul class="list list--reset list--no-indents">
+          <li class="list__item"><a class="footer__link" href="{% url 'terms' %}">Terms</a></li>
+          <li class="list__item"><a class="footer__link" href="{% url 'privacy' %}">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="{% static 'index.js' %}"></script>
+    </div>
+  <script type="text/javascript" src="index.js"></script></body>
+</html>
