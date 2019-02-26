@@ -1,0 +1,11 @@
+<svg width="616" height="562" viewBox="0 0 616 562" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="616" height="562">
+        <path  d="M615.271 0V562H31.8371C-55.3419 374.4 57.0125 108.5 124.087 0H615.271Z" fill="#C4C4C4"/>
+    </clipPath>
+    <!--<g mask="url(#mask0)">-->
+        <!--<rect x="-595.579" y="-202" width="1565.55" height="968" fill="#C4C4C4"/>-->
+    <!--</g>-->
+
+    <image width="100%" clip-path="url(#mask0)" height="100%" preserveAspectRatio="xMaxYMid slice"
+           xlink:href="images/placeholders/woman@2x.jpg"/>
+</svg>
