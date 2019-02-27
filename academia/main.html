@@ -41,10 +41,42 @@
 <meta name="msapplication-square150x150logo" content="mstile-150x150.png">
 <meta name="msapplication-wide310x150logo" content="mstile-310x150.png">
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png">
-<!--link(rel='icon', href='images/favicon/images/favicon_x_16.png', sizes='16x16', type='image/png')-->
-<!--link(rel='icon', href='images/favicon/images/favicon_x_32.png', sizes='32x32', type='image/png')-->
-<!--link(rel='apple-touch-icon', href='images/favicon/', sizes='images/favicon_x_180.png', type='image/png')-->
-    <!--include parts/map-script-->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ae580256-dac9-4b43-ba6c-0cf0c13d2bfb&amp;lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+  ymaps.ready(function () {
+      var myMap = new ymaps.Map('myMap', {
+              center: [55.751574, 37.573856],
+              zoom: 9
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+          // Creating a content layout.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+          myPlacemark = new ymaps.Placemark([55.661574, 37.573856], {
+              hintContent: 'A custom placemark icon',
+              balloonContent: 'This is a pretty placemark'
+          }, {
+              /**
+               * Options.
+               * You must specify this type of layout.
+               */
+              iconLayout: 'default#image',
+              // Custom image for the placemark icon.
+              iconImageHref: 'images/pin@2x.png',
+              // The size of the placemark.
+              iconImageSize: [40, 57],
+              /**
+               * The offset of the upper left corner of the icon relative
+               * to its "tail" (the anchor point).
+               */
+              iconImageOffset: [-5, -38]
+          });
+      myMap.geoObjects
+          .add(myPlacemark);
+  });
+</script>
   <link href="./index.css" rel="stylesheet"></head>
   <body class="page">
     <header class="header">
