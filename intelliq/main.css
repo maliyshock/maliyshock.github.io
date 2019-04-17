@@ -1348,8 +1348,8 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 22px;
-    padding-bottom: 22px; }
+    padding-top: 5px;
+    padding-bottom: 5px; }
     @media (min-width: 600px) {
       .section__button-area {
         flex-wrap: nowrap; } }
@@ -1385,7 +1385,7 @@ a {
   .section__sub-title {
     color: #6b6883; }
   .section__pre-title {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     text-transform: uppercase;
     color: #6b6883;
     line-height: normal; }
@@ -1871,10 +1871,6 @@ a {
       width: 100%;
       padding: 40px 50px;
       transform: none; } }
-  .form--width-medium {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
   .form__row {
     margin-top: 25px; }
     .form__row:first-child {
@@ -2177,7 +2173,10 @@ a {
 .flipper {
   position: relative;
   transform-style: preserve-3d;
-  transition: all 1s ease-in-out; }
+  transition: all 1s ease-in-out;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
   .flipper.active {
     transform: rotateY(180deg); }
   .flipper__side {
