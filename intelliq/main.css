@@ -1436,6 +1436,11 @@ a {
           background-color: #403D5A; } }
     .section__title-area--no-bottom-padding {
       padding-bottom: 0; }
+    .section__title-area--small-bottom-padding {
+      padding-bottom: 25px; }
+      @media (min-width: 960px) {
+        .section__title-area--small-bottom-padding {
+          padding-bottom: 30px; } }
     .section__title-area--text-center {
       text-align: center; }
   .section__sub-title {
