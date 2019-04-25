@@ -1179,11 +1179,13 @@ a {
         display: flex;
         flex-wrap: wrap; } }
   .footer__column {
-    max-width: 50%; }
+    max-width: 50%;
+    min-width: 200px; }
     @media (min-width: 960px) {
       .footer__column {
         width: auto;
         max-width: 100%;
+        min-width: 0;
         flex-basis: auto; } }
   .footer__logo {
     display: flex;
@@ -2093,8 +2095,8 @@ a {
 
 .dropdown--size-small .dropdown__field {
   height: 45px;
-  padding-top: 13px;
-  padding-bottom: 10px; }
+  padding-top: 12px;
+  padding-bottom: 12px; }
 
 @media (min-width: 960px) {
   .dropdown--size-small {
