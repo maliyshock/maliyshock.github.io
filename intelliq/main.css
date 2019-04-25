@@ -1448,8 +1448,10 @@ a {
           padding-bottom: 30px; } }
     .section__title-area--text-center {
       text-align: center; }
+    .section__title-area--mobile-text-center {
+      text-align: center; }
       @media (min-width: 960px) {
-        .section__title-area--text-center {
+        .section__title-area--mobile-text-center {
           text-align: left; } }
   .section__sub-title {
     color: #6b6883; }
