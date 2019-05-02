@@ -2265,6 +2265,8 @@ a {
     top: 12px; }
   .dropdown--size-small .dropdown__text, .dropdown--size-small .dropdown__field-inner {
     font-size: 16px; }
+  .dropdown--size-small .dropdown__selected {
+    transform: translateY(0px); }
   .dropdown--size-small .dropdown__field-inner {
     line-height: 16px;
     transform: translateY(1px); }
