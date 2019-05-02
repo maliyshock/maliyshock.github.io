@@ -51,13 +51,15 @@
 </svg>
 
           </div></a>
-        <button class="header__burger burger js-menu-trigger"><span class="icon burger__icon"><span class="icon__image"><svg class="svg-icon" viewBox="0 0 44 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="header__burger burger js-menu-trigger">
+          <div class="burger__icon"><svg class="svg-icon" viewBox="0 0 44 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" d="M0 32V29H44V32H0ZM0 16H44V19H0V16ZM0 3.00098H44V6.00098H0V3.00098V3.00098Z"/>
 </svg>
-</span></span>
+
+          </div>
         </button>
         <div class="header__navigation-wrapper js-navigation">
-          <button class="header__cross header__cross--hidden-from-landscape js-menu-trigger"><span class="icon"><span class="icon__image"><svg class="svg-icon" viewBox="0 0 44 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="header__cross header__cross--hidden-from-landscape js-header-cross"><span class="icon"><span class="icon__image"><svg class="svg-icon" viewBox="0 0 44 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path  d="M38.609 3.23L23.98 17.859L38.234 32.113L36.112 34.234L21.859 19.98L7.73 34.109L5.625 32.004L19.753 17.875L5 3.121L7.121 1L21.875 15.754L36.504 1.125L38.609 3.23Z"/>
 </svg>
 </span></span>
@@ -81,17 +83,19 @@
             </nav>
           </div>
           <div class="header__buttons">
-            <div class="header__button"><a class="button  js-go-to" href="#get-started"><span class="icon button__icon"><span class="icon__image"></span><span class="icon__text">Get Started</span></span></a>
+            <div class="header__button"><a class="button  js-travel-to" href="#get-started">Get Started</a>
             </div>
             <div class="header__button">
-              <div class="input">
-                <label class="input__label dropdown js-dropdown active">
+              <div class="input dropdown js-dropdown">
+                <div class="input__wrapper">
                   <div class="input__field-wrapper">
                     <div class="input__field dropdown__field" role="listbox" tabindex="0" id="lang" aria-labelledby="listbox1label">
-                      <div class="dropdown__chosen"><span class="icon"><span class="icon__image"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
+                      <div class="dropdown__field-inner">
+                        <div class="dropdown__main-icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
     <path fill="#00B9F1" fill-rule="evenodd" d="M18 0C8.059 0 0 8.059 0 18s8.059 18 18 18 18-8.059 18-18S27.941 0 18 0zm14.25 13.23a24.853 24.853 0 0 0-7.253-2.19 24.826 24.826 0 0 0-2.19-7.252 15.076 15.076 0 0 1 9.443 9.442zm-6.915 8.61c.105-1.267.165-2.55.165-3.84s-.06-2.573-.165-3.84C30.112 15.075 33 16.755 33 18c0 1.245-2.888 2.925-7.665 3.84zM18 33c-1.245 0-2.925-2.887-3.84-7.666 1.267.106 2.55.166 3.84.166s2.572-.06 3.84-.166C20.925 30.113 19.245 33 18 33zm0-10.501c-1.43 0-2.86-.071-4.283-.216a42.28 42.28 0 0 1 0-8.566 42.415 42.415 0 0 1 8.565 0 42.258 42.258 0 0 1 0 8.566 42.236 42.236 0 0 1-4.282.216zM3 18c0-1.245 2.887-2.925 7.665-3.84A46.523 46.523 0 0 0 10.5 18c0 1.29.06 2.573.165 3.84C5.887 20.925 3 19.245 3 18zM18 3c1.245 0 2.925 2.888 3.84 7.665A46.542 46.542 0 0 0 18 10.5c-1.29 0-2.573.06-3.84.165C15.075 5.888 16.755 3 18 3zm-4.77.788a24.826 24.826 0 0 0-2.19 7.252 24.856 24.856 0 0 0-7.252 2.19 15.07 15.07 0 0 1 9.442-9.442zM3.788 22.77a24.856 24.856 0 0 0 7.252 2.19 24.842 24.842 0 0 0 2.19 7.29 15.07 15.07 0 0 1-9.442-9.48zm18.982 9.48a24.853 24.853 0 0 0 2.19-7.253 24.845 24.845 0 0 0 7.29-2.227 15.08 15.08 0 0 1-9.48 9.48z"/>
 </svg>
-</span></span><span class="dropdown__selected js-dropdown-selected">English</span>
+
+                        </div><span class="dropdown__selected js-dropdown-selected">English</span>
                         <input class="js-search-field" type="hidden" value="">
                       </div>
                     </div>
@@ -112,42 +116,59 @@
 </svg>
 
                             </div>
-                          </div><span class="dropdown__text">French</span></a>
+                          </div><span class="dropdown__text">Swedish</span></a>
                       </li>
                     </ul>
                   </div>
-                </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main class="page__inner">
+    <!--.overlay-->
+    <!--    img(src='images/design/intelliq-home.png')
+    //img(src='images/design/intelliq-home-mobile.png')
+    //img(src='images/design/intelliq-menu-mobile.png')
+    
+    -->
+    <main class="page__inner js-main">
       <article class="section section--padding-btm-small section--bg-dark">
         <div class="section__inner">
           <div class="section__title-area section__title-area--width-medium section__title-area--text-center">
             <h1 class="h1 section__title">Test automation, made simple</h1>
             <h3 class="h3 section__sub-title">One consolidated tool for all test needs where multiple protocols can be tested simultaneously.</h3>
-            <div class="section__button-area"><a class="button js-go-to" href="#get-started"><span class="icon button__icon"><span class="icon__image"></span><span class="icon__text">Request a Demo ↓</span></span></a>
+            <div class="section__button-area">
+              <!--+button({classNames: 'js-go-to'})-->
+              <!--    span Request a Demo ↓-->
+              <!--+button({classNames: 'js-go-to', href: '#get-started', text:'Request a Demo ↓'})-->
+              <!--+button({text:'See how it works', classNames:'button--hollow'})-->
+              <!--    include ../assets/images/play.svg--><a class="button js-go-to" href="#get-started"><span>Request a Demo ↓</span></a>
+              <button class="button button--hollow">
+                <div class="button__inner"><span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 27 32">
+    <path fill="#00B9F1" fill-rule="evenodd" d="M25.066 17.941L3.491 31.011c-.35.2-.742.298-1.133.298-.39 0-.782-.098-1.133-.298a2.234 2.234 0 0 1-1.132-1.938V2.933c0-.797.432-1.536 1.132-1.935a2.296 2.296 0 0 1 2.267 0l21.575 13.07a2.232 2.232 0 0 1 1.132 1.938 2.23 2.23 0 0 1-1.133 1.935z"/>
+</svg>
+</span><span>See how it works</span></div>
+              </button>
             </div>
           </div>
-          <div class="logos">
-            <h5 class="h5 logos__title">Trusted by the world’s most innovative businesses – big and small</h5>
-            <!--ul.logos__list-->
-            <!--    li.logos__item-->
-            <!--        include ../assets/images/companies/samsung.svg-->
-            <!--    li.logos__item-->
-            <!--        include ../assets/images/companies/digital_ocean.svg-->
-            <!--    li.logos__item-->
-            <!--        include ../assets/images/companies/new_relic.svg-->
-            <!--    li.logos__item-->
-            <!--        include ../assets/images/companies/doordash.svg-->
-            <!--    li.logos__item-->
-            <!--        include ../assets/images/companies/tradeshift.svg-->
-            <!--    li.logos__item-->
-            <!--        include ../assets/images/companies/instacart.svg-->
-          </div>
+          <!--.logos-->
+          <!--    h5.h5.logos__title Trusted by the world’s most innovative businesses – big and small-->
+          <!---->
+          <!--    ul.logos__list-->
+          <!--        li.logos__item-->
+          <!--            include ../assets/images/companies/samsung.svg-->
+          <!--        li.logos__item-->
+          <!--            include ../assets/images/companies/digital_ocean.svg-->
+          <!--        li.logos__item-->
+          <!--            include ../assets/images/companies/new_relic.svg-->
+          <!--        li.logos__item-->
+          <!--            include ../assets/images/companies/doordash.svg-->
+          <!--        li.logos__item-->
+          <!--            include ../assets/images/companies/tradeshift.svg-->
+          <!--        li.logos__item-->
+          <!--            include ../assets/images/companies/instacart.svg-->
         </div>
       </article>
       <article class="section" id="overview">
@@ -210,210 +231,191 @@
               <h3 class="h3 section__sub-title">Support proprietary protocols, custom made windows, integration to other tools such as build servers and test management tools like Jenkins, Quality Center, etc.</h3>
             </div>
           </div>
-          <section class="article row collapse">
-            <div class="large-6 small-12 article__content">
-              <header class="article__heading" data-aos="fade-up">
-                <h3 class="article__title h3">Create</h3>
-                <p class="article__sub-title">The base GUI framework including the main user workspace, windows for all message handling, user session handling, customized windows, etc.</p>
-              </header>
-              <div class="iconed-copies iconed-copies--size-small" data-aos="fade-up">
-                <ul class="iconed-copies__list row collapse">
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
+          <div>
+            <section class="article row collapse">
+              <div class="large-6 small-12 article__content">
+                <header class="article__heading" data-aos="fade-up">
+                  <h3 class="article__title h3">Create</h3>
+                  <p class="article__sub-title">The base GUI framework including the main user workspace, windows for all message handling, user session handling, customized windows, etc.</p>
+                </header>
+                <div class="iconed-copies iconed-copies--size-small" data-aos="fade-up">
+                  <ul class="iconed-copies__list row collapse">
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
     <path fill="#00B9F1" fill-rule="evenodd" d="M33 24.001h-1.5V21a4.5 4.5 0 0 0-4.5-4.5h-7.5v-4.499H21c1.657 0 3-1.345 3-3.002V3.001a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v5.998a3.002 3.002 0 0 0 3 3.002h1.5V16.5H9A4.5 4.5 0 0 0 4.5 21v3.001H3a3 3 0 0 0-3 3v5.998a3 3 0 0 0 3 3.002h6a3 3 0 0 0 3-3.002v-5.998a3 3 0 0 0-3-3H7.5V21A1.5 1.5 0 0 1 9 19.5h18a1.5 1.5 0 0 1 1.5 1.5v3.001H27a3 3 0 0 0-3 3v5.998a3 3 0 0 0 3 3.002h6a3 3 0 0 0 3-3.002v-5.998a3 3 0 0 0-3-3zm-18-21h6v5.998h-6V3.001zM9 32.999H3v-5.998h6v5.998zm24 0h-6v-5.998h6v5.998z"/>
 </svg>
 
+                        </div>
+                        <h4 class="iconed-copies__title">Environments</h4>
                       </div>
-                      <h4 class="iconed-copies__title">Environments</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Define different test environments and switch easily between them.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 29 36">
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Define different test environments and switch easily between them.</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 29 36">
     <path fill="#00B9F1" fill-rule="evenodd" d="M14.5 36.001c-3.587 0-14.5 0-14.5-6.702 0-4.892 6.496-12.387 14.5-12.387S29 24.407 29 29.299c0 6.702-10.913 6.702-14.5 6.702zm0-16.089c-6.452 0-11.365 6.254-11.365 9.387 0 3.059 6.18 3.7 11.365 3.7 5.185 0 11.365-.641 11.365-3.7 0-3.133-4.913-9.387-11.365-9.387zm0-7.012c-3.726-.048-6.74-2.942-6.74-6.451 0-3.556 3.023-6.448 6.74-6.448s6.74 2.892 6.74 6.448c0 3.557-3.023 6.451-6.74 6.451zm0-9.899c-1.989 0-3.605 1.547-3.605 3.448 0 1.878 1.627 3.425 3.626 3.451 1.966 0 3.584-1.548 3.584-3.451 0-1.901-1.618-3.448-3.605-3.448z"/>
 </svg>
 
+                        </div>
+                        <h4 class="iconed-copies__title">User Sessions</h4>
                       </div>
-                      <h4 class="iconed-copies__title">User Sessions</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Save all user login details in one place. Connect/disconnect all users for all protocols at once.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 30 36">
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Save all user login details in one place. Connect/disconnect all users for all protocols at once.</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 30 36">
     <path fill="#00B9F1" fill-rule="evenodd" d="M29.917 11.52l-.045-.143a1.386 1.386 0 0 0-.299-.434L19.072.442a1.42 1.42 0 0 0-.449-.3L18.48.096a1.78 1.78 0 0 0-.39-.081L18 0H4.5A4.5 4.5 0 0 0 0 4.499V31.5a4.5 4.5 0 0 0 4.5 4.499h21A4.5 4.5 0 0 0 30 31.5V11.999v-.097a1.713 1.713 0 0 0-.083-.382zM19.5 5.122l2.693 2.685 2.684 2.693H21a1.5 1.5 0 0 1-1.5-1.501V5.122zM27 24.876l-.012-.01v4.245l.012.01V31.5a1.5 1.5 0 0 1-1.5 1.499h-21A1.5 1.5 0 0 1 3 31.5V4.499a1.5 1.5 0 0 1 1.5-1.5h12v6a4.5 4.5 0 0 0 4.5 4.5h6v11.377z"/>
 </svg>
 
+                        </div>
+                        <h4 class="iconed-copies__title">Forms</h4>
                       </div>
-                      <h4 class="iconed-copies__title">Forms</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Autogenerated from the API definitions but the layout can easily be changed by the user.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Autogenerated from the API definitions but the layout can easily be changed by the user.</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
     <path fill="#00B9F1" fill-rule="evenodd" d="M31.5 35.999h-27A4.5 4.5 0 0 1 0 31.5V4.499A4.5 4.5 0 0 1 4.5 0h27A4.5 4.5 0 0 1 36 4.499V31.5a4.5 4.5 0 0 1-4.5 4.499zM33 15V4.499a1.5 1.5 0 0 0-1.5-1.5h-27a1.5 1.5 0 0 0-1.5 1.5V31.5a1.5 1.5 0 0 0 1.5 1.499h27A1.5 1.5 0 0 0 33 31.5V15zM19.125 9.749a1.874 1.874 0 1 1-.002-3.748 1.874 1.874 0 0 1 .002 3.748zm-5.625 0a1.876 1.876 0 1 1 .002-3.748 1.876 1.876 0 0 1-.002 3.748zm-5.625 0a1.876 1.876 0 1 1 .002-3.748 1.876 1.876 0 0 1-.002 3.748z"/>
 </svg>
 
+                        </div>
+                        <h4 class="iconed-copies__title">Windows</h4>
                       </div>
-                      <h4 class="iconed-copies__title">Windows</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Branch or customer specific windows for message aggregation, smart controls etc.</p>
-                    </div>
-                  </li>
-                </ul>
-                <ul class="iconed-copies__list row collapse iconed-copies__list--hidden js-show-more-object">
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M33 24.001h-1.5V21a4.5 4.5 0 0 0-4.5-4.5h-7.5v-4.499H21c1.657 0 3-1.345 3-3.002V3.001a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3v5.998a3.002 3.002 0 0 0 3 3.002h1.5V16.5H9A4.5 4.5 0 0 0 4.5 21v3.001H3a3 3 0 0 0-3 3v5.998a3 3 0 0 0 3 3.002h6a3 3 0 0 0 3-3.002v-5.998a3 3 0 0 0-3-3H7.5V21A1.5 1.5 0 0 1 9 19.5h18a1.5 1.5 0 0 1 1.5 1.5v3.001H27a3 3 0 0 0-3 3v5.998a3 3 0 0 0 3 3.002h6a3 3 0 0 0 3-3.002v-5.998a3 3 0 0 0-3-3zm-18-21h6v5.998h-6V3.001zM9 32.999H3v-5.998h6v5.998zm24 0h-6v-5.998h6v5.998z"/>
-</svg>
-
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Branch or customer specific windows for message aggregation, smart controls etc.</p>
                       </div>
-                      <h4 class="iconed-copies__title">Environments</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Define different test environments and switch easily between them.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 29 36">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M14.5 36.001c-3.587 0-14.5 0-14.5-6.702 0-4.892 6.496-12.387 14.5-12.387S29 24.407 29 29.299c0 6.702-10.913 6.702-14.5 6.702zm0-16.089c-6.452 0-11.365 6.254-11.365 9.387 0 3.059 6.18 3.7 11.365 3.7 5.185 0 11.365-.641 11.365-3.7 0-3.133-4.913-9.387-11.365-9.387zm0-7.012c-3.726-.048-6.74-2.942-6.74-6.451 0-3.556 3.023-6.448 6.74-6.448s6.74 2.892 6.74 6.448c0 3.557-3.023 6.451-6.74 6.451zm0-9.899c-1.989 0-3.605 1.547-3.605 3.448 0 1.878 1.627 3.425 3.626 3.451 1.966 0 3.584-1.548 3.584-3.451 0-1.901-1.618-3.448-3.605-3.448z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">User Sessions</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Save all user login details in one place. Connect/disconnect all users for all protocols at once.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 30 36">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M29.917 11.52l-.045-.143a1.386 1.386 0 0 0-.299-.434L19.072.442a1.42 1.42 0 0 0-.449-.3L18.48.096a1.78 1.78 0 0 0-.39-.081L18 0H4.5A4.5 4.5 0 0 0 0 4.499V31.5a4.5 4.5 0 0 0 4.5 4.499h21A4.5 4.5 0 0 0 30 31.5V11.999v-.097a1.713 1.713 0 0 0-.083-.382zM19.5 5.122l2.693 2.685 2.684 2.693H21a1.5 1.5 0 0 1-1.5-1.501V5.122zM27 24.876l-.012-.01v4.245l.012.01V31.5a1.5 1.5 0 0 1-1.5 1.499h-21A1.5 1.5 0 0 1 3 31.5V4.499a1.5 1.5 0 0 1 1.5-1.5h12v6a4.5 4.5 0 0 0 4.5 4.5h6v11.377z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">Forms</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Autogenerated from the API definitions but the layout can easily be changed by the user.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M31.5 35.999h-27A4.5 4.5 0 0 1 0 31.5V4.499A4.5 4.5 0 0 1 4.5 0h27A4.5 4.5 0 0 1 36 4.499V31.5a4.5 4.5 0 0 1-4.5 4.499zM33 15V4.499a1.5 1.5 0 0 0-1.5-1.5h-27a1.5 1.5 0 0 0-1.5 1.5V31.5a1.5 1.5 0 0 0 1.5 1.499h27A1.5 1.5 0 0 0 33 31.5V15zM19.125 9.749a1.874 1.874 0 1 1-.002-3.748 1.874 1.874 0 0 1 .002 3.748zm-5.625 0a1.876 1.876 0 1 1 .002-3.748 1.876 1.876 0 0 1-.002 3.748zm-5.625 0a1.876 1.876 0 1 1 .002-3.748 1.876 1.876 0 0 1-.002 3.748z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">Windows</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Branch or customer specific windows for message aggregation, smart controls etc.</p>
-                    </div>
-                  </li>
-                </ul><a class="iconed-copies__more js-show-more" href="#"><span class="icon"><span class="icon__image"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 25 5">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M22.506 5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5zM12.499 5a2.501 2.501 0 0 1-2.502-2.5 2.501 2.501 0 0 1 5.004 0A2.5 2.5 0 0 1 12.499 5zM2.492 5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5z"/>
-</svg>
-</span><span class="icon__text">See more</span></span></a>
-              </div>
-            </div>
-            <div class="large-6 small-12 article__img-box" data-aos="fade-up">
-              <div class="article__img-wrapper"><img class="article__img" src="https://placehold.it/300x700"></div>
-            </div>
-          </section>
-          <section class="article row collapse">
-            <div class="large-6 small-12 article__img-box" data-aos="fade-up">
-              <div class="article__img-wrapper"><img class="article__img" src="http://placehold.it/300x700"></div>
-            </div>
-            <div class="large-6 small-12 article__content">
-              <header class="article__heading" data-aos="fade-up">
-                <h3 class="article__title h3">VIEW</h3>
-                <p class="article__sub-title">Component from where all sent and received messages can be viewed. Two views are provided – flow view and tabular view.</p>
-              </header>
-              <div class="iconed-copies iconed-copies--size-small" data-aos="fade-up">
-                <ul class="iconed-copies__list row collapse">
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M29.555 14.487a1.5 1.5 0 1 1-2.114-2.114l3.434-3.441H1.508a1.499 1.499 0 1 1 0-2.997h2.249v-.002h27.118l-3.434-3.441A1.499 1.499 0 0 1 29.555.378l5.998 5.998a1.498 1.498 0 0 1 0 2.114l-5.998 5.997zM6.443 21.372a1.5 1.5 0 0 1 2.114 2.113l-3.434 3.441H34.49a1.5 1.5 0 0 1 0 3H5.123l3.434 3.44a1.499 1.499 0 1 1-2.114 2.113L.445 29.484a1.501 1.501 0 0 1 0-2.115l5.998-5.997z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">Flow & Tabular Views</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Visualization of all messages sent/received from all supported protocols in one common view., extremely powerful and comprehensive</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M25.871 23.707l9.651 9.656a1.532 1.532 0 1 1-2.165 2.166l-9.652-9.656a14.484 14.484 0 0 1-9.146 3.237C6.527 29.11.013 22.594.013 14.557S6.527.005 14.559.005c8.034 0 14.546 6.515 14.546 14.552a14.497 14.497 0 0 1-3.234 9.15zm-11.312 2.339c6.343 0 11.484-5.143 11.484-11.489 0-6.344-5.141-11.489-11.484-11.489S3.074 8.213 3.074 14.557c0 6.346 5.142 11.489 11.485 11.489z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">Search & Filtering</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Powerful search & filtering on both message type, message detail and user session level.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 33 36">
-    <path  fill-rule="evenodd" d="M27 26.997h-9.795l-7.05 8.459a1.499 1.499 0 0 1-2.655-.96v-7.499H6a6 6 0 0 1-6-6V5.999A6 6 0 0 1 6 0h21a6 6 0 0 1 6 5.999v14.998a6 6 0 0 1-6 6zm3-20.998a2.999 2.999 0 0 0-3-2.998H6c-1.657 0-3 1.342-3 2.998v14.998a3 3 0 0 0 3 3h3a1.5 1.5 0 0 1 1.5 1.501v4.859l4.845-5.82c.286-.342.709-.54 1.155-.54H27a3 3 0 0 0 3-3V5.999zm-7.5 8.999a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-6 0A1.5 1.5 0 1 1 10.498 12a1.5 1.5 0 0 1 .002 2.998z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">Message Short Descriptions</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">In the flow view, these are used to show the message type and important message contents.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6 small-12">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 37 35">
-    <path fill-rule="evenodd" d="M34.897 18.996h-23.23c-1.048 0-1.897-.671-1.897-1.498 0-.829-.152-1.5.896-1.5h23.231c1.048 0 2.898.671 2.898 1.5 0 .827-.85 1.498-1.898 1.498zm-11.218-16H2.347c-1.289 0-2.333-.671-2.333-1.499 0-.828 1.044-1.499 2.333-1.499h21.332c1.289 0 2.333.671 2.333 1.499 0 .828-1.044 1.499-2.333 1.499zM1.923 7.998h15.166c1.056 0 1.912.671 1.912 1.5 0 .827-.856 1.498-1.912 1.498H1.923c-1.056 0-1.912-.671-1.912-1.498 0-.829.856-1.5 1.912-1.5zm19.753 16h12.971c1.048 0 1.898.671 1.898 1.5 0 .826-.85 1.497-1.898 1.497H21.676c-1.048 0-1.898-.671-1.898-1.497 0-.829.85-1.5 1.898-1.5zm.404 8h5.904c1.132 0 2.051.671 2.051 1.499 0 .827-.919 1.498-2.051 1.498H22.08c-1.132 0-2.05-.671-2.05-1.498 0-.828.918-1.499 2.05-1.499z"/>
-</svg>
-
-                      </div>
-                      <h4 class="iconed-copies__title">API Message Decoding</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Messages are decoded in ”pretty print”, best suitable for each protocol.</p>
-                    </div>
-                  </li>
-                  <li class="iconed-copies__item large-6">
-                    <div class="iconed-copies__header">
-                      <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 28">
+                    </li>
+                  </ul>
+                  <ul class="iconed-copies__list row collapse iconed-copies__list--hidden js-show-more-object">
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 28">
     <path fill-rule="evenodd" d="M35.527.44a1.502 1.502 0 0 0-2.119 0L11.434 24.374l-8.96-10.935a1.505 1.505 0 0 0-2.118.164 1.497 1.497 0 0 0 0 1.951l10.019 11.998a1.503 1.503 0 0 0 2.118 0L35.527 2.554a1.498 1.498 0 0 0 0-2.114z"/>
 </svg>
 
+                        </div>
+                        <h4 class="iconed-copies__title">Environments</h4>
                       </div>
-                      <h4 class="iconed-copies__title">Offline Mode</h4>
-                    </div>
-                    <div class="iconed-copies__content">
-                      <p class="iconed-copies__text">Perfect for sending a clickable log of all transactions to a developer for troubleshooting.</p>
-                    </div>
-                  </li>
-                </ul>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Define different test environments and switch easily between them.</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 28">
+    <path fill-rule="evenodd" d="M35.527.44a1.502 1.502 0 0 0-2.119 0L11.434 24.374l-8.96-10.935a1.505 1.505 0 0 0-2.118.164 1.497 1.497 0 0 0 0 1.951l10.019 11.998a1.503 1.503 0 0 0 2.118 0L35.527 2.554a1.498 1.498 0 0 0 0-2.114z"/>
+</svg>
+
+                        </div>
+                        <h4 class="iconed-copies__title">User Sessions</h4>
+                      </div>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Save all user login details in one place. Connect/disconnect all users for all protocols at once.</p>
+                      </div>
+                    </li>
+                  </ul><a class="iconed-copies__more js-show-more" href="#"><span class="icon"><span class="icon__image"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 25 5">
+    <path fill="#00B9F1" fill-rule="evenodd" d="M22.506 5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5zM12.499 5a2.501 2.501 0 0 1-2.502-2.5 2.501 2.501 0 0 1 5.004 0A2.5 2.5 0 0 1 12.499 5zM2.492 5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5z"/>
+</svg>
+</span><span class="icon__text">See more</span></span></a>
+                </div>
               </div>
-            </div>
-          </section>
+              <div class="large-6 small-12 article__img-box" data-aos="fade-up">
+                <div class="article__img-wrapper"><img class="article__img" src="https://placehold.it/530x400"></div>
+              </div>
+            </section>
+            <section class="article row collapse">
+              <div class="large-6 small-12 article__img-box" data-aos="fade-up">
+                <div class="article__img-wrapper"><img class="article__img" src="http://placehold.it/530x400"></div>
+              </div>
+              <div class="large-6 small-12 article__content">
+                <header class="article__heading" data-aos="fade-up">
+                  <h3 class="article__title h3">VIEW</h3>
+                  <p class="article__sub-title">Component from where all sent and received messages can be viewed. Two views are provided – flow view and tabular view.</p>
+                </header>
+                <div class="iconed-copies iconed-copies--size-small" data-aos="fade-up">
+                  <ul class="iconed-copies__list row collapse">
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
+    <path fill="#00B9F1" fill-rule="evenodd" d="M29.555 14.487a1.5 1.5 0 1 1-2.114-2.114l3.434-3.441H1.508a1.499 1.499 0 1 1 0-2.997h2.249v-.002h27.118l-3.434-3.441A1.499 1.499 0 0 1 29.555.378l5.998 5.998a1.498 1.498 0 0 1 0 2.114l-5.998 5.997zM6.443 21.372a1.5 1.5 0 0 1 2.114 2.113l-3.434 3.441H34.49a1.5 1.5 0 0 1 0 3H5.123l3.434 3.44a1.499 1.499 0 1 1-2.114 2.113L.445 29.484a1.501 1.501 0 0 1 0-2.115l5.998-5.997z"/>
+</svg>
+
+                        </div>
+                        <h4 class="iconed-copies__title">Flow & Tabular Views</h4>
+                      </div>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Visualization of all messages sent/received from all supported protocols in one common view., extremely powerful and comprehensive</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
+    <path fill="#00B9F1" fill-rule="evenodd" d="M25.871 23.707l9.651 9.656a1.532 1.532 0 1 1-2.165 2.166l-9.652-9.656a14.484 14.484 0 0 1-9.146 3.237C6.527 29.11.013 22.594.013 14.557S6.527.005 14.559.005c8.034 0 14.546 6.515 14.546 14.552a14.497 14.497 0 0 1-3.234 9.15zm-11.312 2.339c6.343 0 11.484-5.143 11.484-11.489 0-6.344-5.141-11.489-11.484-11.489S3.074 8.213 3.074 14.557c0 6.346 5.142 11.489 11.485 11.489z"/>
+</svg>
+
+                        </div>
+                        <h4 class="iconed-copies__title">Search & Filtering</h4>
+                      </div>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Powerful search & filtering on both message type, message detail and user session level.</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 33 36">
+    <path  fill-rule="evenodd" d="M27 26.997h-9.795l-7.05 8.459a1.499 1.499 0 0 1-2.655-.96v-7.499H6a6 6 0 0 1-6-6V5.999A6 6 0 0 1 6 0h21a6 6 0 0 1 6 5.999v14.998a6 6 0 0 1-6 6zm3-20.998a2.999 2.999 0 0 0-3-2.998H6c-1.657 0-3 1.342-3 2.998v14.998a3 3 0 0 0 3 3h3a1.5 1.5 0 0 1 1.5 1.501v4.859l4.845-5.82c.286-.342.709-.54 1.155-.54H27a3 3 0 0 0 3-3V5.999zm-7.5 8.999a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-6 0A1.5 1.5 0 1 1 10.498 12a1.5 1.5 0 0 1 .002 2.998z"/>
+</svg>
+
+                        </div>
+                        <h4 class="iconed-copies__title">Message Short Descriptions</h4>
+                      </div>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">In the flow view, these are used to show the message type and important message contents.</p>
+                      </div>
+                    </li>
+                    <li class="iconed-copies__item large-6 small-12">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 37 35">
+    <path fill-rule="evenodd" d="M34.897 18.996h-23.23c-1.048 0-1.897-.671-1.897-1.498 0-.829-.152-1.5.896-1.5h23.231c1.048 0 2.898.671 2.898 1.5 0 .827-.85 1.498-1.898 1.498zm-11.218-16H2.347c-1.289 0-2.333-.671-2.333-1.499 0-.828 1.044-1.499 2.333-1.499h21.332c1.289 0 2.333.671 2.333 1.499 0 .828-1.044 1.499-2.333 1.499zM1.923 7.998h15.166c1.056 0 1.912.671 1.912 1.5 0 .827-.856 1.498-1.912 1.498H1.923c-1.056 0-1.912-.671-1.912-1.498 0-.829.856-1.5 1.912-1.5zm19.753 16h12.971c1.048 0 1.898.671 1.898 1.5 0 .826-.85 1.497-1.898 1.497H21.676c-1.048 0-1.898-.671-1.898-1.497 0-.829.85-1.5 1.898-1.5zm.404 8h5.904c1.132 0 2.051.671 2.051 1.499 0 .827-.919 1.498-2.051 1.498H22.08c-1.132 0-2.05-.671-2.05-1.498 0-.828.918-1.499 2.05-1.499z"/>
+</svg>
+
+                        </div>
+                        <h4 class="iconed-copies__title">API Message Decoding</h4>
+                      </div>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Messages are decoded in ”pretty print”, best suitable for each protocol.</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="iconed-copies__list row collapse iconed-copies__list--hidden js-show-more-object">
+                    <li class="iconed-copies__item large-6">
+                      <div class="iconed-copies__header">
+                        <div class="iconed-copies__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 28">
+    <path fill-rule="evenodd" d="M35.527.44a1.502 1.502 0 0 0-2.119 0L11.434 24.374l-8.96-10.935a1.505 1.505 0 0 0-2.118.164 1.497 1.497 0 0 0 0 1.951l10.019 11.998a1.503 1.503 0 0 0 2.118 0L35.527 2.554a1.498 1.498 0 0 0 0-2.114z"/>
+</svg>
+
+                        </div>
+                        <h4 class="iconed-copies__title">Offline Mode</h4>
+                      </div>
+                      <div class="iconed-copies__content">
+                        <p class="iconed-copies__text">Perfect for sending a clickable log of all transactions to a developer for troubleshooting.</p>
+                      </div>
+                    </li>
+                  </ul><a class="iconed-copies__more js-show-more" href="#"><span class="icon"><span class="icon__image"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 25 5">
+    <path fill="#00B9F1" fill-rule="evenodd" d="M22.506 5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5zM12.499 5a2.501 2.501 0 0 1-2.502-2.5 2.501 2.501 0 0 1 5.004 0A2.5 2.5 0 0 1 12.499 5zM2.492 5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 1 1 0 5z"/>
+</svg>
+</span><span class="icon__text">See more</span></span></a>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </article>
       <article class="section" id="industries">
@@ -481,6 +483,56 @@
           </div>
         </div>
       </article>
+      <!--article.section.section--bg-pre-white-->
+      <!--    .section__inner-->
+      <!--        .tabs.js-tab-widget(data-aos="fade-up")-->
+      <!--            h4.tabs__title Trusted by the world’s most innovative businesses – big and small-->
+      <!---->
+      <!--            ul.tabs__list.js-tabs-list(role='tablist')-->
+      <!--                li.tabs__item-->
+      <!--                    a(href='#' role='tab' aria-selected='true' aria-controls='samsung-tab-content' id='samsung-tab' class='tabs__tab active js-tab')-->
+      <!--                        .tabs__img-->
+      <!--                            include ../assets/images/companies/samsung.svg-->
+      <!--                li.tabs__item-->
+      <!--                    a(href='#' role='tab' aria-selected='false' aria-controls='do-tab-content' id='do-tab' class='tabs__tab js-tab')-->
+      <!--                        .tabs__img-->
+      <!--                            include ../assets/images/companies/digital_ocean.svg-->
+      <!--                li.tabs__item-->
+      <!--                    a(href='#' role='tab' aria-selected='false' aria-controls='n-rlc-tab-content' id='n-rlc-tab' class='tabs__tab js-tab')-->
+      <!--                        .tabs__img-->
+      <!--                            include ../assets/images/companies/new_relic.svg-->
+      <!--                li.tabs__item-->
+      <!--                    a(href='#' role='tab' aria-selected='false' aria-controls='d-dash-tab-content' id='d-dash-tab' class='tabs__tab js-tab')-->
+      <!--                        .tabs__img-->
+      <!--                            include ../assets/images/companies/doordash.svg-->
+      <!---->
+      <!--            .tabs__panel(id='samsung-tab-content' aria-labelledby='samsung-tab' class='tabs__panel active js-tab-panel')-->
+      <!--                +blockquote({-->
+      <!--                    text: "Building the right data foundation has been a critical part of DoorDash's success. IntelliQ helps us get the visibility we need to make analytically driven decisions every day.",-->
+      <!--                    author: "— Jessica Lachs,",-->
+      <!--                    position: "Head of Analytics at DoorDash"-->
+      <!--                })-->
+      <!---->
+      <!--            .tabs__panel(id='do-tab-content' aria-labelledby='do-tab' class='tabs__panel js-tab-panel')-->
+      <!--                +blockquote({-->
+      <!--                    text: "Building the right data foundation has been a critical part of DoorDash's success. IntelliQ helps us get the visibility we need to make analytically driven decisions every day.",-->
+      <!--                    author: "— Jessica Lachs,",-->
+      <!--                    position: "Head of Analytics at DoorDash"-->
+      <!--                })-->
+      <!---->
+      <!--            .tabs__panel(id='n-rlc-tab-content' aria-labelledby='n-rlc-tab' class='tabs__panel js-tab-panel')-->
+      <!--                +blockquote({-->
+      <!--                    text: "Building the right data foundation has been a critical part of DoorDash's success. IntelliQ helps us get the visibility we need to make analytically driven decisions every day.",-->
+      <!--                    author: "— Jessica Lachs,",-->
+      <!--                    position: "Head of Analytics at DoorDash"-->
+      <!--                })-->
+      <!---->
+      <!--            .tabs__panel(id='d-dash-tab-content' aria-labelledby='d-dashrlc-tab' class='tabs__panel js-tab-panel')-->
+      <!--                +blockquote({-->
+      <!--                    text: "Building the right data foundation has been a critical part of DoorDash's success. IntelliQ helps us get the visibility we need to make analytically driven decisions every day.",-->
+      <!--                    author: "— Jessica Lachs,",-->
+      <!--                    position: "Head of Analytics at DoorDash"-->
+      <!--                })-->
       <article class="section section--bg-dark" id="get-started">
         <div class="section__inner">
           <div class="modular-grid modular-grid--large-span-2">
@@ -504,7 +556,8 @@
                     <div class="form__body">
                       <div class="form__row">
                         <div class="input">
-                          <label class="input__label js-input-wrapper"><span class="input__name">Name *</span><span class="input__error js-input-error"></span>
+                          <label class="input__wrapper js-input-wrapper">
+                            <div class="input__labels"><span class="input__name">Name *</span><span class="input__error js-input-error"></span></div>
                             <div class="input__field-wrapper">
                               <input class="input__field js-field" type="text" placeholder="Douglas Adams">
                             </div>
@@ -512,9 +565,10 @@
                         </div>
                       </div>
                       <div class="form__row">
-                        <div class="input">
-                          <label class="input__label js-input-wrapper"><span class="input__name">Company *</span><span class="input__error js-input-error">Invalid Email</span>
-                            <div class="input__field-wrapper error">
+                        <div class="input error">
+                          <label class="input__wrapper js-input-wrapper">
+                            <div class="input__labels"><span class="input__name">Company *</span><span class="input__error js-input-error">Invalid Email</span></div>
+                            <div class="input__field-wrapper">
                               <input class="input__field js-field" type="text" placeholder="Acme Co.">
                             </div>
                           </label>
@@ -522,7 +576,8 @@
                       </div>
                       <div class="form__row">
                         <div class="input">
-                          <label class="input__label js-input-wrapper"><span class="input__name">Email *</span><span class="input__error js-input-error"></span>
+                          <label class="input__wrapper js-input-wrapper">
+                            <div class="input__labels"><span class="input__name">Email *</span><span class="input__error js-input-error"></span></div>
                             <div class="input__field-wrapper">
                               <input class="input__field js-field" type="text" placeholder="you@company.com">
                             </div>
@@ -530,17 +585,29 @@
                         </div>
                       </div>
                       <div class="form__row">
-                        <div class="input">
-                          <label class="input__label dropdown js-dropdown active"><span class="input__name">Which best describes you? *</span><span class="input__error">Choose Something</span>
+                        <div class="input dropdown js-dropdown error">
+                          <div class="input__wrapper">
+                            <div class="input__labels"><span class="input__name">Which best describes you? *</span><span class="input__error">Required</span></div>
                             <div class="input__field-wrapper">
                               <div class="input__field dropdown__field" role="listbox" tabindex="0" id="describe" aria-labelledby="listbox1label">
-                                <div class="dropdown__chosen"><span class="dropdown__selected js-dropdown-selected">Financial institution</span>
+                                <div class="dropdown__field-inner"><span class="dropdown__selected js-dropdown-selected">Please Select</span>
                                   <input class="js-search-field" type="hidden" value="">
                                 </div>
                               </div>
                               <ul class="dropdown__list dropdown-menu js-dropdown-list">
                                 <li class="dropdown__item" role="option" aria-selected>
                                   <button class="dropdown__link js-dropdown-link active">
+                                    <div class="dropdown__icon-wrapper">
+                                      <div class="dropdown__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 28">
+    <path fill-rule="evenodd" d="M35.527.44a1.502 1.502 0 0 0-2.119 0L11.434 24.374l-8.96-10.935a1.505 1.505 0 0 0-2.118.164 1.497 1.497 0 0 0 0 1.951l10.019 11.998a1.503 1.503 0 0 0 2.118 0L35.527 2.554a1.498 1.498 0 0 0 0-2.114z"/>
+</svg>
+
+                                      </div>
+                                    </div><span class="dropdown__text">Please Select</span>
+                                  </button>
+                                </li>
+                                <li class="dropdown__item" role="option">
+                                  <button class="dropdown__link js-dropdown-link">
                                     <div class="dropdown__icon-wrapper">
                                       <div class="dropdown__icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 28">
     <path fill-rule="evenodd" d="M35.527.44a1.502 1.502 0 0 0-2.119 0L11.434 24.374l-8.96-10.935a1.505 1.505 0 0 0-2.118.164 1.497 1.497 0 0 0 0 1.951l10.019 11.998a1.503 1.503 0 0 0 2.118 0L35.527 2.554a1.498 1.498 0 0 0 0-2.114z"/>
@@ -585,11 +652,11 @@
                                 </li>
                               </ul>
                             </div>
-                          </label>
+                          </div>
                         </div>
                       </div>
                       <div class="form__row form__button">
-                        <button class="button button--color-blue button--width-full js-button"><span class="icon button__icon"><span class="icon__image"></span><span class="icon__text">Request a Demo</span></span>
+                        <button class="button button--color-blue button--width-full js-button">Request a Demo
                         </button>
                       </div>
                     </div>
@@ -710,13 +777,7 @@
       </article>
     </main>
     <footer class="footer">
-      <div class="footer__inner"><a class="logo footer__logo footer__column" href="/">
-          <div class="logo__img"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 170 40">
-    <path fill="#00B9F1" fill-rule="evenodd" d="M169.997 35.618l-3.807 4.369-4.705-4.105c-3.489 2.525-7.401 3.789-11.79 3.789-2.696 0-5.234-.527-7.666-1.527-2.432-.947-4.547-2.315-6.291-4-1.745-1.737-3.119-3.79-4.176-6.264-1.005-2.367-1.535-4.999-1.535-7.79 0-2.736.53-5.368 1.587-7.788 1.005-2.475 2.432-4.58 4.229-6.318 1.745-1.789 3.86-3.157 6.345-4.157 2.379-1.053 4.969-1.58 7.665-1.58 2.697 0 5.288.527 7.667 1.527 2.432 1 4.547 2.368 6.291 4.106 1.745 1.737 3.173 3.841 4.23 6.263a20.462 20.462 0 0 1 1.533 7.79c0 4.473-1.322 8.474-3.965 11.949l4.388 3.736zm-8.512-22.737a13.822 13.822 0 0 0-4.917-5.106c-2.062-1.264-4.335-1.895-6.767-1.895-7.455-.158-13.588 6.422-13.428 14.105 0 2.527.581 4.896 1.744 7.054 1.163 2.158 2.802 3.843 4.863 5.106 2.063 1.262 4.337 1.893 6.821 1.893 2.591 0 4.969-.684 7.137-2.052l-7.137-6.105 3.859-4.421 7.296 6.42c1.534-2.367 2.274-4.999 2.274-7.895 0-2.578-.582-4.947-1.745-7.104zM121.6 7.655c-2.284 0-3.894-1.551-3.894-3.772 0-2.274 1.61-3.876 3.894-3.876 2.232 0 3.841 1.602 3.841 3.876 0 2.221-1.609 3.772-3.841 3.772zm3.062 31.316h-6.177V17.629h-3.945v-5.478h10.122v26.82zM104.373.213h6.177v38.758h-6.177V.213zm-12.664 0h6.177v38.758h-6.177V.213zM66.183 27.344c.467 4.288 3.217 6.976 7.525 6.976 3.167 0 5.347-1.395 6.54-4.134l5.555 1.446c-1.921 4.91-6.489 7.959-12.25 7.959-3.997 0-7.267-1.344-9.706-3.98-2.492-2.634-3.737-5.993-3.737-10.076 0-3.98 1.245-7.286 3.737-9.974 2.492-2.687 5.709-4.029 9.654-4.029 3.945 0 7.162 1.291 9.602 3.926 2.44 2.636 3.634 5.995 3.634 9.974l-.051 1.912H66.183zm7.318-10.801c-3.893 0-6.592 2.481-7.215 6.253h14.326c-.57-3.772-3.166-6.253-7.111-6.253zM54.068 38.971h-6.177v-21.91H43.79v-4.91h4.101V5.174h6.177v6.977h4.515v4.91h-4.515v21.91zm-19.583-16.07c0-3.773-1.765-6.1-5.347-6.1-3.945 0-6.332 2.481-6.332 6.615v15.555h-6.177v-26.82h5.71v3.566c1.245-2.326 4.204-4.185 8.305-4.185 6.384 0 10.018 4.185 10.018 10.593v16.846h-6.177v-16.07zM7.053 7.655c-2.284 0-3.893-1.551-3.893-3.772C3.16 1.609 4.769.007 7.053.007c2.232 0 3.841 1.602 3.841 3.876 0 2.221-1.609 3.772-3.841 3.772zm3.062 31.316H3.939V17.629H-.006v-5.478h10.121v26.82z"/>
-</svg>
-
-          </div>
-          <div class="logo__text">Intelligent QA Solutions™</div></a>
+      <div class="footer__inner">
         <div class="footer__navigation">
           <nav class="navigation">
             <ul class="navigation__list">
@@ -727,16 +788,24 @@
               <li class="navigation__item"><a class="navigation__link" href="#">Sign In →</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="footer__button footer__column">
-          <div class="input">
-            <label class="input__label dropdown js-dropdown active dropdown--open-upstairs dropdown--size-small">
+        </div><a class="logo footer__logo footer__column" href="/">
+          <div class="logo__img"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 170 40">
+    <path fill="#00B9F1" fill-rule="evenodd" d="M169.997 35.618l-3.807 4.369-4.705-4.105c-3.489 2.525-7.401 3.789-11.79 3.789-2.696 0-5.234-.527-7.666-1.527-2.432-.947-4.547-2.315-6.291-4-1.745-1.737-3.119-3.79-4.176-6.264-1.005-2.367-1.535-4.999-1.535-7.79 0-2.736.53-5.368 1.587-7.788 1.005-2.475 2.432-4.58 4.229-6.318 1.745-1.789 3.86-3.157 6.345-4.157 2.379-1.053 4.969-1.58 7.665-1.58 2.697 0 5.288.527 7.667 1.527 2.432 1 4.547 2.368 6.291 4.106 1.745 1.737 3.173 3.841 4.23 6.263a20.462 20.462 0 0 1 1.533 7.79c0 4.473-1.322 8.474-3.965 11.949l4.388 3.736zm-8.512-22.737a13.822 13.822 0 0 0-4.917-5.106c-2.062-1.264-4.335-1.895-6.767-1.895-7.455-.158-13.588 6.422-13.428 14.105 0 2.527.581 4.896 1.744 7.054 1.163 2.158 2.802 3.843 4.863 5.106 2.063 1.262 4.337 1.893 6.821 1.893 2.591 0 4.969-.684 7.137-2.052l-7.137-6.105 3.859-4.421 7.296 6.42c1.534-2.367 2.274-4.999 2.274-7.895 0-2.578-.582-4.947-1.745-7.104zM121.6 7.655c-2.284 0-3.894-1.551-3.894-3.772 0-2.274 1.61-3.876 3.894-3.876 2.232 0 3.841 1.602 3.841 3.876 0 2.221-1.609 3.772-3.841 3.772zm3.062 31.316h-6.177V17.629h-3.945v-5.478h10.122v26.82zM104.373.213h6.177v38.758h-6.177V.213zm-12.664 0h6.177v38.758h-6.177V.213zM66.183 27.344c.467 4.288 3.217 6.976 7.525 6.976 3.167 0 5.347-1.395 6.54-4.134l5.555 1.446c-1.921 4.91-6.489 7.959-12.25 7.959-3.997 0-7.267-1.344-9.706-3.98-2.492-2.634-3.737-5.993-3.737-10.076 0-3.98 1.245-7.286 3.737-9.974 2.492-2.687 5.709-4.029 9.654-4.029 3.945 0 7.162 1.291 9.602 3.926 2.44 2.636 3.634 5.995 3.634 9.974l-.051 1.912H66.183zm7.318-10.801c-3.893 0-6.592 2.481-7.215 6.253h14.326c-.57-3.772-3.166-6.253-7.111-6.253zM54.068 38.971h-6.177v-21.91H43.79v-4.91h4.101V5.174h6.177v6.977h4.515v4.91h-4.515v21.91zm-19.583-16.07c0-3.773-1.765-6.1-5.347-6.1-3.945 0-6.332 2.481-6.332 6.615v15.555h-6.177v-26.82h5.71v3.566c1.245-2.326 4.204-4.185 8.305-4.185 6.384 0 10.018 4.185 10.018 10.593v16.846h-6.177v-16.07zM7.053 7.655c-2.284 0-3.893-1.551-3.893-3.772C3.16 1.609 4.769.007 7.053.007c2.232 0 3.841 1.602 3.841 3.876 0 2.221-1.609 3.772-3.841 3.772zm3.062 31.316H3.939V17.629H-.006v-5.478h10.121v26.82z"/>
+</svg>
+
+          </div>
+          <div class="logo__text">Intelligent QA Solutions™</div></a>
+        <div class="footer__button">
+          <div class="input dropdown js-dropdown dropdown--open-upstairs dropdown--size-small">
+            <div class="input__wrapper">
               <div class="input__field-wrapper">
                 <div class="input__field dropdown__field" role="listbox" tabindex="0" id="lang" aria-labelledby="listbox1label">
-                  <div class="dropdown__chosen"><span class="icon"><span class="icon__image"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
+                  <div class="dropdown__field-inner">
+                    <div class="dropdown__main-icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewbox="0 0 36 36">
     <path fill="#00B9F1" fill-rule="evenodd" d="M18 0C8.059 0 0 8.059 0 18s8.059 18 18 18 18-8.059 18-18S27.941 0 18 0zm14.25 13.23a24.853 24.853 0 0 0-7.253-2.19 24.826 24.826 0 0 0-2.19-7.252 15.076 15.076 0 0 1 9.443 9.442zm-6.915 8.61c.105-1.267.165-2.55.165-3.84s-.06-2.573-.165-3.84C30.112 15.075 33 16.755 33 18c0 1.245-2.888 2.925-7.665 3.84zM18 33c-1.245 0-2.925-2.887-3.84-7.666 1.267.106 2.55.166 3.84.166s2.572-.06 3.84-.166C20.925 30.113 19.245 33 18 33zm0-10.501c-1.43 0-2.86-.071-4.283-.216a42.28 42.28 0 0 1 0-8.566 42.415 42.415 0 0 1 8.565 0 42.258 42.258 0 0 1 0 8.566 42.236 42.236 0 0 1-4.282.216zM3 18c0-1.245 2.887-2.925 7.665-3.84A46.523 46.523 0 0 0 10.5 18c0 1.29.06 2.573.165 3.84C5.887 20.925 3 19.245 3 18zM18 3c1.245 0 2.925 2.888 3.84 7.665A46.542 46.542 0 0 0 18 10.5c-1.29 0-2.573.06-3.84.165C15.075 5.888 16.755 3 18 3zm-4.77.788a24.826 24.826 0 0 0-2.19 7.252 24.856 24.856 0 0 0-7.252 2.19 15.07 15.07 0 0 1 9.442-9.442zM3.788 22.77a24.856 24.856 0 0 0 7.252 2.19 24.842 24.842 0 0 0 2.19 7.29 15.07 15.07 0 0 1-9.442-9.48zm18.982 9.48a24.853 24.853 0 0 0 2.19-7.253 24.845 24.845 0 0 0 7.29-2.227 15.08 15.08 0 0 1-9.48 9.48z"/>
 </svg>
-</span></span><span class="dropdown__selected js-dropdown-selected">English</span>
+
+                    </div><span class="dropdown__selected js-dropdown-selected">English</span>
                     <input class="js-search-field" type="hidden" value="">
                   </div>
                 </div>
@@ -757,14 +826,14 @@
 </svg>
 
                         </div>
-                      </div><span class="dropdown__text">French</span></a>
+                      </div><span class="dropdown__text">Swedish</span></a>
                   </li>
                 </ul>
               </div>
-            </label>
+            </div>
           </div>
         </div>
-        <div class="footer__socials footer__column socials">
+        <div class="footer__socials socials">
           <ul class="socials__list">
             <li class="socials__item"><a class="socials__link" href="#" target="_blank"><span class="icon"><span class="icon__image"><svg class="svg-icon" viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.03 31.01V16.862H21.041L21.791 11.351H16.03V7.83C16.03 6.237 16.498 5.148 18.913 5.148L21.994 5.145V0.217C21.461 0.146 19.632 0 17.505 0C13.064 0 10.023 2.567 10.023 7.286V11.351H5V16.862H10.023V31.01H16.03V31.01Z"/>
