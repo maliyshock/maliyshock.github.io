@@ -548,6 +548,9 @@ a {
       margin-right: auto; } }
   .title-container--content-center {
     text-align: center; }
+    .title-container--content-center .title-container__sub-title {
+      margin-left: auto;
+      margin-right: auto; }
   .title-container__title.h1 {
     margin-bottom: 10px; }
     @media (min-width: 960px) {
@@ -557,8 +560,6 @@ a {
     margin-bottom: 10px; }
   .title-container__sub-title {
     max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     font-weight: 400;
     color: #7782A7; }
 
