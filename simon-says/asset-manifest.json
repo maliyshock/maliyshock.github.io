@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.a299eb6f.chunk.css",
-  "main.js": "/static/js/main.54f29d66.chunk.js",
-  "main.js.map": "/static/js/main.54f29d66.chunk.js.map",
-  "static/js/1.7cf7ad8b.chunk.js": "/static/js/1.7cf7ad8b.chunk.js",
-  "static/js/1.7cf7ad8b.chunk.js.map": "/static/js/1.7cf7ad8b.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.a299eb6f.chunk.css.map": "/static/css/main.a299eb6f.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.1149d1a9a7f808c09bbbf9517e5649b2.js": "/precache-manifest.1149d1a9a7f808c09bbbf9517e5649b2.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/simon-says/static/css/main.a299eb6f.chunk.css",
+  "main.js": "/simon-says/static/js/main.5ca58c69.chunk.js",
+  "main.js.map": "/simon-says/static/js/main.5ca58c69.chunk.js.map",
+  "static/js/1.7cf7ad8b.chunk.js": "/simon-says/static/js/1.7cf7ad8b.chunk.js",
+  "static/js/1.7cf7ad8b.chunk.js.map": "/simon-says/static/js/1.7cf7ad8b.chunk.js.map",
+  "runtime~main.js": "/simon-says/static/js/runtime~main.7f2f6054.js",
+  "runtime~main.js.map": "/simon-says/static/js/runtime~main.7f2f6054.js.map",
+  "static/css/main.a299eb6f.chunk.css.map": "/simon-says/static/css/main.a299eb6f.chunk.css.map",
+  "index.html": "/simon-says/index.html",
+  "precache-manifest.de82d84f6c083073208fa26705693640.js": "/simon-says/precache-manifest.de82d84f6c083073208fa26705693640.js",
+  "service-worker.js": "/simon-says/service-worker.js"
 }
