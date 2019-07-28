@@ -1,9 +1,9 @@
 {
-  "main.css": "/simon-says/static/css/main.eba2ae39.chunk.css",
-  "main.js": "/simon-says/static/js/main.6136090c.chunk.js",
-  "main.js.map": "/simon-says/static/js/main.6136090c.chunk.js.map",
-  "static/js/1.ab99578d.chunk.js": "/simon-says/static/js/1.ab99578d.chunk.js",
-  "static/js/1.ab99578d.chunk.js.map": "/simon-says/static/js/1.ab99578d.chunk.js.map",
+  "main.css": "/simon-says/static/css/main.7c41dfa1.chunk.css",
+  "main.js": "/simon-says/static/js/main.b179df35.chunk.js",
+  "main.js.map": "/simon-says/static/js/main.b179df35.chunk.js.map",
+  "static/js/1.374684d6.chunk.js": "/simon-says/static/js/1.374684d6.chunk.js",
+  "static/js/1.374684d6.chunk.js.map": "/simon-says/static/js/1.374684d6.chunk.js.map",
   "runtime~main.js": "/simon-says/static/js/runtime~main.7f2f6054.js",
   "runtime~main.js.map": "/simon-says/static/js/runtime~main.7f2f6054.js.map",
   "static/media/beat.mp3": "/simon-says/static/media/beat.60755cec.mp3",
@@ -12,8 +12,8 @@
   "static/media/betha.mp3": "/simon-says/static/media/betha.de75dd9d.mp3",
   "static/media/thetha.mp3": "/simon-says/static/media/thetha.55e6839d.mp3",
   "static/media/go.mp3": "/simon-says/static/media/go.adadbe2c.mp3",
-  "static/css/main.eba2ae39.chunk.css.map": "/simon-says/static/css/main.eba2ae39.chunk.css.map",
+  "static/css/main.7c41dfa1.chunk.css.map": "/simon-says/static/css/main.7c41dfa1.chunk.css.map",
   "index.html": "/simon-says/index.html",
-  "precache-manifest.18cbc9efdf80ebfeb4455ff0cd1f74fd.js": "/simon-says/precache-manifest.18cbc9efdf80ebfeb4455ff0cd1f74fd.js",
+  "precache-manifest.106d095c537b606f6b1979233f09d81e.js": "/simon-says/precache-manifest.106d095c537b606f6b1979233f09d81e.js",
   "service-worker.js": "/simon-says/service-worker.js"
 }
