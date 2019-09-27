@@ -1,7 +1,7 @@
 {
   "main.css": "/simon-says/static/css/main.432dea1d.chunk.css",
-  "main.js": "/simon-says/static/js/main.1fa754ba.chunk.js",
-  "main.js.map": "/simon-says/static/js/main.1fa754ba.chunk.js.map",
+  "main.js": "/simon-says/static/js/main.c4e17368.chunk.js",
+  "main.js.map": "/simon-says/static/js/main.c4e17368.chunk.js.map",
   "static/js/1.2f18dcdc.chunk.js": "/simon-says/static/js/1.2f18dcdc.chunk.js",
   "static/js/1.2f18dcdc.chunk.js.map": "/simon-says/static/js/1.2f18dcdc.chunk.js.map",
   "runtime~main.js": "/simon-says/static/js/runtime~main.7f2f6054.js",
@@ -14,6 +14,6 @@
   "static/media/beat.mp3": "/simon-says/static/media/beat.60755cec.mp3",
   "static/css/main.432dea1d.chunk.css.map": "/simon-says/static/css/main.432dea1d.chunk.css.map",
   "index.html": "/simon-says/index.html",
-  "precache-manifest.98078c866bea1a1d1031f8a8a83f058b.js": "/simon-says/precache-manifest.98078c866bea1a1d1031f8a8a83f058b.js",
+  "precache-manifest.8c462c4333c2e429b9d47ccfd4cda996.js": "/simon-says/precache-manifest.8c462c4333c2e429b9d47ccfd4cda996.js",
   "service-worker.js": "/simon-says/service-worker.js"
 }
