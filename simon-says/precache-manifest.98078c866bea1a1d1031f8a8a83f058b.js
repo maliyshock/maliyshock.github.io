@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "b179df355f271b3d79bd",
-    "url": "/simon-says/static/css/main.7c41dfa1.chunk.css"
+    "revision": "1fa754ba89801417edea",
+    "url": "/simon-says/static/css/main.432dea1d.chunk.css"
   },
   {
-    "revision": "b179df355f271b3d79bd",
-    "url": "/simon-says/static/js/main.b179df35.chunk.js"
+    "revision": "1fa754ba89801417edea",
+    "url": "/simon-says/static/js/main.1fa754ba.chunk.js"
   },
   {
-    "revision": "374684d60eea9aa35782",
-    "url": "/simon-says/static/js/1.374684d6.chunk.js"
+    "revision": "2f18dcdc0678ee69913e",
+    "url": "/simon-says/static/js/1.2f18dcdc.chunk.js"
   },
   {
     "revision": "7f2f6054d8393883ca62",
     "url": "/simon-says/static/js/runtime~main.7f2f6054.js"
-  },
-  {
-    "revision": "60755cec70636e318bf949be8b7f7ca4",
-    "url": "/simon-says/static/media/beat.60755cec.mp3"
   },
   {
     "revision": "0d7fbcae0b7219ad2525e2fa5fc03593",
@@ -40,7 +36,11 @@ self.__precacheManifest = [
     "url": "/simon-says/static/media/go.adadbe2c.mp3"
   },
   {
-    "revision": "b3607909607245b64c37270cf4ba8aa1",
+    "revision": "60755cec70636e318bf949be8b7f7ca4",
+    "url": "/simon-says/static/media/beat.60755cec.mp3"
+  },
+  {
+    "revision": "4860af122fd398040bc448c860f8b6ea",
     "url": "/simon-says/index.html"
   }
 ];
