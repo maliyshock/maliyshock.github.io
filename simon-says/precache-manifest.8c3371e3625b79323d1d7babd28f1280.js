@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "c4e173684f3d9f128f72",
+    "revision": "b24b2a741ce22b3837da",
     "url": "/simon-says/static/css/main.432dea1d.chunk.css"
   },
   {
-    "revision": "c4e173684f3d9f128f72",
-    "url": "/simon-says/static/js/main.c4e17368.chunk.js"
+    "revision": "b24b2a741ce22b3837da",
+    "url": "/simon-says/static/js/main.b24b2a74.chunk.js"
   },
   {
-    "revision": "2f18dcdc0678ee69913e",
-    "url": "/simon-says/static/js/1.2f18dcdc.chunk.js"
+    "revision": "d837c6e9d6ab600a17d5",
+    "url": "/simon-says/static/js/1.d837c6e9.chunk.js"
   },
   {
     "revision": "7f2f6054d8393883ca62",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/simon-says/static/media/beat.60755cec.mp3"
   },
   {
-    "revision": "503e44facaa6d2302351b7698dab7a25",
+    "revision": "6f06d5020dca685531f57cf1615650be",
     "url": "/simon-says/index.html"
   }
 ];

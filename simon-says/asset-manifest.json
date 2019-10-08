@@ -1,9 +1,9 @@
 {
   "main.css": "/simon-says/static/css/main.432dea1d.chunk.css",
-  "main.js": "/simon-says/static/js/main.c4e17368.chunk.js",
-  "main.js.map": "/simon-says/static/js/main.c4e17368.chunk.js.map",
-  "static/js/1.2f18dcdc.chunk.js": "/simon-says/static/js/1.2f18dcdc.chunk.js",
-  "static/js/1.2f18dcdc.chunk.js.map": "/simon-says/static/js/1.2f18dcdc.chunk.js.map",
+  "main.js": "/simon-says/static/js/main.b24b2a74.chunk.js",
+  "main.js.map": "/simon-says/static/js/main.b24b2a74.chunk.js.map",
+  "static/js/1.d837c6e9.chunk.js": "/simon-says/static/js/1.d837c6e9.chunk.js",
+  "static/js/1.d837c6e9.chunk.js.map": "/simon-says/static/js/1.d837c6e9.chunk.js.map",
   "runtime~main.js": "/simon-says/static/js/runtime~main.7f2f6054.js",
   "runtime~main.js.map": "/simon-says/static/js/runtime~main.7f2f6054.js.map",
   "static/media/alfa.mp3": "/simon-says/static/media/alfa.0d7fbcae.mp3",
@@ -14,6 +14,6 @@
   "static/media/beat.mp3": "/simon-says/static/media/beat.60755cec.mp3",
   "static/css/main.432dea1d.chunk.css.map": "/simon-says/static/css/main.432dea1d.chunk.css.map",
   "index.html": "/simon-says/index.html",
-  "precache-manifest.8c462c4333c2e429b9d47ccfd4cda996.js": "/simon-says/precache-manifest.8c462c4333c2e429b9d47ccfd4cda996.js",
+  "precache-manifest.8c3371e3625b79323d1d7babd28f1280.js": "/simon-says/precache-manifest.8c3371e3625b79323d1d7babd28f1280.js",
   "service-worker.js": "/simon-says/service-worker.js"
 }
